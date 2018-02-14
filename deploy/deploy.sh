@@ -59,7 +59,7 @@ echo "Add new data to $BACKEND_REPO"
 git add -A .
 if ! [[ -z $(git status -s) ]] ; then
   echo "Pushing changes to the $BACKEND_REPO branch"
-  git commit -m "Add new build data from $BACKEND_NAME frontend $HEAD_COMMIT commit to $BUILD_BRANCH"
+  git commit -m "Add new build data from $FRONTEND_REPO frontend $HEAD_COMMIT commit to $BUILD_BRANCH"
   git push origin $BUILD_BRANCH
   echo "All done."
 else
