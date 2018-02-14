@@ -41,17 +41,21 @@ git checkout $BUILD_BRANCH
 popd
 
 echo "Copy data to the backend repo"
-mkdir tmp
-cp -rf ../$BACKEND_NAME/deploy tmp/
-rsync -avi --delete ./ ../$BACKEND_NAME/
-rm -rf ../${BACKEND_NAME}/deploy
-cp -rf tmp/deploy ../${BACKEND_NAME}/
+echo "Copy repo files to new frontend repo"
+rsync -avi --delete ./css ../$BACKEND_NAME/
+rsync -avi --delete ./en ../$BACKEND_NAME/
+rsync -avi --delete ./img ../$BACKEND_NAME/
+rsync -avi --delete ./js ../$BACKEND_NAME/
+rsync -avi --delete ./ru ../$BACKEND_NAME/
+rsync -avi ./favicon.ico ../$BACKEND_NAME/
+echo "Copying finished"
 
 echo "Add new data to the backend repo git"
 pushd ../$BACKEND_NAME
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
 
+echo "Add new data to $BACKEND_REPO"
 git add -A .
 if ! [[ -z $(git status -s) ]] ; then
   echo "Pushing changes to the $BACKEND_REPO branch"
