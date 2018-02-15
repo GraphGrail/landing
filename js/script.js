@@ -250,7 +250,7 @@ $(document).on("click",'.lang-menu a',function(){
       $(this).html(first);
     });
    var currentHref = $('.lang-menu li:first-child a').attr("href");
-    location.href = currentHref;   переход на другой язык
+    location.href = currentHref;   //переход на другой язык
    }
 return false;
 });

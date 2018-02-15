@@ -62,11 +62,11 @@ body:after{
   -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
 
- /* animation-name: movement;
+  animation-name: movement;
   animation-duration: 455s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-*/
+
 }
 
 @keyframes movement
