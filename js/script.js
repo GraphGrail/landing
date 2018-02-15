@@ -173,7 +173,7 @@ sliderHome.slick({
       var wasAnimate = false; 
       var wasAnimateM = false; 
       var wasUnlock = false;  
-      var offset = parseInt($('header').outerHeight() - $('header nav').outerHeight()  + 100);    
+      var offset = parseInt($('header').outerHeight() - $('header nav').outerHeight()  + 180);    
       var offsetM = parseInt($('.logo-large').outerHeight()) +40;   
 
       var place = function(){   
@@ -195,8 +195,8 @@ sliderHome.slick({
           if(wasAnimate == true){
             $('body').removeClass('fixedHeader');
 
-            $('.intro,section:not(.home),footer').animate({"top": "0"},500);
-            $('section.home').animate({"top": "-90px"},500);
+            $('.intro,section,footer').animate({"top": "0"},500);
+           // $('section.home').animate({"margin-top": "-90px","margin-bottom":"-90px"},500);
                wasAnimate = false;         
         }
       }
@@ -250,7 +250,7 @@ $(document).on("click",'.lang-menu a',function(){
       $(this).html(first);
     });
    var currentHref = $('.lang-menu li:first-child a').attr("href");
-    location.href = currentHref;   //переход на другой язык
+   // location.href = currentHref; //  переход на другой язык
    }
 return false;
 });
@@ -527,6 +527,123 @@ if($('.team').length){
   }
 }
 });
+
+/*
+Highcharts.chart('pie-container-1', {
+  colors: ['#1b215c', '#996666', '#e6e8f0', '#e30613', '#aaeeee',
+      '#ff0066', '#eeaaee', '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: ''
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: '1',
+            y: 56.33
+        }, {
+            name: '2',
+            y: 24.03,
+            sliced: true,
+            selected: true
+        }, {
+            name: '3',
+            y: 10.38
+        }, {
+            name: '4',
+            y: 4.77
+        }, {
+            name: '5',
+            y: 0.91
+        }, {
+            name: '6',
+            y: 0.2
+        }]
+    }]
+});
+
+Highcharts.chart('pie-container-2', {
+ colors: ['#1b215c', '#996666', '#e6e8f0', '#e30613', '#aaeeee',
+      '#ff0066', '#eeaaee', '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: ''
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'team',
+            y: 26.33
+        }, {
+            name: 'grail',
+            y: 44.03,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'token',
+            y: 20.38
+        }, {
+            name: 'bitcoin',
+            y: 4.77
+        }, {
+            name: 'world',
+            y: 0.91
+        }, {
+            name: 'Other',
+            y: 0.2
+        }]
+    }]
+});
+
+*/
+
+
+
+
 
 
 });
