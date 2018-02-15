@@ -41,19 +41,13 @@ body:after{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f1626', endColorstr='#060d31',GradientType=0 ); 
 }
 .noise{
- position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
+ position: relative;
   z-index: 1;
   background: url("../img/noise.png") repeat top left;
 }
 .lines{
- position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 2;
+ position: relative;
+  z-index: 6;
   background-image: url("../img/lines2.png");
    background-repeat: no-repeat;
   background-position: center top;
@@ -62,10 +56,10 @@ body:after{
   -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
 
-  animation-name: movement;
-  animation-duration: 455s;
+/*  animation-name: movement;
+  animation-duration: 855s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite;*/
 
 }
 
@@ -79,6 +73,70 @@ body:after{
   }
 }
 
+.dots1{
+ position: relative;
+  z-index: 3;
+  background-image: url("../img/1.png");
+   background-repeat: no-repeat;
+  background-position: center top;
+   background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+
+ /* animation-name: movementdots;
+  animation-duration: 1155s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;*/
+
+}
+
+.dots2{
+ position: relative;
+  z-index: 4;
+  background-image: url("../img/2.png");
+   background-repeat: no-repeat;
+  background-position: center top;
+   background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+
+  /*animation-name: movementdots;
+  animation-duration: 1555s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;*/
+
+}
+
+
+.dots3{
+ position: relative;
+  z-index: 5;
+  background-image: url("../img/3.png");
+   background-repeat: no-repeat;
+  background-position: center top;
+   background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+
+ /* animation-name: movementdots;
+  animation-duration: 855s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;*/
+  
+}
+
+@keyframes movementdots
+{
+  from {
+      background-position: 0 0;
+  }
+  to {
+      background-position: 0 -15000px;
+  }
+}
 
 .equal, .equal > div[class*='col-'] {
     display: -webkit-box;
@@ -203,19 +261,29 @@ z-index: 100;
   top: 0;
   z-index: 100;
  /* background-color: #060d31;*/
-  padding: 20px 0 0 0;
   /*height: auto;*/
   overflow: visible;
 
-  background-image: url("../img/nav.png");
+  
+  display: none;
+
+ 
+}
+header nav .back{
+background-image: url("../img/nav.png");
   background-repeat: no-repeat;
   background-position: center top;
-   background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  display: none;
+   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   max-width: 970px;
+   margin: auto;
+   height: 160px;
+  padding: 20px 0 0 0;
+
 }
+
 body.fixedHeader section, body.fixedHeader footer{top: 0 !important;}
 body.fixedHeader header nav{
   display: block;
@@ -265,20 +333,14 @@ header nav .left{
   float:left;
   width:50%;
   padding-right: 76px;
-  padding-left: 30px;
+  padding-left: 0;
 }
 header nav .right{
   float:left;
   width:50%;
   padding-left: 76px;
-  padding-right: 138px;
+  padding-right: 108px;
 }
-
-body.fixedHeader header nav ul{
-  max-width: 1000px;
-  margin: auto;
-}
-
 
 .intro .content.gray {
   margin-bottom: 34px;
@@ -419,7 +481,7 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
 }
 .intro .items .item{
   font-size: 18px;
-  padding-left: 25px;
+  padding: 0 15px 0 25px;
   line-height: 1.4;
   position: relative;
 }
@@ -643,13 +705,18 @@ right: 38px;
     padding: 60px 40px;
     margin: 30px 0 45px;
 }
+.points .item .icon img{
+  width: 60%;
+  height: auto;
+}
 .points .item .icon, .profits .item .icon{
   display: inline-block;
   width: 148px;
   height: 148px;
+  line-height: 142px;
   border-radius: 50%;
   border: 2px solid #ffffff;
-  background-color: #ff0313;
+  background-color: transparent;/*#ff0313*/;
    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
@@ -706,7 +773,9 @@ right: 38px;
     width: 100%;
     height: auto;
 }
-
+.platform .img{
+  margin: 50px 0;
+}
 .keyproblem .text, .platform .text{
   line-height: 1.4;
   padding-bottom: 50px;
@@ -2179,9 +2248,12 @@ box-shadow:
   right: 10px;
   margin-top: -70px;
    right: 10px;
-   z-index: 200;
+   z-index: 500;
 }
 
+.panel .btn.red{
+  margin-top: 20px;
+}
 /************** LANG MENU ***************/
 
 .top .lang-menu{
@@ -2195,7 +2267,7 @@ box-shadow:
 .lang-menu a{
   position: relative;
   z-index: 20;
-  text-align: right; 
+  text-align: left; 
   padding: 20px 0;
   color: #ffffff;
   cursor: pointer;
@@ -2231,7 +2303,7 @@ box-shadow:
   position: absolute;
   z-index: 420;
   min-width: 95px;
-  right: 30px;
+  right: 0;
   top: 0;
   margin-top: -15px;
 }

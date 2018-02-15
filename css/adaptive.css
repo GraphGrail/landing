@@ -330,6 +330,9 @@ span.size{ display: none; }
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
     }
+    .menu-open nav .back{
+      background-image: none;
+    }
     @keyframes showmenu{from{opacity:0;}to{opacity:1;}}
 
     .menu-open header nav a, .menu-open header nav a:visited{
