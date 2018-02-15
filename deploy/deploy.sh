@@ -42,11 +42,11 @@ popd
 
 echo "Copy data to the backend repo"
 echo "Copy repo files to new frontend repo"
-rsync -avi --delete ./css ../$BACKEND_NAME/
-rsync -avi --delete ./en ../$BACKEND_NAME/
-rsync -avi --delete ./img ../$BACKEND_NAME/
-rsync -avi --delete ./js ../$BACKEND_NAME/
-rsync -avi --delete ./ru ../$BACKEND_NAME/
+rsync -avi ./css ../$BACKEND_NAME/
+rsync -avi ./en ../$BACKEND_NAME/
+rsync -avi ./img ../$BACKEND_NAME/
+rsync -avi ./js ../$BACKEND_NAME/
+rsync -avi ./ru ../$BACKEND_NAME/
 rsync -avi ./favicon.ico ../$BACKEND_NAME/
 echo "Copying finished"
 
