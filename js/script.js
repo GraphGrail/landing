@@ -20,7 +20,14 @@ sliderHome.slick({
   variableWidth: false
 });
 
-
+$('.constructormokap .slider2').slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 1,
+  centerMode: true,
+  variableWidth: false
+});
 
   var date = $('#countdown').data("date");
   if(date){
