@@ -597,10 +597,14 @@ display: block;
 }
 .home .slider .item {
   position: relative;
+  outline: none;
 }
 .home .slider .item img{
   width: 100%;
   height: auto;
+}
+.home .slider2 .item{
+  outline: none;
 }
 .home .slider .item .text{
   text-align: center;
@@ -851,7 +855,7 @@ display: block;
 }
 .outascheme{
   margin: 0 auto;
-  padding: 40px;
+  padding: 30px;
   border-radius: 10px;
   display: block;
   width: 64%;
@@ -1303,6 +1307,10 @@ display: block;
 .dropdown.graal-menudropdown .dropdown-menu{
   width: 96%;
   left: 2%;
+}
+.graal-menudropdown label{
+  text-transform: uppercase;
+  margin-left: 5px;
 }
 .graal-menudropdown .caret{
   position: relative;
@@ -2474,6 +2482,7 @@ body.fixedHeader .intro{
 }
 .slider2 .slick-slide{
   margin: 0 40px;
+  outline: none;
 }
 .slider2 .slick-next{
   right: -7px;
