@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0" />
+        <title>GraphGrail Ai RU</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/icons.css" />
+        <link rel="stylesheet" href="css/font-awesome/css/fontawesome-all.min.css" />
+        <link rel="stylesheet" href="css/slick.css" />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/adaptive.css">
+        <link rel="icon" type="image/png" href="favicon.ico" />
+
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body>
+    <div class="noise">
+        <div class="lines">
+        <div id="stars-closest"></div><div id="stars-middle"></div><div id="stars-far"></div>
+
+            <header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+
+                            <h1 class="logo-large">
+                                <a href="index.html" title="GraphGrail Ai">
+                                    <img src="img/logo_large.png" width="97" height="127" alt="" />
+                                    <span class="ring ring1"><img src="img/ring1.png" width="209" height="208" alt="" /></span>
+                                    <span class="ring ring2"><img src="img/ring2.png" width="209" height="208" alt="" /></span>
+                                    <span class="ring ring3"><img src="img/ring3.png" width="187" height="227" alt="" /></span>
+                                </a>
+
+                            </h1>
+                            <div class="menu-mobile visible-xs visible-sm hidden-md hidden-lg">
+                                <a class="menu-toggle">
+                                            <span></span><span></span><span></span>
+                                </a>
+                                <a href="#" class="logo-nav"><img src="img/logo-nav.png" width="61" height="96" alt="" /></a>
+                                <a class="menu-close">
+                                  <i class="fas fa-times"></i>
+                                </a>
+
+                            </div>
+                            <div class="top">
+                                <div class="login"><a href="/profile">Войти</a></div>
+                                <div class="lang-menu">
+                                                <ul>
+                                                    <li><a href="https://ru/graphgrail.com" id="ru"><span><img src="img/rus.png" alt="" /> RUS</span></a></li>
+                                                    <li><a href="https://en/graphgrail.com/" id="en"><span><img src="img/en.png" alt="" /> ENG</span></a></li>
+                                                </ul>
+                                </div>
+                            </div>
+
+                            <div class="intro">
+                                <div class="content gray with-angle">
+                                    <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-8">
+                                        <h2>Объединяем искусственный интеллект и блокчейн</h2>
+                                        <div class="red-text">
+                                            GraphGrail Ai – первая в мире платформа Искусственного интеллекта для Блокчейна, построенная на базе технологий обработки естественного языка с маркетплейсом децентрализованных приложений.
+                                        </div>
+                                        <div class="items">
+                                            <div class="row equal">
+                                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                                                <div class="item">Децентрализованный IBM Watson, открытый для всего мира</div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                                                    <div class="item">Ethereum для data-science профессионалов</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-10">
+                                                <div class="btns">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <a target="_blank" href="whitepaper/ru/index.html" class="btn red"><i>Whitepaper</i></a>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <a href="mvp/dest/views/index.html" class="btn blue"><i>Попробовать MVP</i></a>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-4">
+                                                            <a href="https://t.me/GraphGrailAi" class="btn blue"><i>Чат</i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-2">
+                                                 <div class="share">
+                                                <a href="https://bitcointalk.org/index.php?topic=2016928"><i class="fab fa-btc"></i></a>
+                                                <a href="http://www.facebook.com/graphgrailcom"><i class="fab fa-facebook-f"></i></a>
+                                            </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="why">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                   <p>Почему GraphGrail уникален?</p>
+                                                    <a href="whitepaper/ru/index.html">Подробнее</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-4">
+                                            <!--div class="panel">
+                                                <div class="text"><b>PreICO завершено за 15 часов</b><br>EtherScan</div>
+                                                <div class="form">
+                                                <form data-toggle="validator">
+                                                <div class="form-group required" aria-required="true">
+                                                  <input type="email" placeholder="Email" value="" class="form-control input-sm" required>
+                                                </div>
+
+                                                <div class="form-group" aria-required="true">
+                                                  <button type="submit" class="btn blue"><i>Добавить в White list</i></button>
+                                                </div>
+
+                                                </form>
+                                                </div>
+                                                <div class="countdown">
+
+                                                    <div class="countdown-container" id="countdown" data-days="дней" data-hours="часов" data-minutes="минут" data-seconds="секунд" data-date="25.08.2018"></div>
+                                                    </div>
+                                                    <script type="text/template" id="countdown-template">
+                                                    <div class="time <%= label %>">
+                                                      <span class="count curr top"><%= curr %></span>
+                                                      <span class="count next top"><%= next %></span>
+                                                      <span class="count next bottom"><%= next %></span>
+                                                      <span class="count curr bottom"><%= curr %></span>
+                                                      <span class="label"><%= label.length < 8 ? label : label.substr(0, 3)  %></span>
+                                                    </div>
+                                                    </script>
+
+                                                    <div class="databar">
+                                                        <div class="bar">
+                                                        <span>$3 M</span><span>$300 M</span>
+                                                        </div>
+                                                        <label class="data left"><i class="fa fa-check"></i><b>Softcap</b> всего за 5 часов</label>
+                                                        <label class="data right"><i class="fa fa-check"></i><b>Hardcap</b></label>
+                                                    </div>
+                                            </div-->
+                                            <div class="panel">
+                                                <div class="text"><b>старт ICO</b><br>Инструкция для покупки</div>
+                                                <div class="blocks">
+                                                    <div>
+                                                        <!-- $51 656 963 -->0
+                                                        <b>Worth of GAI tokens*</b>
+                                                    </div>
+
+                                                    <div>
+                                                        0
+                                                        <b>BTC Raised</b>
+                                                    </div>
+                                                    <div>
+                                                      0
+                                                        <b>Purchasers</b>
+                                                    </div>
+                                                </div>
+                                                <a href="/profile" class="btn red"><i>Вложить токены</i></a>
+                                                    <script type="text/template" id="countdown-template">
+                                                    <div class="time <%= label %>">
+                                                      <span class="count curr top"><%= curr %></span>
+                                                      <span class="count next top"><%= next %></span>
+                                                      <span class="count next bottom"><%= next %></span>
+                                                      <span class="count curr bottom"><%= curr %></span>
+                                                      <span class="label"><%= label.length < 8 ? label : label.substr(0, 3)  %></span>
+                                                    </div>
+                                                    </script>
+
+                                                    <div class="databar">
+                                                        <div class="bar">
+                                                        <span>$2 M</span><span>$12 M</span>
+                                                        </div>
+                                                        <label class="data left"><i class="fa fa-check"></i><b>Softcap</b></label>
+                                                        <label class="data right"><i class="fa fa-check"></i><b>Hardcap</b></label>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav>
+                              <div class="back">
+                            <div class="container">
+                                <div class="left">
+                                    <a href="#about">О проекте</a>
+                                    <a href="#platform">Платформа</a>
+                                    <a href="#roadmap">Дорожная карта</a>
+                                </div>
+                                <a href="#" class="logo-nav"><img src="img/logo-nav.png" width="61" height="96" alt="" /></a>
+                                 <div class="right">
+                                    <a href="#team">Команда</a>
+                                    <a href="#news">Новости</a>
+                                    <a href="#cases">Кейсы</a>
+                                    <div class="lang-menu hidden-xs hidden-sm visible-md visible-lg">
+                                            <ul>
+                                                <li><a href="https://ru/graphgrail.com" id="ru"><span><img src="img/rus.png" alt="" /> RUS</span></a></li>
+                                                <li><a href="https://en/graphgrail.com" id="en"><span><img src="img/en.png" alt="" /> ENG</span></a></li>
+                                                <li><a href="https://es/graphgrail.com" id="es"><span><img src="img/rus.png" alt="" /> ESP</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="slider hidden-xs visible-sm visible-md visible-lg">
+                                <div class="item">
+                                <img src="img/headslide1.png" alt=""/>
+                                <div class="text">УНИВЕРСАЛЬНЫЙ КОНСТРУКТОР ДЛЯ СЛОЖНЫХ КЛАССИФИКАЦИЙ ПО СМЫСЛУ ТЕКСТА – AI-DESIGNER.</div>
+                                </div>
+                                <div class="item">
+                                <img src="img/headslide2.png" alt=""/>
+                                <div class="text"></div>
+                                </div>
+                                <div class="item">
+                                <img src="img/headslide3.png" alt=""/>
+                                <div class="text"></div>
+                                </div>
+                            </div>
+
+                            <div class="slider hidden-md hidden-lg hidden-sm visible-xs">
+                                <div class="item">
+                                <img src="img/slide-mobile.png" alt=""/>
+                                <div class="text">УНИВЕРСАЛЬНЫЙ КОНСТРУКТОР ДЛЯ СЛОЖНЫХ КЛАССИФИКАЦИЙ ПО СМЫСЛУ ТЕКСТА – AI-DESIGNER.</div>
+                                </div>
+                                <div class="item">
+                                <img src="img/slide-mobile.png" alt=""/>
+                                <div class="text">Следующий слайд</div>
+                                </div>
+                                <div class="item">
+                                <img src="img/slide-mobile.png" alt=""/>
+                                <div class="text">И ещё один слайд</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btns">
+                    <div class="row">
+                        <div class="hidden-xs col-sm-1"></div>
+                        <div class="col-xs-12 col-sm-10">
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4">
+                                     <a target="_blank" href="whitepaper/pdf/WP_eng.pdf" class="btn blue"><i>WHITEPAPER <label>ENG</label></i></a>
+                                </div>
+                                 <div class="col-xs-12 col-sm-4">
+                                     <a target="_blank" href="whitepaper/pdf/WP_eng.pdf" class="btn blue"><i>WHITEPAPER <label>RUS</label></i></a>
+                                </div>
+                                <div class="col-xs-12 col-sm-4">
+
+                                <div class="dropdown graal-menudropdown">
+                                  <button class="btn blue dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                   <i>Litepaper</i>
+                                    <span class="caret"></span>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a target="_blank" href="whitepaper/ru/index.html">LITEPAPER <label>ru</label></a></li>
+                                    <li><a target="_blank" href="whitepaper/de/index.html">LITEPAPER <label>de</label></a></li>
+                                    <li><a target="_blank" href="whitepaper/es/index.html">LITEPAPER <label>es</label></a></li>
+                                    <li><a target="_blank" href="whitepaper/ko/index.html">LITEPAPER <label>ko</label></a></li>
+                                    <li><a target="_blank" href="whitepaper/zh/index.html">LITEPAPER <label>zh</label></a></li>
+                                    <li><a target="_blank" href="whitepaper/en/index.html">LITEPAPER <label>en</label></a></li>
+                                  </ul>
+                                </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="hidden-xs col-sm-1"></div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content white">
+                           <h2>Что мы делаем?</h2>
+                           <div class="text">
+                                Мы строим экосистему искусственного интеллекта, позволяющую бизнесу реализовать стратегию внедрения постоянных инноваций, развиваться и выходить на новые рынки.
+                           </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="forwhom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content white">
+                           <h2>Для кого?</h2>
+                           <div class="row">
+                                <div class="col-xs-12 col-sm-6 text-right">
+                                     <a href="#" class="btn blue"><i>ДЛЯ AI СПЕЦИАЛИСТОВ</i></a>
+                                </div>
+                                 <div class="col-xs-12 col-sm-6 text-left">
+                                     <a href="#" class="btn blue"><i>ДЛЯ BLOCKCHAINE СПЕЦИАЛИСТОВ</i></a>
+                                </div>
+
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </section>
+
+
+             <section class="points">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content gray with-angle">
+                           <div class="row">
+                             <div class="col-xs-12 col-sm-6 col-md-4">
+                                 <div class="item">
+                                     <div class="icon"><img src="img/svg/1_.svg" /></div>
+                                     <h3>Маркетплейс<br>приложений</h3>
+                                     <div class="text">Зарабатывайте на платформе! Создавайте и продавайте свои лингвистические приложения - это выгодно и data-sciense специалистам, и бизнесу.</div>
+                                 </div>
+                             </div>
+                             <div class="col-xs-12 col-sm-6 col-md-4">
+                                 <div class="item">
+                                     <div class="icon"><img src="img/svg/2_.svg" /></div>
+                                     <h3>Искусственный<br>интеллект</h3>
+                                     <div class="text">На платформе GraphGrail AI можно создавать и обучать нейронные сети для различных задач, включая сложную классификацию, используя Google Tensorflow и другие инструменты.</div>
+                                 </div>
+                             </div>
+                             <div class="col-xs-12 col-sm-6 col-md-4">
+                                 <div class="item">
+                                     <div class="icon"><img src="img/svg/3_.svg" /></div>
+                                     <h3>Без<br>программирования</h3>
+                                     <div class="text">Разработка чатботов для бизнеса, аналитика продуктов и услуг в медиа, определение авторства по стилю текста, точное определение эмоций по высказываниям - и все это без программирования!</div>
+                                 </div>
+                             </div>
+                             <div class="col-xs-12 col-sm-6 col-md-4">
+                                 <div class="item">
+                                     <div class="icon"><img src="img/svg/4_.svg" /></div>
+                                     <h3>Разметка<br>данных</h3>
+                                     <div class="text">Пользователи со всего мира смогут размечать массивы текстовых данных на своем языке и помогать бизнесу — в той сфере, в которой они разбираются.</div>
+                                 </div>
+                             </div>
+                             <div class="col-xs-12 col-sm-6 col-md-4">
+                                 <div class="item">
+                                     <div class="icon"><img src="img/svg/5_.svg" /></div>
+                                     <h3>Умные<br>смарт-контракты</h3>
+                                     <div class="text">GraphGrail AI - это "мозг" для смарт-контрактов. Платформа поможет автоматизировать выполнение смарт-контрактов, благодаря кросс-блокчейн экосистеме, webAPI и внешних источников данных.</div>
+                                 </div>
+                             </div>
+                             <div class="col-xs-12 col-sm-6 col-md-4">
+                                 <div class="item">
+                                     <div class="icon"><img src="img/svg/6_.svg" /></div>
+                                     <h3>Лаборатория</h3>
+                                     <div class="text">RND LAB для новых и перспективных решений для разработчиков </div>
+                                 </div>
+                             </div>
+
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="keyproblem">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content white with-angle">
+                           <h2>Ключевая проблема</h2>
+                            <div class="text text-center">Тесла учится по камерам и GPS. В сфере анализа естественного языка данные могут быть обработаны только человеком.</div>
+                            <div class="img text-center">
+                                <img src="img/cars.png" width="861" height="450" alt="" />
+                            </div>
+                            <h3 class="text-center">Не хватает данных</h3>
+                            <div class="text text-center">
+                              Размеченных данных (датасетов) почти
+всегда не хватает (нужно от 1000 до миллиона экземпляров), для того,
+чтобы обучать нейронные сети во многих отраслях, включая банковскую,
+телеком, медиа и госструктуры. Даже если нейросети и фреймворки для глубокого обучения помогут ускорить процесс
+                    - каждый шаг нужно будет повторять снова, чтобы сохранять актуальность
+                    решения с учетом новых данных.
+                            </div>
+                            <div class="items">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="item">
+                                            <h3>Долго</h3>
+                                            <div class="text">
+                                               Полный цикл работ может занимать от 5 до 10 месяцев, включая разработку и тестирование. Все это время команда разработки нужно оплачивать.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="item">
+                                            <h3>Дорого</h3>
+                                            <div class="text">
+                                              Даже если такие датасеты есть, бизнесу все равно очень сложно и затратно
+  											по времени собирать, очищать их, делать тренировочные и тестовые наборы - даже для специалистов в области анализа данных с опытом.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="item">
+                                            <h3>Разрозненно</h3>
+                                            <div class="text">
+                                              Бизнесу приходится использовать разные сервисы и API для решения своих задач, а затем делать сложные интеграции сторонних сервисов со своими системами аналитики.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="platform">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content gray with-angle">
+                           <h2>Как работает платформа</h2>
+
+                            <div class="img text-center">
+                                <img src="img/svg/scheme.svg" width="680" height="240" alt="" />
+                            </div>
+                            <h3 class="text-center">Решение для анализа данных полного цикла</h3>
+                            <div class="text text-center">
+                                GraphGrail Ai предоставляет единое решение для анализа текстовых данных. Мы предлагаем все необходимые модули для подготовки и обработки данных: сбор и парсинг, очистка, разметка (тегирование) с помощью Ai-designer для построения языковой модели предметной области, тестиварование, машинное обучение и настройка нейронной сети под задачу. Готовое решение размещается в Децентрализованном Маркетплейсе и начинает зарабатывать деньги. Теперь не нужно использовать другие сервисы и делать сложные интеграции - все задачи решаются на платформе GraphGrail Ai.
+                            </div>
+                            <div class="items">
+                                <div class="row equal">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="item">
+                                            <h3>Как сейчас</h3>
+                                            <div class="text">
+                                               Высокие косты для бизнеса. Вы должны собирать, обрабатывать данные своими силами и платить высокие зарплаты.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="item">
+                                            <h3>С применением GraphGrail Ai</h3>
+                                            <div class="text">
+                                                Легкий в использовании даже для неспециалистов сервис. Снижает затраты бизнеса и позволяет идти в ногу со временем, постоянное внедренение инноваций.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </section>
+
+
+             <section class="fivesteps">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content">
+                           <h2>5 шагов создания приложения</h2>
+
+
+                           <div class="row">
+                                <div class="hidden-xs hidden-sm col-md-1"></div>
+                                <div class="col-xs-12 col-sm-12 col-md-10">
+                                   <div class="items">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                                <div class="item">
+                                                    <h3 class="text-center">Collecting data</h3>
+                                                    <div class="step step1"><span class="icon">Raw text data (posts)</span></div>
+                                                    <div class="text text-center">
+                                                      Сбор данных: Википедия, Социальные медиа, внутренние базы, Steemit, Golos.io laoreet.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                                <div class="item">
+                                                    <h3 class="text-center">Labeling</h3>
+                                                    <div class="step step2"><span class="icon">Structured data</span></div>
+                                                    <div class="text text-center">
+                                                      GraphGrail Ai-designer: легкий драг-н-дроп интерфейс для разметки данных
+                                                      GraphGrail Ai-designer: easy drag-n-drop interface for data labeling laoreet.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                                <div class="item">
+                                                   <h3 class="text-center">Neural network</h3>
+                                                    <div class="step step3"><span class="icon">Labeled dataset</span></div>
+                                                    <div class="text text-center">
+                                                      Тренировка и глубокое обучение: Python, Tensorflow, Theano, Keras, Sci-kit learn
+                                                      Training, Deep learning: Python, Tensorflow, Theano, Keras, Sci-kit learn laoreet.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                                <div class="item">
+                                                    <h3 class="text-center">integration</h3>
+                                                    <div class="step step4"><span class="icon">Trained datastore</span></div>
+                                                    <div class="step step5"><span class="icon">Custom solution</span></div>
+                                                    <div class="text text-center">
+                                                      Ваш бизнес здесь: публичный API, CSV, веб-интерфейс, чатбот laoreet.
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hidden-xs hidden-sm col-md-1"></div>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="constructormokap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content gray connector with-angle with-top-angle">
+                          <h3 class="text-center yourOwn">Создавайте свое языковое решение с любым потоком изначальных данных</h3>
+                          <div class="text text-center yourOwnDescription"> Ai-designer как конструктор: он помогает комбинировать несколько типовых NLP модулей платформы GraphGrail Ai в любом порядке для создания именно вашего решения. Без программирования!</div>
+                          <img class="outascheme" src="img/svg/scheme2.svg" alt="">
+                           <h2 class="jumper">Ai конструктор</h2>
+                           <div class="ipad">
+                              <img src="img/ipad.png" alt="">
+                           </div>
+                           <div class="slider2 hidden-xs visible-sm visible-md visible-lg">
+                               <div class="item">
+                               <img src="img/slidecon1.png" alt=""/>
+                               </div>
+                               <div class="item">
+                               <img src="img/slidecon2.png" alt=""/>
+                               </div>
+                           </div>
+                            <div class="text text-center">
+                              <p>Ai-designer как конструктор: он помогает комбинировать несколько типовых NLP модулей платформы GraphGrail Ai в любом порядке для создания именно вашего решения. Без программирования!</p>
+                              <ul>
+                                <li>Разные уровни смыслового анализа текста: от морфологического анализа, синтаксического и до высокоуровневого прагматического анализа</li>
+                                <li>Гибкая настройка логики и воркфлоу (workflow) - потоков текстовых данных и очередности применения алгоритмов</li>
+                                <li>Возможность создания Агентов - независимых приложений из компонентов, взаимодействующих друг с другом и для решения сложных задач искусственного интеллекта</li>
+                                <li>Настройка пайплайнов при применении алгоритмов и параллельного применения обученных нейронных сетей (RNN, LSTM)</li>
+                              </ul>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="interface">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content white with-angle">
+                           <h2>Интерфейс разметки данных</h2>
+                           <h3 class="text-center">
+                           ПОШАГОВЫЙ ИНТЕРФЕЙС (ПРИМЕНЯЕТСЯ КОГДА СЛОЖНАЯ КАТЕГОРИЗАЦИЯ) <br>
+                           ОДИН ВОПРОС ЗА РАЗ?
+                           </h3>
+                            <div class="quiz text-center">
+                                Есть халат для медсестры с защитой от жидкости, недорогой?<br>
+                                ВОЗРАЖЕНИЯ?
+                            </div>
+                            <div class="btns text-center">
+                                <a href="#" class="yes">Да</a>
+                                <a href="#" class="no">Нет</a>
+                            </div>
+                            <div class="lists">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<div class="btn-group bootstrap-select graal-dropdown">
+					<div class="dropdown-menu open" style="max-height: 141.983px; overflow: hidden; min-height: 0px;">
+						<ul class="dropdown-menu inner" role="menu" style="max-height: 129.983px; overflow-y: auto; min-height: 0px;">
+							<li data-original-index="1">
+								<a class="" data-tokens="null" style="" tabindex="0"><span class="text">раз</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+							</li>
+							<li data-original-index="2">
+								<a class="" data-tokens="null" style="" tabindex="0"><span class="text">два</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+							</li>
+							<li data-original-index="3">
+								<a class="" data-tokens="null" style="" tabindex="0"><span class="text">три</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+							</li>
+						</ul>
+					</div><select class="selectpicker graal-dropdown" tabindex="-98" title="Продукт">
+						<option class="bs-title-option" selected="selected" value="">
+							Продукт
+						</option>
+						<option>
+							Одежда
+						</option>
+						<option>
+							Обувь
+						</option>
+						<option>
+							Инструменты
+						</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				<div class="btn-group bootstrap-select graal-dropdown">
+					<div class="dropdown-menu open" style="max-height: 141.983px; overflow: hidden; min-height: 0px;">
+						<ul class="dropdown-menu inner" role="menu" style="max-height: 129.983px; overflow-y: auto; min-height: 0px;">
+							<li data-original-index="1">
+								<a class="" data-tokens="null" style="" tabindex="0"><span class="text">раз</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+							</li>
+							<li data-original-index="2">
+								<a class="" data-tokens="null" style="" tabindex="0"><span class="text">два</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+							</li>
+							<li data-original-index="3">
+								<a class="" data-tokens="null" style="" tabindex="0"><span class="text">три</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+							</li>
+						</ul>
+					</div><select class="selectpicker graal-dropdown" tabindex="-98" title="Клиент">
+						<option class="bs-title-option" selected="selected" value="">
+							Клиент
+						</option>
+						<option>
+							Медсестра
+						</option>
+						<option>
+							Хирург
+						</option>
+						<option>
+							Офтальмолог
+						</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				<div class="btn-group bootstrap-select graal-dropdown dropup">
+					<div class="dropdown-menu open" style="max-height: 8313.02px; overflow: hidden; min-height: 0px;">
+						<ul class="dropdown-menu inner" role="menu" style="max-height: 8301.02px; overflow-y: auto; min-height: 0px;">
+							<li data-original-index="1">
+								<a class="" data-tokens="null" style="" tabindex="0"><span class="text">раз</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+							</li>
+							<li data-original-index="2">
+								<a class="" data-tokens="null" style="" tabindex="0"><span class="text">два</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+							</li>
+							<li data-original-index="3">
+								<a class="" data-tokens="null" style="" tabindex="0"><span class="text">три</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+							</li>
+						</ul>
+					</div><select class="selectpicker graal-dropdown" tabindex="-98" title="Цена">
+						<option class="bs-title-option" selected="selected" value="">
+							Цена
+						</option>
+						<option>
+							Премиум
+						</option>
+						<option>
+							Средний
+						</option>
+						<option>
+							Бюджетный
+						</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="profits">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content">
+                           <h2>Преимущества</h2>
+
+                            <div class="row equal">
+                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                   <div class="item">
+                                       <div class="icon">
+                                       <img src="img/svg/icon1.svg" alt=""></div>
+                                       <h3>ЛЮБОЕ количество КАТЕГОРИЙ</h3>
+                                       <div class="text">
+                                         Работайте с категориями гибко с возможностью вложенности категорий - списками или деревьями онтологий в зависимости от сложности и детализации объектов вашего бизнеса
+                                       </div>
+                                   </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                   <div class="item">
+                                     <div class="icon">
+                                     <img src="img/svg/icon2.svg" alt=""></div>
+                                       <h3>ЛЮБАЯ СЛОЖНОСТЬ</h3>
+                                       <div class="text">
+                                         Благодаря нашим наборам предобученных моделей система способна парсить и подготовливать данные из внутренних баз бизнес-клиентов, сокращая ручную работу
+                                       </div>
+                                   </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                   <div class="item">
+                                     <div class="icon">
+                                     <img src="img/svg/icon3.svg" alt=""></div>
+                                       <h3>ОНТОЛОГИИ и ОТНОШЕНИЯ</h3>
+                                       <div class="text">
+                                         В системе предустановлены лексико-семантические признаки: синонимы, антонимы, отношения категория - подкатегория, часть - целое.
+ Теперь легко работать со сложными смысловыми категориями
+                                       </div>
+                                   </div>
+                               </div>
+
+                            </div>
+
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cases">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content gray with-top-angle">
+                           <h2>Кейсы</h2>
+
+                           <div class="item">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                           <div class="img"><img src="img/case1.jpg" alt="" /></div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                       <div class="text" style="top: 0px; opacity: 1;">Мониторинг (social media) Аналитика и поиск проблем с продуктами и услугами бизнеса, мониторинг публикаций конкурентов о криптовалютах, анализ медийного поля в политике, стриминг новостей Технологии: Aspect sentiment, Named Entity Recognition, Busines-specific ontology, Multi-class classification, CNN
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item hidden-xs">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                       <div class="text" style="top: 0px; opacity: 1;">
+                                         Умный чат (e-commerce)
+Понимает потребности покупателя, проведение по всем этапам продажи, понимание возражений клиента, повышение конверсии в продажи
+Технологии: Natural Language Understanding, Syntax similarity, Multi-class classification, RNN, LSTM, Neural Turing Machines
+                                        </div>
+                                    </div>
+                                     <div class="col-xs-12 col-sm-6">
+                                           <div class="img"><img src="img/case2.jpg" alt="" /></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item hidden-sm hidden-md hidden-lg">
+                                <div class="row">
+                                     <div class="col-xs-12 col-sm-6">
+                                           <div class="img"><img src="img/mysmartchat.jpg" alt="" /></div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                       <div class="text">
+                                            Лидер блокчейн-проекта
+GraphGrail Ai принял участие в конференции и экспертной панели WeAre
+Ecosystem 14 декабря в Москве.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                           <div class="img"><img src="img/case3.jpg" alt="" /></div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                       <div class="text">
+                                         Контракты ((Ethereum, EOS, Bitshares)) через Оракулы могут взаимодействовать с вне-блокчейновым миром.
+Это порождает очевидные проблемы доверия. Как доказать, что условия смарт-контракта выполнились в реальном мире. Смарт-контракт легко может проверить сумму на банковском аккаунте, но условия в реальном мире, такие как смена погоды,
+покупка-продажа компаний, политические или юридические решения, детали договоров и форс-мажор проверить намного более сложно. GraphGrail AI решает эти задачи.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="economic">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content white with-angle">
+                           <h2>Экономика токенов</h2>
+                           <h3 class="text-center">Схема распределения токенов и затрат проект</h3>
+                                <!--div class="img text-center">
+                                <img src="img/economic.png" width="1143" height="488" alt="" />
+                                </div-->
+                                <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6">
+                                    <div class="img text-center">
+                                        <img src="img/economic.png" width="555" height="488" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6">
+                                    <div class="img text-center">
+                                        <img src="img/economic.png" width="488" height="488" alt="" />
+                                    </div>
+                                </div>
+                                </div>
+                            <h3 class="text-center">Роль токена</h3>
+                            <div class="text text-center">
+                                <p>Токен GraphGrail Ai (GAI) является
+utility token и выполняет роль внутренней валюты в системе. За токен
+бизнес - заказчик конечного продукта NLP получает доступ в систему и
+возможность быстро заказать и получить решение - программную разработку
+приложения и разметку данных для него.
+                                </p>
+                                <p>
+                                  Токены выплачивают разметчикам данных за
+   их работу. Токены также выплачиваются тестировщикам и голосующим за
+  модели - делегатам, следящим за их качеством и комьюнити. Баланс спроса и
+   предложения токенов на платформе достигается за счет гибкого
+  ценообразования - выплаты участинкам платформы тем больше, чем сложнее
+  работа по разметке данных.
+                                </p>
+
+                            </div>
+
+                            <h3 class="text-center">Преимущества держателей токенов</h3>
+                            <div class="text text-center">
+                                <p>Токен растет в цене потому, что экосистема растет и развивается - больше клиентов, больше людей на разметке данных.
+                                </p>
+                                <p>
+                                  Полезность экосистемы обеспечивается за счет баланса спроса и предложения услуг и заказов от бизнес-клиентов - больше клиентов, больше людей на разметке данных, больших охват сегментов для каждого из которых требуются кастомные языковые модели.
+  Для доступа на платформу представителю бизнеса необходимо купить на бирже от 5000 до 10000 токенов. Таким образом, из свободного оборота изымается ликвидность. Эти токены бизнес сможет потратить на покупку внутренних услуг платформы: сбор, очистку, разметку данных, кастомные настройки для обучения нейросети и т.п. Чем больше участников в системе и чем больше заказов размещается в маркетплейсе приложений, тем большую пользу бизнесу приносит платформа,
+   обеспечивая долгосрочный фундамент благодаря накоплению ценных данных и моделей для всех сторон-участников: разметчиков данных, бизнеса и продавцов моделей на маркетплейсе.
+                                </p>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="roadmap" style="top: 0px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content gray with-angle">
+                           <h2>Дорожная карта</h2>
+                           <div class="items">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6">
+                                   <div class="item text-right">
+                                        <h3>2014</h3>
+                                        <div class="text">Июль - Создание компании<br>
+Первые продажи аналитических решений по анализу языка бизнес-клиентам<br>
+Разработан сервис по поиску - в основе продукта лежала собственная разработка. Сервис успешно продан
+</div>
+                                   </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                   <div class="item">
+                                        <h3>2015</h3>
+                                        <div class="text">Инкубация в Южном ИТ-парке<br>Получение первых инвестиций
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                   <div class="item text-right">
+                                        <h3>2016</h3>
+                                        <div class="text">
+Продажи бизнес-клиентам аналитических исследований: маркетинговому агентству, LinguaLeo<br>
+GraphGrailAi - одна из трех компаний в РФ с сервисом поиска и тонкого смыслового анализа высказываний в Интернет
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                   <div class="item">
+                                        <h3>октябрь 2017</h3>
+                                        <div class="text">
+                                            Проведение Presale GraphGrail Ai.<br>
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                   <div class="item text-right">
+                                        <h3>Февраль, 2018</h3>
+                                        <div class="text">
+Релиз use-case на платформе GraphGrailAi - системы мониторинга с возможностью гибкой настройки категоризации текстов с помощью языковых моделей<br>
+
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                   <div class="item">
+                                        <h3>Март - Май, 2018</h3>
+                                        <div class="text">
+Релиз use-case на платформе GraphGrailAi - Умного чата для автоматизации продаж<br>
+Релиз компонента Разметки данных с возможностью заказа сторонними бизнес-клиентами
+
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                   <div class="item text-right">
+                                        <h3>Июнь - Июль, 2018</h3>
+                                        <div class="text">
+Полномасштабный запуск платформы, конструктора лингвистических моделей и нейросетей с доступом через программные интерфейсы (API),<br>
+Тестирование и подключение 2го языка для платформы - английского
+
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                   <div class="item">
+                                        <h3>Август - Октябрь, 2018</h3>
+                                        <div class="text">
+Релиз компонента Маркетплейса языковых моделей с возможностью монетизации и оплаты за запросы АПИ<br>
+Внедрение готовых к использованию наборов семантических категорий (категория-подкатегория, таксономия, часть-целое)<br>
+Внедрение блокчейна для контроля качества разметки данных (proof-of-quality-work)
+
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                   <div class="item text-right">
+                                        <h3>Первый квартал, 2019</h3>
+                                        <div class="text">
+Создание Лаборатории перспективных решений глубокого машинного обучения и Искусственного интеллекта будущего на базе моделей платформы (RnD Laboratory with deep learning)
+<br>
+
+                                        </div>
+                                   </div>
+                                </div>
+
+                            </div>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="news">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content white">
+                           <h2>Новости проекта</h2>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                   <div class="item">
+                                       <div class="img"><img src="img/news1.jpg" alt="" /></div>
+                                       <div class="date">20.12.2017</div>
+                                       <h3>Конференция WeAre Ecosystem</h3>
+                                       <div class="text">
+                                        Лидер блокчейн-проекта GraphGrail Ai принял участие в конференции и экспертной панели WeAre Ecosystem 14 декабря в Москве.
+                                       </div>
+                                   </div>
+                               </div>
+
+                               <div class="col-xs-12 col-sm-12 col-md-4">
+                                   <div class="item">
+                                       <div class="img"><img src="img/news2.jpg" alt="" /></div>
+                                       <div class="date">20.12.2017</div>
+                                       <h3>Перенос краудсейла</h3>
+                                       <div class="text">
+                                            Команда блокчейн-стартапа GraphGrailAi объявила о переносе старта краудсейла проекта на 15 февраля.
+                                       </div>
+                                   </div>
+                               </div>
+
+                               <div class="col-xs-12 col-sm-12 col-md-4">
+                                   <div class="item">
+                                       <div class="img"><img src="img/news3.jpg" alt="" /></div>
+                                       <div class="date">20.12.2017</div>
+                                       <h3>Выступление на митапе</h3>
+                                       <div class="text">
+                                        Выступление GraphGrailAi на втором митапе Rostov Blockchain Meetup 2.0 | META с рассказом об опыте пресейла без затрат на рекламу.
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="presscentre" style="top: 0px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content white with-angle">
+                           <h2>СМИ о нас</h2>
+
+                           <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                   <div class="item" style="top: 0px; opacity: 1;">
+                                       <div class="img"><img src="img/presscentre1.jpg" alt=""></div>
+                                       <h3>Криптовалюты.рф</h3>
+                                       <div class="text">
+                                       Опыт блокчейн-проекта GraphGrail Ai: как собрать 200000 долларов за 15 часов?
+                                       </div>
+                                   </div>
+                               </div>
+
+                               <div class="col-xs-12 col-sm-12 col-md-4">
+                                   <div class="item" style="top: 0px; opacity: 1;">
+                                       <div class="img"><img src="img/presscentre2.jpg" alt=""></div>
+                                       <h3>Firrma.ru</h3>
+                                       <div class="text">
+                                       GraphGrail Ai объявил о привлечении более $200 тысяч за две недели pre-ICO Golos.io
+                                       </div>
+                                   </div>
+                               </div>
+
+                               <div class="col-xs-12 col-sm-12 col-md-4">
+                                   <div class="item" style="top: 0px; opacity: 1;">
+                                       <div class="img"><img src="img/presscentre3.jpg" alt=""></div>
+                                       <h3>Golos.io</h3>
+                                       <div class="text">
+                                       Официальный блог платформы ИИ GraphGrail Ai на блокчейн-медиа платформе Голос.
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="team" style="top: 0px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="content gray with-angle">
+                           <h2>Команда</h2>
+                           <div class="text text-center descript">
+                                Наша команда состоит из достаточно
+опытных специалистов из различных областей и полностью закрывает
+необходимые компетенции. <br>
+                                В команде люди с опытом более 6 лет в
+науке о данных (data-science) и обработке естественного языка. <br>
+                                Мы успешно завершили несколько проектов
+для бизнеса и государства. Большая часть команды имеет солидный опыт в
+выполнении научных и университетских проектов, а также продажах и маркетинге
+                           </div>
+
+                           <div class="row teamWrapper">
+                               <div class="col-xs-12 col-sm-6 col-md-3">
+                                   <div class="item" style="top: 0px; opacity: 1;">
+                                       <div class="img" style="background-image: url('img/victor.png')"></div>
+                                       <h3 class="text-center">Виктор Носко</h3>
+                                       <div class="text text-center">
+                                         <p><span>CEO и основатель, ИИ, Data-science.</span><br>
+                                           Python разработчик, Django фреймворк. Data-science специалист, NLP стэк:
+                                           NLTK + Celery + Pymorphy2 + GLRparser и т.д. Виктор имеет более 6 лет опыта разработки и deep learning
+                                           Опытен в Google TensorFlow</p>
+                                       </div>
+                                   </div>
+                               </div>
+
+                               <div class="col-xs-12 col-sm-6 col-md-3">
+                                  <div class="item" style="top: 0px; opacity: 1;">
+                                       <div class="img" style="background-image: url('img/alexander.png')"></div>
+                                       <h3 class="text-center">Александр Бородич</h3>
+                                       <div class="text text-center">
+                                         <p><span>Венчурный инвестор, CMO.</span><br>
+                                           Футуролог, angel investor, серийный предприниматель, основатель
+                                           VentureClub, MyWishBoard, MyDreamBoard, и SuperFolder. Chief Dreams
+                                           Officer and partner in Future Action, founder of crowd-investing
+                                           platform VentureClub.ru. Alexander has solid business experience</p>
+                                       </div>
+                                   </div>
+                               </div>
+
+                               <div class="col-xs-12 col-sm-6 col-md-3">
+                                   <div class="item" style="top: 0px; opacity: 1;">
+                                       <div class="img" style="background-image: url('img/antonS.png')"></div>
+                                       <h3 class="text-center">Антон Сметанин</h3>
+                                       <div class="text text-center">
+                                       <span>Fullstack веб-разработчик.</span> <br>
+                                       Отвечает за backend разработку. <br>
+                                       Опыт работы в данной сфере - более 7 лет. Основные языки и фреймворки, которые использую: PHP (Yii), Python (Django), Javascript.
+                                       </div>
+                                   </div>
+                               </div>
+
+                               <div class="col-xs-12 col-sm-6 col-md-3">
+                                   <div class="item" style="top: 0px; opacity: 1;">
+                                       <div class="img" style="background-image: url('img/alexanderG.png')"></div>
+                                       <h3 class="text-center">Александр Гусарин</h3>
+                                       <div class="text text-center">
+                                       <span>Разработчик Python & Data Science. </span><br>
+                                       Отвечает за разработку программ в сфере машинного обучения, программирование на языке Python.
+                                        Имеет два высших образования: <br>
+                                        специалитет "Компьютерная безопасность" (ДГТУ) (красный диплом) <br>
+                                        магистратура "Программная инженерия" (ДГТУ)
+                                       </div>
+                                   </div>
+                               </div>
+
+                               <div class="col-xs-12 col-sm-6 col-md-3">
+                                   <div class="item" style="top: 0px; opacity: 1;">
+                                       <div class="img" style="background-image: url('img/zakhar.png')"></div>
+                                       <h3 class="text-center">Захар понимаш</h3>
+                                       <div class="text text-center">
+                                        <span>Консультант по нейросетям. </span><br>
+                                        Занимается нейронными сетями и сильным ИИ. <br>
+                                        Разработчик игр, на базе фреймворка XNA, TCP/ip чат, чат ботов, систем понимания текста. <br>
+                                        2 раза занимал первое место на университетской конференции по экономике, 2 раза по радиотехнике. Один раз получил 1-е место на хакатоне в IT парке.
+                                        Участвовал в акселерационной программе IT парка с проектом "распознавание образов".
+                                        Хорошие знания C#.
+                                       </div>
+                                   </div>
+                               </div>
+
+                               <div class="col-xs-12 col-sm-6 col-md-3">
+                                   <div class="item" style="top: 0px; opacity: 1;">
+                                       <div class="img" style="background-image: url('img/mariya.png')"></div>
+                                       <h3 class="text-center">Мария Тарасова</h3>
+                                       <div class="text text-center">
+                                         <span>Журналист </span><br>
+                                       Кандидат философских наук, специализируется в области имитационного моделирования,
+                                       data mining и статистического анализа данных. Награждена стипендией
+                                       Президента Российской Федерации и Правительства Российской Федерации за
+                                       высокий вклад в науку, автор более 60 научно-исследовательских работ по
+                                       моделированию социальных процессов, активный участник 5 грантов Российского
+                                       Фонда Фундаментальных Исследований, участник более 10 всероссийских и международных конференций
+                                       </div>
+                                   </div>
+                               </div>
+
+                               <div class="col-xs-12 col-sm-6 col-md-3">
+                                   <div class="item" style="top: 0px; opacity: 1;">
+                                       <div class="img" style="background-image: url('img/marina.png')"></div>
+                                       <h3 class="text-center">Марина Паринова</h3>
+                                       <div class="text text-center">
+                                       <span>HR manager</span> <br>
+                                       Отвечает за IT рекрутмент, адаптацию новых сотрудников, уютную и приятную атмосферу в офисе.
+                                       Команда активно растет и пополняется крутыми специалистами.
+                                       Присоединяйтесь к нам! Отправьте CV на <a href="mailto:m.parinova@graphgrail.com">m.parinova@graphgrail.com</a> , и мы с удовольствием организуем интервью к нам в компанию.
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="col-xs-12 col-sm-6 col-md-3">
+                                   <div class="item" style="top: 0px; opacity: 1;">
+                                       <div class="img" style="background-image: url('img/nikita.png')"></div>
+                                       <h3 class="text-center">Никита Буевич</h3>
+                                       <div class="text text-center">
+                                       <span>Frontend Developer </span><br>
+                                       Отвечает за создание умных, красивых и удобных пользовательских интерфейсов, которые помогут решить ваши задачи с максимальной эффективностью и удовольствием. Любит это делать.
+                                       </div>
+                                   </div>
+                               </div>
+
+                           </div>
+
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="economic" style="top: 0px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                <div class="content white with-angle">
+                                   <h2>Частые вопросы (FAQ)</h2>
+                                        <!--div class="img text-center">
+                                        <img src="img/economic.png" width="1143" height="488" alt="" />
+                                        </div-->
+
+                                    <h3 class="text-center">Роль токена</h3>
+                                    <div class="text text-center">
+                                        <p>Общий искусственный интеллект (AGI) – это система с когнитивными способностями человека,
+        								которая может выполнять широкий круг задач и применять эти знания для решения незнакомой проблемы без подготовки.<br><br>
+
+        								Иску́сственная нейро́нная се́ть (ИНС) — математическая модель, а также её программное или аппаратное воплощение, построенная по принципу организации
+         и функционирования биологических нейронных сетей — сетей нервных клеток живого организма. <br><br>
+
+         Компью́терная лингви́стика (также: математи́ческая или вычисли́тельная лингви́стика, англ. computational linguistics)
+         — научное направление в области математического и компьютерного моделирования интеллектуальных процессов
+         у человека и животных при создании систем искусственного интеллекта, которое ставит своей целью использование математических моделей для описания естественных языков.
+        <br><br>
+         Компьютерная лингвистика частично пересекается с обработкой естественных языков. Однако в последней акцент делается не на абстрактные модели, а на прикладные методы описания и обработки языка для компьютерных систем.
+        Полем деятельности компьютерных лингвистов является разработка алгоритмов и прикладных программ для обработки языковой информации.
+        <br><br>
+        (Лингвистическая) разметка (англ. tagging, annotation) – это процесс или результат приписывания текстам и их компонентам специальных меток.
+        Лингвистическая разметка – одно из основных понятий корпусной лингвистики. Разметка даёт возможность идентифицировать тексты по различным параметрам,
+         позволяя осуществлять осмысленный поиск по корпусу.
+        Собственно лингвистическая разметка делится на:
+        морфологическую (выделение аффиксов, сложных слов и т.п.),
+        лемматизацию (указание для каждой словоформы из текста ее исходной формы) и т.п.
+
+                                        </p>
+
+
+                                    </div>
+
+
+                                </div>
+                               </div>
+                            </div>
+                        </div>
+                    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="content">
+
+                        <div class="row">
+                           <div class="col-xs-12">
+                                <h2>Присоединяйтесь</h2>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-8">
+                                    <div class="row">
+                                        <div class=" col-xxs-12 col-xs-6 col-sm-4 col-md-4">
+                                            <div class="footer-nav">
+                                                <div><a href="https://steemit.com/@gromozeka">Steemit (EN)</a></div>
+                                                <div><a href="https://golos.io/@bitcoinking">Golos.io (RU)</a></div>
+                                                <div><a href="https://t.me/joinchat/DAbHbQrAb5KHNtmMYfVsKA">Telegram ENG</a></div>
+                                                <div><a href="https://t.me/GraphGrailAi">Telegram RUS</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-4">
+                                            <div class="footer-nav">
+                                                <div><a href="https://bitcointalk.org/index.php?topic=2040117">BitcoinTalk (англ)</a></div>
+                                                <div><a href="https://bitcointalk.org/index.php?topic=2016928">BitcoinTalk (рус)</a></div>
+                                                <div><a href="https://bitcointalk.org/index.php?topic=2173307.0">BitcoinTalk Bounty (англ)</a></div>
+                                                <div><a href="https://bitcointalk.org/index.php?topic=2091282">BitcoinTalk Баунти (рус)</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-4">
+                                            <div class="footer-nav">
+                                                <div><a href="#">Slack</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                         <div class="social">
+                                            <a href="http://www.facebook.com/graphgrailcom" class="fb"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="http://twitter.com/GraphGrail" class="tw"><i class="fab fa-twitter"></i></a>
+                                            <a href="http://spark.ru/startup/5265b5450fcfc" class="vk"><i class="fab fa-vk"></i></a>
+                                            <a href="https://vk.com/graphgrail" class="gp"><i class="fab fa-google-plus-g"></i></a>
+                                            <a href="https://plus.google.com/u/0/b/108596133658749594638/108596133658749594638" class="rss"><i class="fas fa-rss"></i></a>
+                                            <a href="#" class="vimeo"><i class="fab fa-rss-v"></i></a>
+                                        </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                             <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+                             <div class="feedback text-center">
+                             <a href="https://t.me/joinchat/DAbHbQrAb5KHNtmMYfVsKA" class="btn red"><i>Обратная связь</i></a>
+                             </div>
+                             </div>
+                             <div class="col-xs-12">
+                             <div class="copyright text-center">
+                                        Все права защищены. Графовый Грааль, 2014-2017. Основан в 2014 году &copy; GraphGrail Ai.
+                                    </div>
+                              </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    </div>
+</div>
+<span class="size xxs"></span><span class="size xs"></span><span class="size sm"></span>
+
+     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="js/validator.min.js"></script>
+     <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+     <script type="text/javascript" src="js/slick.min.js"></script>
+     <script type='text/javascript' src="js/lodash.min.js"></script>
+     <script type='text/javascript' src="js/jquery.countdown.min.js"></script>
+     <script type='text/javascript' src="js/jquery.easing.1.3.js"></script>
+     <script type='text/javascript' src="js/jquery.scrollTo.min.js"></script>
+     <script type="text/javascript" src="js/script.js"></script>
+     <script type="text/javascript" src="js/adaptive.js"></script>
+    </body>
+</html>
