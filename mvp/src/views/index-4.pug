@@ -1,0 +1,32 @@
+extends ./inc/_layout
+block title
+    | Конструктор
+    - menuItem = 4
+block content
+    .col-md-12
+        .row.ui-sortable#m_sortable
+            .col-md-6
+                .m-portlet.m-portlet--tab
+                    .m-portlet__body
+                        h3.m--padding-bottom-15 Предобработка
+                        .m-widget2
+                            +component("Stopwords remover", "Подробное описание компонента - 1", 1)
+                            +component("Personal data cleaner", "Подробное описание компонента - 2", 2)
+                            +component("HTML cleaner", "Подробное описание компонента - 3", 3)
+                        h3.m--padding-bottom-15 Группа компонентов
+                        .m-widget2
+                            +component("Tokenization", "Подробное описание компонента - 4", 4)
+                            +component("Morphology analysis", "Подробное описание компонента - 5", 5)
+                            +component("Dependency parsing", "Подробное описание компонента - 6", 6)
+                            +component("POS tagging", "Подробное описание компонента - 7", 7)
+                            +component("Ontology tree (special)", "Подробное описание компонента - 8", 8)
+
+            .col-md-6.m-used-components
+                .m-portlet.m-portlet--tab
+                    .m-portlet__body
+                        .m-widget2
+                            +component("Tokenization", "Подробное описание компонента - 100", 100)
+    .m--padding-15.m-width-100.m--padding-30
+        a.btn.btn-info.pull-right(href="index-4.html")
+            | Далее
+        .clearfix

@@ -1,0 +1,91 @@
+extends ./inc/_layout
+block title
+    | Настройка разметки
+    - menuItem = 2
+block content
+    - var texts = ["Есть халат для медсестры с защитой от жидкости, недорогой?", "Есть халат для доктора хауса, средней цены?"]
+    .col-md-4
+        .m-portlet.m--bg-accent.m-portlet--bordered-semi.m-portlet--skin-dark.m-portlet--full-height
+            .m-portlet__head
+                .m-portlet__head-caption
+                    h3.m-portlet__head-text Через Telegram BOT
+            .m-portlet__body.m-text-center
+                div.m--padding-bottom-30
+                    i.fa.fa-telegram(style="font-size: 7em")
+                button.m-btn.m-btn--pill.btn.btn-lg.btn-danger Начать
+    .col-md-4
+        .m-portlet.m--bg-danger.m-portlet--bordered-semi.m-portlet--skin-dark.m-portlet--full-height
+            .m-portlet__head
+                .m-portlet__head-caption
+                    h3.m-portlet__head-text Через Веб-Интерфейс
+            .m-portlet__body.m-text-center
+                div.m--padding-bottom-30
+                    i.fa.fa-desktop(style="font-size: 7em")
+                button#demo-markup-btn.m-btn.m-btn--pill.btn.btn-lg.btn-accent Начать
+    .col-md-4
+        .m-portlet.m-portlet--bordered-semi.m-portlet--full-height
+            .m-portlet__head
+                .m-portlet__head-caption
+                    h3.m-portlet__head-text Заказать разметку у нас
+            .m-portlet__body
+                form
+                    .m--margin-top-10.form-group.m-form__group.row
+                        .col-md-5
+                            label.m-lh-37
+                                | Цена
+                        .col-md-7
+                            input.form-control.m-input(type='text')
+
+                    .form-group.m-form__group.row
+                        .col-md-5
+                            label.m-lh-37
+                                | Кол-во меток
+                        .col-md-7
+                            input.form-control.m-input(type='text')
+
+                    .form-group.m-form__group
+                        button.btn.btn-primary.pull-right.btn-lg
+                            | Начать
+                        .clearfix
+
+    .col-md-12#demo-markup.m--hide
+        .m-portlet.m-portlet--tab
+            .m-portlet__head
+                .m-portlet__head-caption
+                    .m-portlet__head-title
+                        h3.m-portlet__head-text
+                            | Задать категории
+            .m-portlet__body
+                .alert.m-alert--default.m-text-center.m--margin-bottom-20
+                    #gallery.carousel.slide(data-ride="carousel" data-interval="0")
+                        div.carousel-inner(role="listbox")
+                            each text, i in texts
+                                if (i === 0)
+                                    div.carousel-item.active
+                                        .lead #{text}
+                                else
+                                    div.carousel-item
+                                        .lead #{text}
+                        a.carousel-control-prev(href="#gallery", role="button", data-slide="prev")
+                            span.fa.fa-chevron-left.text-dark(aria-hidden="true")
+                        a.carousel-control-next(href="#gallery", role="button", data-slide="next")
+                            span.fa.fa-chevron-right.text-dark(aria-hidden="true")
+                #selectCategoryExample.m--hide
+                    .form-group.m-form__group
+                        .input-group.m-input-group
+                            select.form-control.m-input
+                                option Выберите категорию...
+                            .input-group-append
+                                button.input-group-btn.btn.btn-danger.btn-remove
+                                    | x
+                #additionBlokExample.m--hide
+                    .form-group.m-form__group.addition-btn
+                        .form-group.m-form__group
+                            .align-items-center.d-flex.flex-column
+                                button.btn.m-btn--pill.btn-primary.btn-circle
+                                    | +
+                form.row.categoryzation
+    .m--padding-15.m-width-100.m--padding-30
+        a.btn.btn-info.pull-right(href="index-3.html")
+            | Далее
+        .clearfix

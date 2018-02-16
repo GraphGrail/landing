@@ -1,0 +1,42 @@
+mixin component(name,desc,n)
+    .m-widget2__item.m-widget2__item--primary.m-draggable
+        .m-accordion__item-head
+            .m-widget2__checkbox.m-draggable__x
+                i.fa.fa-arrows
+            .m-widget2__desc.m-draggable__title
+                .m-widget2__text
+                    | #{name}
+                .m-widget2__user-name
+                    | #{desc}
+            .m-widget2__settings(data-toggle="collapse", href="#m_component" + n)
+                i.fa.fa-gear
+        .m-accordion__item-body.collapse(id = 'm_component' + n)
+            form.m-form.m-form-settings.m-demo
+                .form-group.m-form__group.row
+                    label.col-2.col-form-label Text
+                    .col-10
+                        input.form-control.m-input(type="text")
+                .form-group.m-form__group.row
+                    label.col-2.col-form-label Select
+                    .col-10
+                        select.form-control.m-input
+                            option 1
+                            option 2
+                            option 3
+                .form-group.m-form__group
+                    label Default Checkboxes
+                    .m-checkbox-list
+                        label.m-checkbox
+                            input(type='checkbox')
+                            | Checkbox
+                            span
+                        label.m-checkbox
+                            input(type='checkbox')
+                            | Checkbox
+                            span
+                        label.m-checkbox
+                            input(type='checkbox')
+                            | Checkbox
+                            span
+                .form-group.m-form__group
+                    .btn.btn-primary Сохранить

@@ -834,7 +834,7 @@ display: block;
 }
 
 .fivesteps .content{
-  padding: 30px 0 50px;
+  padding: 30px 0 0px;
 }
 .fivesteps h2{
   color: #ffffff;
@@ -855,18 +855,21 @@ display: block;
 }
 .outascheme{
   margin: 0 auto;
-  padding: 30px;
-  border-radius: 10px;
+  padding: 16px;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
   display: block;
-  width: 64%;
-  margin-top: -81px;
-  background-color: white;
+  background-color: #e6e5e9;
 }
 .ipad{
   z-index: 0;
   position: absolute;
   width: 100%;
   padding: 0 60px 0 0;
+}
+.jumper{
+  margin-top: 50px;
 }
 .fivesteps .text{
   color: #000000;
@@ -879,8 +882,11 @@ display: block;
 .fivesteps .items{
   position: relative;
   background-color: #ffffff;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   margin-top: 25px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   /*padding: 60px 30px*/
 }
 .fivesteps .items .item{
@@ -888,7 +894,12 @@ display: block;
   border-right: 1px solid #e6e5e9;
   position: relative;
 }
-
+.content.gray.with-angle.connector{
+  margin-top: 0;
+}
+.content.gray.with-top-angle:before{
+  display: none;
+}
 .fivesteps .items .row{
   margin: 0;
 }

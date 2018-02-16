@@ -1,0 +1,36 @@
+extends ./inc/_layout
+block title
+    | Результат разметки
+    - menuItem = 2
+block content
+    .col-md-12
+        .m-portlet.m-portlet--tab
+            .m-portlet__head
+                .m-portlet__head-caption
+                    .m-portlet__head-title
+                        h3.m-portlet__head-text
+                            | Какая-то там таблица
+            .m-portlet__body
+                table.m_datatable(width="100%")
+                    thead
+                        tr
+                            th Текст
+                            th Категория
+                            th ID Категории
+                    tbody
+                        tr
+                            td Есть халат для медсестры с защитой от жидкости, недорогой?
+                            td Продукты/Одежда/Халаты
+                            td 123
+                        tr
+                            td Есть халат для медсестры с защитой от жидкости, недорогой?
+                            td Клиенты/Медсестра
+                            td 127
+                        tr
+                            td Есть халат для медсестры с защитой от жидкости, недорогой?
+                            td Цена/1 - 200р
+                            td 132
+    .m--padding-15.m-width-100.m--padding-30
+        a.btn.btn-info.pull-right(href="index-4.html")
+            | Далее
+        .clearfix

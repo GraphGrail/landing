@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Настройка разметки
+    </title>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link rel="stylesheet" href="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css">
+    <link rel="stylesheet" href="../assets/vendors/base/vendors.bundle.css">
+    <link rel="stylesheet" href="../assets/demo/default/base/style.bundle.css">
+    <link rel="stylesheet" href="../styles/styles.css?v=7">
+    <!--include ../livereload.html-->
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script src="../scripts/font.js"></script>
+  </head>
+  <body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
+    <div class="m-grid m-grid--hor m-grid--root m-page">
+      <!--header.m-grid__item.m-header(data-minimize-offset="200", data-minimize-mobile-offset="200")-->
+      <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+        <div class="m-grid__item m-aside-left m-aside-left--skin-dark" id="m_aside_left">
+          <div class="m-brand__logo m-logo"><img src="../images/graphgrail1_png.png"></div>
+          <div class="m-aside-menu m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark" id="m_ver_menu" data-menu-vertical="true" data-menu-scrollable="false" data-menu-dropdown-timeout="500">
+            <ul class="m-menu__nav m-menu__nav--dropdown-submenu-arrow">
+              <li class="m-menu__item m-menu__item--submenu"><a class="m-menu__link m-menu__toggle" href="index.html"><span class="m-menu__link-text">Сбор</span><i class="m-menu__ver-arrow la la-angle-right"></i></a></li>
+              <li class="m-menu__item m-menu__item--submenu m-menu__item--active"><a class="m-menu__link m-menu__toggle" href="index-2.html"><span class="m-menu__link-text">Разметка</span><i class="m-menu__ver-arrow la la-angle-right"></i></a></li>
+              <li class="m-menu__item m-menu__item--submenu"><a class="m-menu__link m-menu__toggle" href="index-4.html"><span class="m-menu__link-text">Конструктор</span><i class="m-menu__ver-arrow la la-angle-right"></i></a></li>
+              <li class="m-menu__item m-menu__item--submenu"><a class="m-menu__link m-menu__toggle" href="index-5.html"><span class="m-menu__link-text">Подключение</span><i class="m-menu__ver-arrow la la-angle-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="m-grid__item m-grid__item--fluid m-wrapper">
+          <div class="m-subheader">
+            <div class="d-flex align-items-center">
+              <div class="mr-auto">
+                <h3 class="m-subheader__title">Настройка разметки
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="m-content">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="m-portlet m--bg-accent m-portlet--bordered-semi m-portlet--skin-dark m-portlet--full-height">
+                  <div class="m-portlet__head">
+                    <div class="m-portlet__head-caption">
+                      <h3 class="m-portlet__head-text">Через Telegram BOT</h3>
+                    </div>
+                  </div>
+                  <div class="m-portlet__body m-text-center">
+                    <div class="m--padding-bottom-30"><i class="fa fa-telegram" style="font-size: 7em;"></i></div>
+                    <button class="m-btn m-btn--pill btn btn-lg btn-danger">Начать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="m-portlet m--bg-danger m-portlet--bordered-semi m-portlet--skin-dark m-portlet--full-height">
+                  <div class="m-portlet__head">
+                    <div class="m-portlet__head-caption">
+                      <h3 class="m-portlet__head-text">Через Веб-Интерфейс</h3>
+                    </div>
+                  </div>
+                  <div class="m-portlet__body m-text-center">
+                    <div class="m--padding-bottom-30"><i class="fa fa-desktop" style="font-size: 7em;"></i></div>
+                    <button class="m-btn m-btn--pill btn btn-lg btn-accent" id="demo-markup-btn">Начать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="m-portlet m-portlet--bordered-semi m-portlet--full-height">
+                  <div class="m-portlet__head">
+                    <div class="m-portlet__head-caption">
+                      <h3 class="m-portlet__head-text">Заказать разметку у нас</h3>
+                    </div>
+                  </div>
+                  <div class="m-portlet__body">
+                    <form>
+                      <div class="m--margin-top-10 form-group m-form__group row">
+                        <div class="col-md-5">
+                          <label class="m-lh-37">Цена</label>
+                        </div>
+                        <div class="col-md-7">
+                          <input class="form-control m-input" type="text">
+                        </div>
+                      </div>
+                      <div class="form-group m-form__group row">
+                        <div class="col-md-5">
+                          <label class="m-lh-37">Кол-во меток</label>
+                        </div>
+                        <div class="col-md-7">
+                          <input class="form-control m-input" type="text">
+                        </div>
+                      </div>
+                      <div class="form-group m-form__group">
+                        <button class="btn btn-primary pull-right btn-lg">Начать</button>
+                        <div class="clearfix"></div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 m--hide" id="demo-markup">
+                <div class="m-portlet m-portlet--tab">
+                  <div class="m-portlet__head">
+                    <div class="m-portlet__head-caption">
+                      <div class="m-portlet__head-title">
+                        <h3 class="m-portlet__head-text">Задать категории</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="m-portlet__body">
+                    <div class="alert m-alert--default m-text-center m--margin-bottom-20">
+                      <div class="carousel slide" id="gallery" data-ride="carousel" data-interval="0">
+                        <div class="carousel-inner" role="listbox">
+                          <div class="carousel-item active">
+                            <div class="lead">Есть халат для медсестры с защитой от жидкости, недорогой?</div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="lead">Есть халат для доктора хауса, средней цены?</div>
+                          </div>
+                        </div><a class="carousel-control-prev" href="#gallery" role="button" data-slide="prev"><span class="fa fa-chevron-left text-dark" aria-hidden="true"></span></a><a class="carousel-control-next" href="#gallery" role="button" data-slide="next"><span class="fa fa-chevron-right text-dark" aria-hidden="true"></span></a>
+                      </div>
+                    </div>
+                    <div class="m--hide" id="selectCategoryExample">
+                      <div class="form-group m-form__group">
+                        <div class="input-group m-input-group">
+                          <select class="form-control m-input">
+                            <option>Выберите категорию...</option>
+                          </select>
+                          <div class="input-group-append">
+                            <button class="input-group-btn btn btn-danger btn-remove">x</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="m--hide" id="additionBlokExample">
+                      <div class="form-group m-form__group addition-btn">
+                        <div class="form-group m-form__group">
+                          <div class="align-items-center d-flex flex-column">
+                            <button class="btn m-btn--pill btn-primary btn-circle">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <form class="row categoryzation"></form>
+                  </div>
+                </div>
+              </div>
+              <div class="m--padding-15 m-width-100 m--padding-30"><a class="btn btn-info pull-right" href="index-3.html">Далее</a>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--footer.m-grid__item.m-footer
+      div.m-container.m-container--fluid.m-container--full-height.m-page__container
+          div.m-stack.m-stack--flex-tablet-and-mobile.m-stack--ver.m-stack--desktop
+              .m--padding-top-10.m--padding-bottom-10
+                  button.btn.btn-primary.pull-right
+                      | Далее
+                  .clearfix
+      -->
+    </div>
+    <div class="m--wait-overlay">
+      <div class="m--wait">
+        <div class="m-blockui"><span>Пожалуйста подождите...</span><span>
+            <div class="m-loader m-loader--brand m-loader--lg"></div></span></div>
+      </div>
+    </div>
+    <script src="../assets/vendors/base/vendors.bundle.js"></script>
+    <script src="../assets/demo/default/base/scripts.bundle.js"></script>
+    <script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js"></script>
+    <script src="../assets/vendors/custom/jquery-ui/jquery-ui.bundle.js"></script>
+    <script src="../scripts/data-local.js"></script>
+    <script src="../scripts/draggable.js"></script>
+    <script src="../scripts/components.js?v=7"></script>
+    <script src="../scripts/demo.js?v=7"></script>
+  </body>
+</html>

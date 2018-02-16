@@ -1,0 +1,58 @@
+extends ./inc/_layout
+block title
+    | Главная
+block content
+    .col-md-12
+        .m-portlet.m-portlet--tab
+            .m-portlet__body.m-portlet__body--no-padding
+
+                .row.m-row--no-padding.m-row--col-separator-xl
+                    .col-md-6
+                        .m-widget1
+                            h5.m-widget5__title Загрузить
+                            form.m-section.m--margin-bottom-5#demoUploadForm
+                                .m-section__sub
+                                    | Прикрепить файл с текстом
+                                .form-group.m-form__group
+                                    .custom-file
+                                        input#exampleInputFile.custom-file-input(type='file')
+                                        label.custom-file-label(for="exampleInputFile")
+                                            | Выберите файл
+                                .form-group.m-form__group
+                                    button#demo-upload-file.btn.btn-metal.pull-right
+                                        | Загрузить
+                                    .clearfix
+                            .m--padding-bottom-25
+                            .m-separator.m-separator--space.m-separator--dashed
+                            button.btn.btn-info.pull-right
+                                | Найти на маркетплейс
+                            .clearfix
+                    .col-md-6
+                        .m-widget1
+                            h5.m-widget5__title Заказать
+                            form.m-section.m--margin-bottom-5
+                                .m-section__sub
+                                    | Описание задачи
+                                .form-group.m-form__group
+                                    textarea.form-control.m-input(rows=3)
+                                .form-group.m-form__group.row
+                                    .col-md-2
+                                        label.m-lh-37
+                                            | Цена
+                                    .col-md-8
+                                        input.form-control.m-input(type='text')
+                                    .col-md-2
+                                        span.m-badge.m-badge--metal.pull-right(
+                                            style="width:35px; height:35px; line-height:35px; font-size:18px; border-radius:50%",
+                                            data-toggle="m-tooltip",
+                                            title="$10 000"
+                                            )
+                                            | ?
+                                .m-separator.m-separator--space.m-separator--dashed
+                                button.btn.btn-metal.pull-right
+                                    | Заказать
+                                .clearfix
+    .m--padding-15.m-width-100.m--padding-30
+        a.btn.btn-info.pull-right(href="index-2.html")
+            | Далее
+        .clearfix

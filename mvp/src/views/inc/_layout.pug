@@ -1,0 +1,76 @@
+doctype html
+- var version = 7
+- var menuItem = 1
+html
+    head
+        meta(charset='utf-8')
+        title
+            block title
+        meta(content='width=device-width, initial-scale=1, shrink-to-fit=no', name='viewport')
+        link(rel='stylesheet', href='../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css')
+        link(rel='stylesheet', href='../assets/vendors/base/vendors.bundle.css')
+        link(rel='stylesheet', href='../assets/demo/default/base/style.bundle.css')
+        link(rel='stylesheet', href='../styles/styles.css?v=' + version)
+        //include ../livereload.html
+        include ./mixins
+        script(src="//ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js")
+        script(src="../scripts/font.js")
+    body.m-page--fluid.m--skin-.m-content--skin-light2.m-header--fixed-mobile.m-aside-left--enabled.m-aside-left--skin-dark.m-aside-left--offcanvas.m-footer--push.m-aside--offcanvas-default
+        div.m-grid.m-grid--hor.m-grid--root.m-page
+            //header.m-grid__item.m-header(data-minimize-offset="200", data-minimize-mobile-offset="200")
+            div.m-grid__item.m-grid__item--fluid.m-grid.m-grid--ver-desktop.m-grid--desktop.m-body
+                div#m_aside_left.m-grid__item.m-aside-left.m-aside-left--skin-dark
+                    div.m-brand__logo.m-logo
+                        img(src="../images/graphgrail1_png.png")
+                    div#m_ver_menu.m-aside-menu.m-aside-menu--skin-dark.m-aside-menu--submenu-skin-dark(data-menu-vertical="true", data-menu-scrollable="false", data-menu-dropdown-timeout="500")
+                        ul.m-menu__nav.m-menu__nav--dropdown-submenu-arrow
+                            li.m-menu__item.m-menu__item--submenu(class= (menuItem == 1)?"m-menu__item--active":"")
+                                a.m-menu__link.m-menu__toggle(href="index.html")
+                                    span.m-menu__link-text
+                                        | Сбор
+                                    i.m-menu__ver-arrow.la.la-angle-right
+                            li.m-menu__item.m-menu__item--submenu(class= (menuItem == 2)?"m-menu__item--active":"")
+                                a.m-menu__link.m-menu__toggle(href="index-2.html")
+                                    span.m-menu__link-text
+                                        | Разметка
+                                    i.m-menu__ver-arrow.la.la-angle-right
+                            li.m-menu__item.m-menu__item--submenu(class= (menuItem == 4)?"m-menu__item--active":"")
+                                a.m-menu__link.m-menu__toggle(href="index-4.html")
+                                    span.m-menu__link-text
+                                        | Конструктор
+                                    i.m-menu__ver-arrow.la.la-angle-right
+                            li.m-menu__item.m-menu__item--submenu(class= (menuItem == 5)?"m-menu__item--active":"")
+                                a.m-menu__link.m-menu__toggle(href="index-5.html")
+                                    span.m-menu__link-text
+                                        | Подключение
+                                    i.m-menu__ver-arrow.la.la-angle-right
+                div.m-grid__item.m-grid__item--fluid.m-wrapper
+                    div.m-subheader
+                        div.d-flex.align-items-center
+                            div.mr-auto
+                                h3.m-subheader__title
+                                    block title
+                    div.m-content
+                        div.row
+                            block content
+            //footer.m-grid__item.m-footer
+                div.m-container.m-container--fluid.m-container--full-height.m-page__container
+                    div.m-stack.m-stack--flex-tablet-and-mobile.m-stack--ver.m-stack--desktop
+                        .m--padding-top-10.m--padding-bottom-10
+                            button.btn.btn-primary.pull-right
+                                | Далее
+                            .clearfix
+        .m--wait-overlay
+            .m--wait
+                .m-blockui
+                    span Пожалуйста подождите...
+                    span
+                        div.m-loader.m-loader--brand.m-loader--lg
+        script(src="../assets/vendors/base/vendors.bundle.js")
+        script(src="../assets/demo/default/base/scripts.bundle.js")
+        script(src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js")
+        script(src="../assets/vendors/custom/jquery-ui/jquery-ui.bundle.js")
+        script(src="../scripts/data-local.js")
+        script(src="../scripts/draggable.js")
+        script(src="../scripts/components.js?v=" + version)
+        script(src="../scripts/demo.js?v=" + version)
