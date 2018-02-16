@@ -875,9 +875,9 @@ display: block;
   color: #000000;
   line-height: 1.4;
 }
-.fivesteps .yourOwn{
+.yourOwn{
   font-weight: bold;
-  font-size: 22px;
+  font-size: 30px;
 }
 .fivesteps .items{
   position: relative;
