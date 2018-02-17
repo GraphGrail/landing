@@ -3,7 +3,7 @@ $(document).ready(function() {
 		anchors:['menu', 'initial', 'problems', 'solution', 'advantages', 'architecture', 'team', 'cases', 'roadmap', 'tokensale'],
     verticalCentered: true,
     scrollOverflow: true,
-		responsiveWidth: 900
+		responsiveWidth: 1279
   });
 
 	$('#langToggle').click(function(){

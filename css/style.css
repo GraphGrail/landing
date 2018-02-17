@@ -623,7 +623,13 @@ display: block;
   color: #ffffff;
   font-size: 30px;
 }
-
+.liteFlag{
+	width: 62px;
+	float: right;
+	background-size: contain;
+	height: 20px;
+	background-repeat: no-repeat;
+}
 .about .content{
   background-color: #ffffff;
   position: relative;
