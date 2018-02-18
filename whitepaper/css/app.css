@@ -172,12 +172,12 @@ body:after{
   color: black;
 }
 .language .langes{
-  height: 0;
+	height: 0;
   overflow: hidden;
   transition: all 0.2s;
 }
 .language .opened{
-  height: 200px;
+  height: 260px;
 }
 #langToggle{
   box-sizing: border-box;
@@ -211,10 +211,6 @@ body:after{
 .banner p{
   text-align: center;
   margin: 20px auto 0 auto;
-}
-.liteFlag{
-	width: 10px;
-	height: 10px;
 }
 .bigTitle{
   font-size: 33px;

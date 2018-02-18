@@ -1329,6 +1329,9 @@ display: block;
   text-transform: uppercase;
   margin-left: 5px;
 }
+.graal-menudropdown ul li{
+	background-color: #f5f5f5;
+}
 .graal-menudropdown .caret{
   position: relative;
   border: none;
@@ -2360,6 +2363,7 @@ box-shadow:
   color:#e30613;
   font-size: 14px;
   text-decoration: underline;
+	margin-left: 20px;
 }
 .login a:hover{
   text-decoration: none;
