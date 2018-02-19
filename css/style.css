@@ -2511,3 +2511,6 @@ body.fixedHeader .intro{
 .slider2 .slick-prev{
   left: -14px;
 }
+.constructorsample{
+  display: none;
+}
