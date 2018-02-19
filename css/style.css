@@ -241,7 +241,7 @@ header{
   z-index: 14;
 }
 body.fixedHeader header{
-  z-index: 14;
+  z-index: 400;
 }
 section{position: relative;}
 header nav{
@@ -871,7 +871,7 @@ display: block;
 .ipad{
   z-index: 0;
   position: absolute;
-  width: 100%;
+  width: 97%;
   padding: 0 60px 0 0;
 }
 .jumper{
@@ -2372,10 +2372,12 @@ box-shadow:
   position: absolute;
   right: 10px;
   margin-top: -70px;
-   right: 10px;
+   right: 0px;
    z-index: 500;
 }
-
+.top .lang-menu ul li{
+  width: 45px;
+}
 .panel .btn.red{
   margin-top: 20px;
 }

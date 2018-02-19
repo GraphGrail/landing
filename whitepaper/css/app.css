@@ -163,7 +163,7 @@ body:after{
   color: #1a205c;
 }
 .language{
-	position: absolute;
+	position: fixed;
   top: 10px;
   right: 23px;
   z-index: 1000;
@@ -178,6 +178,29 @@ body:after{
 }
 .language .opened{
   height: 260px;
+}
+.goBack{
+  box-sizing: border-box;
+background-color: white;
+cursor: pointer;
+outline: none;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+position: fixed;
+top: 10px;
+left: 23px;
+margin: 18px 0;
+    z-index: 10;
+  border-radius: 6px;
+}
+.goBack a{
+  padding: 10px;
+  text-decoration: none;
+  display: block;
 }
 #langToggle{
   box-sizing: border-box;
@@ -204,7 +227,8 @@ body:after{
   width: 40px;
   height: 26px;
   background-size: cover;
-  margin: 8px auto;
+  border: 1px solid #6b6b6b;
+  margin: 5px auto;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
