@@ -202,9 +202,9 @@ body:after{
 }
 .language .langes a div{
   width: 40px;
-  height: 35px;
-  background-size: contain;
-  margin: 0 auto;
+  height: 26px;
+  background-size: cover;
+  margin: 8px auto;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
