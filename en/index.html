@@ -213,6 +213,12 @@
                                                         <div class="bar">
                                                         <span>$2 M</span><span>$12 M</span>
                                                         </div>
+                                                        <div class="preico">
+                                                          <div class="cash">Pre ICO $200 K</div>
+                                                        </div>
+                                                        <div class="raised">
+                                                          <div class="cash"><span>$180 126</span></div>
+                                                        </div>
                                                         <label class="data left"><i class="fa fa-check"></i><b>Softcap</b></label>
                                                         <label class="data right"><i class="fa fa-check"></i><b>Hardcap</b></label>
                                                     </div>
@@ -1324,6 +1330,61 @@ Good knowledge of C#.
             <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1021041488/?guid=ON&amp;script=0"/>
         </div>
     </noscript>
-
+    <script>
+      $(function(){
+        // Bind Google Analytics gtag.js events.
+        if ('gtag' in window) {
+          $('a.btn').click(function(){
+            var href = $(this).attr('href');
+            if (href && $.isString(href)) {
+              if (href.match(/whitepaper/)) {
+                window.gtag('event', 'get_wp', { category: 'UX' });
+              }
+              if (href.match(/mvp/)) {
+                window.gtag('event', 'try_mvp', { category: 'UX' });
+              }
+              if (href.match(/chat/)) {
+                window.gtag('event', 'chat', { category: 'UX' });
+              }
+              if (href.match(/profile/)) {
+                window.gtag('event', 'attach_tokens', { category: 'UX' });
+              }
+              if (href.match(/WP_eng/)) {
+                var labelText = $(this).find('label').text();
+                if (labelText === 'ENG') {
+                  window.gtag('event', 'wp_eng', { category: 'UX' });
+                }
+                if (labelText === 'RUS') {
+                  window.gtag('event', 'wp_rus', { category: 'UX' });
+                }
+              }
+            }
+          });
+          $('.share a').click(function(){
+            var href = $(this).attr('href');
+            if (href && $.isString(href)) {
+              if (href.match(/bitcointalk/)) {
+                window.gtag('event', 'bitcointalk', { category: 'UX' });
+              }
+              if (href.match(/facebook/)) {
+                window.gtag('event', 'facebook', { category: 'UX' });
+              }
+            }
+          });
+          $('.graal-menudropdown button:contains("Litepaper")').click(function() {
+            window.gtag('event', 'litepaper', { category: 'UX' });
+          });
+          $('a:contains("For AI specialists")').click(function(){
+            window.gtag('event', 'FOR_AI_SPECIALISTS', { category: 'UX' });
+          });
+          $('a:contains("For blockchain specialists")').click(function(){
+            window.gtag('event', 'FOR_BLOCKCHAIN_SPECIALISTS', { category: 'UX' });
+          });
+          $('.feedback a').click(function(){
+            window.gtag('event', 'FEEDBACK', { category: 'UX' });
+          });
+        }
+      });
+  </script>
     </body>
 </html>
