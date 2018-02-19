@@ -61,7 +61,7 @@ span.size{ display: none; }
 
 @media (min-width:1280px) {
     .container {
-        border: 1px solid orange;       
+        border: 1px solid orange;
     }
 
    .menu-open nav{
@@ -70,7 +70,7 @@ span.size{ display: none; }
 }
 @media (min-width:1200px) and (max-width:1279px) {  /*big*/
     .container {
-        border: 1px solid violet;       
+        border: 1px solid violet;
     }
 
      .intro .share a{
@@ -191,7 +191,7 @@ span.size{ display: none; }
       margin: 30px 0;
       text-align: center;
     }
-    
+
      .home .btns  .row  div[class*='col-'] {
          padding-right: 0;
     }
@@ -212,7 +212,7 @@ span.size{ display: none; }
     .profits .item{
       padding: 30px 20px;
     }
-    
+
     .fivesteps h2{
       margin-bottom: 120px;
      }
@@ -280,7 +280,7 @@ span.size{ display: none; }
     }
     .fivesteps .items:before, .fivesteps .items:after {
       position: absolute;
-      content: "";      
+      content: "";
       background-color: #e6e5e9;
     }
     .fivesteps .items .item{
@@ -418,7 +418,7 @@ span.size{ display: none; }
 .fixedHeaderMobile.menu-open  header nav .logo-nav{
     position: absolute;
     display: block;
-    
+
 }
 .fixedHeaderMobile.menu-open  .menu-mobile .logo-nav{
     display: none;
@@ -499,7 +499,7 @@ background-image: none;
 
     span.size.xs{ display: block; }
     span.size.xxs,span.size.sm{ display: none; }
-   
+
 
    .equal, .equal > div[class*='col-'] {
     display: block;
@@ -515,7 +515,7 @@ background-image: none;
       display: block;
       text-align: center;
     }
-    
+
     h2{font-size: 42px;}
     footer .footer-nav{
       padding: 0;
@@ -577,14 +577,8 @@ background-image: none;
   padding: 0 10px 10px;
   line-height: 1.2;
 }
-.roadmap .items > .row > div[class*='col-']:nth-child(2n+1) .item:after,
-.roadmap .items > .row > div[class*='col-']:nth-child(2n) .item:after{
-  top: 29px;
-  left: 0;
-}
-.roadmap .items > .row > div[class*='col-']:nth-child(2n+1) .item:after{
-  right: 0;
-  left: auto;
+.roadmap .items > .row > div[class*='col-'] .item:after{
+  display: none;
 }
 
     .points .item .text, .profits .item .text, .profits .item h3{
@@ -660,7 +654,7 @@ background-image: none;
     }
     .fivesteps .items:before, .fivesteps .items:after {
       position: absolute;
-      content: "";      
+      content: "";
       background-color: #e6e5e9;
     }
     .fivesteps .items .item{
@@ -681,7 +675,7 @@ background-image: none;
       height: 1px;
       width: 100%;
     }
-    
+
 
     .keyproblem .items .item, .platform .items .item{
       margin-bottom: 30px;
@@ -770,7 +764,7 @@ background-image: none;
         transform: rotate(90deg);
       }
 
-      
+
       .social a{
         width: 54px;
         height: 54px;
@@ -926,7 +920,7 @@ background-image: none;
 .fixedHeaderMobile.menu-open  header nav .logo-nav{
     position: absolute;
     display: block;
-    
+
 }
 .fixedHeaderMobile.menu-open  .menu-mobile .logo-nav{
     display: none;
@@ -974,7 +968,7 @@ background-image: none;
 .content.with-angle:after{
   height: 39px;
   bottom: -39px;
-  background-image: url("../img/white-bottom-m.png"); 
+  background-image: url("../img/white-bottom-m.png");
 }
 .content.gray.with-angle:after{
   background-image: url("../img/gray-bottom-m.png");
@@ -983,7 +977,7 @@ background-image: none;
 .content.gray.with-top-angle:before{
   background-image: url("../img/gray-top-m.png");
   height: 39px;
-  top: -39px;  
+  top: -39px;
 }
 
 .content.gray.with-top-angle{
