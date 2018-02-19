@@ -439,11 +439,7 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   border-radius: 10px 10px 0 0;
 }
 .content.gray.with-angle{
-<<<<<<< HEAD
-  margin-bottom: 114px !important;
-=======
   margin-bottom: 90px !important;
->>>>>>> 585edd433d34bee6dc9173161d9d5d020cdb6a7c
   border-radius: 0;
 }
 .content.gray.with-angle:after{
@@ -537,21 +533,6 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
 
 .intro .bar{
   margin-top: 40px;
-<<<<<<< HEAD
-  background-color: #e40815;
-  background-image: -moz-linear-gradient(top, #e30613 8px, #fa3f53 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(8px,#e30613), color-stop(100%,#fa3f53));
-  background-image: -webkit-linear-gradient(top, #e30613 8px, #fa3f53 100%);
-  background-image: -o-linear-gradient(top, #e30613 8px, #fa3f53 100%);
-  background-image: -ms-linear-gradient(top, #e30613 8px, #fa3f53 100%);
-  background-image: linear-gradient(top, #e30613 8px, #fa3f53 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e30613', endColorstr='#fa3f53',GradientType=0 );
-
-border-radius: 10px;
-height: 16px;
-position: relative;
-}
-=======
     background-color: #c1c1c1;
     background-image: -moz-linear-gradient(top, #e30613 8px, #fa3f53 100%);
     background-image: -o-linear-gradient(top, #e30613 8px, #fa3f53 100%);
@@ -566,7 +547,6 @@ position: relative;
     height: 16px;
     position: relative;
   }
->>>>>>> 585edd433d34bee6dc9173161d9d5d020cdb6a7c
 .intro .bar:after,.intro .bar:before{
   position: absolute;
   content: "";
@@ -741,12 +721,9 @@ display: block;
   width: 60%;
   height: auto;
 }
-<<<<<<< HEAD
-=======
 .profits .item .icon img{
   width: 70%;
 }
->>>>>>> 585edd433d34bee6dc9173161d9d5d020cdb6a7c
 .points .item .icon, .profits .item .icon{
   display: inline-block;
   width: 148px;
@@ -2510,8 +2487,6 @@ body.fixedHeader .intro{
   -o-transition: none;
   transition: none;
 }
-<<<<<<< HEAD
-=======
 .slider2 .slick-slide img{
   width: 730px;
   height: 548px;
@@ -2536,4 +2511,3 @@ body.fixedHeader .intro{
 .slider2 .slick-prev{
   left: -14px;
 }
->>>>>>> 585edd433d34bee6dc9173161d9d5d020cdb6a7c
