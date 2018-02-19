@@ -36,6 +36,8 @@ $('.constructormokap .slider2').slick({
   variableWidth: false
 });
 
+
+
   var date = $('#countdown').data("date");
   if(date){
   var dateArr = date.split('.')
@@ -662,3 +664,10 @@ Highcharts.chart('pie-container-2', {
 
 
 });
+
+moment.locale('ru');
+
+var now = moment();
+var event = moment('2018-02-12 11:00:00');
+
+$('#since').text(now.subtract(event.toObject()).format('H'));
