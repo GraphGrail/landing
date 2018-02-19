@@ -42,12 +42,7 @@ popd
 
 echo "Copy data to the backend repo"
 echo "Copy repo files to new frontend repo"
-rsync -avi --delete ./css ../$BACKEND_NAME/
-rsync -avi --delete ./en ../$BACKEND_NAME/
-rsync -avi --delete ./img ../$BACKEND_NAME/
-rsync -avi --delete ./js ../$BACKEND_NAME/
-rsync -avi --delete ./ru ../$BACKEND_NAME/
-rsync -avi ./favicon.ico ../$BACKEND_NAME/
+rsync -avi --exclude=deploy --exclude=id_rsa --exclude=.git --exclude=.travis.yml --exclude=.gitignore ./ ../$BACKEND_NAME/
 echo "Copying finished"
 
 echo "Add new data to the backend repo git"
