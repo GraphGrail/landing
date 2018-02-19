@@ -20,6 +20,13 @@ sliderHome.slick({
   variableWidth: false
 });
 
+$( function() {
+    $( "#faqardion" ).accordion({
+      collapsible: true,
+      active: false
+    });
+  } );
+
 $('.constructormokap .slider2').slick({
   dots: false,
   infinite: false,

@@ -853,6 +853,12 @@ width: 151px;
         margin-left: 0;
         right: 0;
        }
+       .fixedHeaderMobile .top .lang-menu{
+         margin-top: -55px;
+margin-left: 0;
+position: absolute;
+top: 72px;
+       }
 .profits .item{
     padding: 20px;
 }
@@ -946,9 +952,14 @@ width: 151px;
 
 .fixedHeaderMobile .top {
   position: fixed;
-  top:0;
-  margin-top: -15px;
+  top: 0;
+  left: calc( 50% - 110px);
+  width: 60%;
+  margin-top: -16px;
   z-index: 405;
+}
+.fixedHeaderMobile .top .login{
+  left: 0;
 }
  .menu-open .top {
   top: 0;
@@ -1094,8 +1105,41 @@ footer .content{
 
 
 }
+@media (max-width: 580px) {
+  .fixedHeaderMobile .top{
+    position: fixed;
+    top: 0;
+    left: 70px;
+    width: 83%;
+    margin-top: -16px;
+    z-index: 405;
+  }
+  .fixedHeaderMobile .top .login{
+    left: 0;
+    width: 79%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 32px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .fixedHeaderMobile .top .login a:last-child{
+    margin-left: 10px;
+  }
+  .fixedHeaderMobile .top .login a{
+    font-size: 12px;
+    padding: 8px 9px;
+  }
+}
+
 
 @media (max-width:480px) {
+  .fixedHeaderMobile .top .login{
+    width: 73%;
+    top: 30px;
+  }
   .top .lang-menu{
     margin-top: -83px;
     margin-left: 0;
@@ -1268,4 +1312,14 @@ background-color: #1e245e;
       margin-top: 90px;
     }
 
+}
+@media (max-width:380px) {
+  .fixedHeaderMobile .top .login{
+    width: 73%;
+    left: -6px;
+    top: 30px;
+  }
+  .fixedHeaderMobile .top .login a:first-child{
+    width: 53px;
+  }
 }

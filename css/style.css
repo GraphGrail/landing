@@ -237,8 +237,7 @@ header a{
 }
 header{
   position: relative;
-  z-index: 80;
-  z-index: 14;
+  z-index: 20;
 }
 body.fixedHeader header{
   z-index: 400;
@@ -624,11 +623,11 @@ display: block;
   font-size: 30px;
 }
 .liteFlag{
-	width: 62px;
-	float: right;
-	background-size: contain;
-	height: 20px;
-	background-repeat: no-repeat;
+  width: 32px;
+  float: right;
+  background-size: cover;
+  height: 20px;
+  background-repeat: no-repeat;
 }
 .about .content{
   background-color: #ffffff;
@@ -2113,7 +2112,8 @@ button{
 footer{
   color: #ffffff;
   position: relative;
-  padding: 40px 0 0
+  padding: 40px 0 0;
+  margin-top: 70px;
   z-index: 3;
 }
 footer .content{
@@ -2144,6 +2144,20 @@ footer .feedback {
 }
 footer .feedback .btn{
   width: 100%;
+}
+.economic .ui-accordion-header{
+  background-color: #f7f7f7;
+  border: 1px solid gainsboro;
+  cursor: pointer;
+  padding: 10px 0;
+  border-radius: 4px;
+}
+.economic .content.white.with-angle{
+  padding-top: 50px;
+}
+.economic .ui-accordion-header:hover{
+  background-color: #dadada;
+  border: 1px solid #969696;
 }
 footer .copyright{
   padding: 20px 0 0;
@@ -2359,6 +2373,26 @@ box-shadow:
   top: 38px;
   left: -50px;
 }
+.fixedHeaderMobile .top .login{
+  left: -30px;
+}
+.fixedHeaderMobile .top .login a{
+  color: #e30613;
+font-size: 14px;
+text-decoration: underline;
+margin-left: 11px;
+border-radius: 9px;
+padding: 9px 12px;
+color: white;
+background-color: #e6e4e8;
+}
+.fixedHeaderMobile .top .login a:first-child{
+  background-color: #de1c22;
+}
+.fixedHeaderMobile .top .login a:last-child{
+background-color: #1e245e;
+margin-left: 70px;
+}
 .login a{
   color:#e30613;
   font-size: 14px;
@@ -2438,7 +2472,7 @@ box-shadow:
 .lang-menu ul{
   position: absolute;
   top: 0;
-  right: 30px;
+  right: 0;
   max-width: unset !important;
   margin: unset !important;
 }
