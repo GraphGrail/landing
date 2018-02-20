@@ -657,17 +657,55 @@ Highcharts.chart('pie-container-2', {
 });
 
 */
-
-
-
-
-
-
+$('body').on("scroll", function(e) {
+if (this.scrollTop > 147) {
+  $('.nav').addClass("fixback");
+} else {
+  $('.nav').removeClass("fixback");
+}
 });
+
+$('#menuBurger').click(function(){
+  $('body').toggleClass('open');
+  $('body').toggleClass('menu-open');
+})
+$('#closeMenu').click(function(){
+  $('body').removeClass('open');
+})
+$('.lang-menu').click(function(){
+  $(this).toggleClass('open');
+})
+
+function moveBar(){
+  var currentUSD = parseInt($('#currentUSD').text().replace(/\s/g, ''));
+  var usdPercent = (12000000/100);
+  finalWidth = ((currentUSD+600000)/usdPercent);
+  $('#raised').width(finalWidth + "%");
+  $('#USDClone').text(currentUSD - 200000);
+}
+moveBar();
+$('#currentUSD').on('DOMSubtreeModified',function(){
+  moveBar();
+})
+
 
 moment.locale('ru');
 
 var now = moment();
-var event = moment('2018-02-12 11:00:00');
+var icoStart = moment('2018-02-19T11:00:00');
 
-$('#since').text(now.subtract(event.toObject()).format('H'));
+hSince = (now.diff(icoStart, 'hours')).toString();
+$('#since').text(hSince);
+var hword;
+if((hSince.substr(hSince.length-1,1)) == 1 ){
+  hword = ' час';
+}
+if((hSince.substr(hSince.length-1,1)) > 1 && (hSince.substr(hSince.length-1,1)) < 5 ){
+  hword = ' часa';
+}
+if((hSince.substr(hSince.length-1,1)) > 4 || (hSince.substr(hSince.length-1,1)) == 0 ){
+  hword = ' часов';
+}
+$('#since').text('За '+ hSince + hword);
+$('#sinceEng').text('By '+ hSince + ' hours');
+});

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0" />
-        <title>GraphGrail Ai RU</title>
+        <title>GraphGrail Ai EN</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
         <link rel="stylesheet" href="../css/fonts.css" />
@@ -71,23 +71,23 @@
                                 </a>
 
                             </h1>
+                            <a id="menuBurger">
+                                        <span></span><span></span><span></span>
+                            </a>
                             <div class="menu-mobile visible-xs visible-sm hidden-md hidden-lg">
-                                <a class="menu-toggle">
-                                            <span></span><span></span><span></span>
-                                </a>
                                 <a href="#" class="logo-nav"><img src="../img/logo-nav.png" width="61" height="96" alt="" /></a>
-                                <a class="menu-close">
+                                <a id="closeMenu" class="menu-close">
                                   <i class="fas fa-times"></i>
                                 </a>
 
                             </div>
                             <div class="top">
-                                <div class="login"><a href="/profile">Sign in</a></div>
+                                <div class="login"><a href="/users/sign_in">Sign in</a><a href="/users/sign_up">Sign up</a></div>
                                 <div class="lang-menu">
-                                                <ul>
-                                                  <li><a href="https://en.graphgrail.com/" id="en"><span><img src="../img/en.png" alt="" /> ENG</span></a></li>
-                                                  <li><a href="https://ru.graphgrail.com" id="ru"><span><img src="../img/rus.png" alt="" /> RUS</span></a></li>
-                                                </ul>
+                                  <ul>
+                                    <li><a href="https://en.graphgrail.com/" id="en"><span><img src="../img/en.png" alt="" /> ENG</span></a></li>
+                                    <li><a href="https://ru.graphgrail.com" id="ru"><span><img src="../img/rus.png" alt="" /> RUS</span></a></li>
+                                  </ul>
                                 </div>
                             </div>
 
@@ -97,7 +97,7 @@
                                     <div class="col-xs-12 col-sm-12 col-md-8">
                                         <h2>Ai meets Blockchain</h2>
                                         <div class="red-text">
-                                            GraphGrail Ai – is the world’s first Artificial Intelligence platform for Blockchain built on top of Natural Language Understanding technology with the DApps marketplace.
+                                            GraphGrail Ai – is the world's first Artificial Intelligence platform for Blockchain built on top of Natural Language Understanding technology with the DApps marketplace.
                                         </div>
                                         <div class="items">
                                             <div class="row equal">
@@ -114,13 +114,13 @@
                                                 <div class="btns">
                                                     <div class="row">
                                                         <div class="col-xs-12 col-sm-4">
-                                                            <a target="_blank" href="../whitepaper/en/index.html" class="btn red"><i>Whitepaper</i></a>
+                                                            <a onclick="ga('send', 'event', 'click', 'whitepaper');" target="_blank" href="../whitepaper/en/index.html" class="btn red"><i>Whitepaper</i></a>
                                                         </div>
                                                         <div class="col-xs-12 col-sm-4">
-                                                            <a href="../mvp/dest/views/index.html" class="btn blue"><i>Try MVP</i></a>
+                                                            <a onclick="ga('send', 'event', 'click', 'try_mvp');" href="../mvp/dest/views/index.html" class="btn red"><i>Try MVP</i></a>
                                                         </div>
                                                         <div class="col-xs-12 col-sm-4">
-                                                            <a href="https://t.me/joinchat/DAbHbQrAb5KHNtmMYfVsKA" class="btn blue"><i>Chat</i></a>
+                                                            <a onclick="ga('send', 'event', 'click', 'chat');" href="https://t.me/joinchat/DAbHbQrAb5KHNtmMYfVsKA" class="btn blue"><i>Chat</i></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -128,8 +128,8 @@
                                             </div>
                                             <div class="col-xs-12 col-sm-12 col-md-2">
                                                  <div class="share">
-                                                <a href="https://bitcointalk.org/index.php?topic=2040117"><i class="fab fa-btc"></i></a>
-                                                <a href="http://www.facebook.com/graphgrailcom"><i class="fab fa-facebook-f"></i></a>
+                                                <a onclick="ga('send', 'event', 'click', 'bitcointalk');" href="https://bitcointalk.org/index.php?topic=2040117"><i class="fab fa-btc"></i></a>
+                                                <a onclick="ga('send', 'event', 'click', 'facebook');" href="http://www.facebook.com/graphgrailcom"><i class="fab fa-facebook-f"></i></a>
                                             </div>
 
                                             </div>
@@ -182,7 +182,12 @@
                                                     </div>
                                             </div-->
                                             <div class="panel">
-                                                <div class="text timeSince"><b>ICO started</b><br>Raised per <span id="since"></span> hours</div>
+                                              <div class="bonus">
+                                                <p>35% Bonus<br>
+                                                    <hr>
+                                              </div>
+                                                <div class="text timeSince">
+                                                  <span id="sinceEng">ICO started 19 February 11:00</span></div>
                                                 <div class="blocks">
                                                     <div>
                                                           12432650
@@ -190,7 +195,7 @@
                                                     </div>
 
                                                     <div>
-                                                        380 126
+                                                        <span id="currentUSD">380 126</span>
                                                         <b>USD Raised</b>
                                                     </div>
                                                     <div>
@@ -198,7 +203,7 @@
                                                         <b>Purchasers</b>
                                                     </div>
                                                 </div>
-                                                <a href="/profile" class="btn red"><i>Attach tokens</i></a>
+                                                <a onclick="ga('send', 'event', 'click', 'attach_tokens');" href="/profile" class="btn red"><i>Attach tokens</i></a>
                                                     <script type="text/template" id="countdown-template">
                                                     <div class="time <%= label %>">
                                                       <span class="count curr top"><%= curr %></span>
@@ -216,7 +221,7 @@
                                                         <div class="preico">
                                                           <div class="cash">Pre ICO $200 K</div>
                                                         </div>
-                                                        <div class="raised">
+                                                        <div id="raised" class="raised">
                                                           <div class="cash"><span>$180 126</span></div>
                                                         </div>
                                                         <label class="data left"><i class="fa fa-check"></i><b>Softcap</b></label>
@@ -233,7 +238,7 @@
                                 <div class="left">
                                     <a href="#about">About us</a>
                                     <a href="#platform">Platform</a>
-                                    <a href="#roadmap">Roadmap</a>
+                                    <a class="outlaw" href="#roadmap">Roadmap</a>
                                 </div>
                                 <a href="#" class="logo-nav"><img src="../img/logo-nav.png" width="61" height="96" alt="" /></a>
                                  <div class="right">
@@ -259,7 +264,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
-                            <iframe width="100%" height="630" src="https://www.youtube.com/embed/-AoMVn-R12Q?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <iframe width="100%"  height="315" src="https://www.youtube.com/embed/V3SWIwXLQHE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="btns">
@@ -269,10 +274,10 @@
 
                             <div class="row">
                                 <div class="col-xs-12 col-sm-4">
-                                     <a target="_blank" href="../whitepaper/pdf/WP_eng.pdf" class="btn blue"><i>WHITEPAPER <label>ENG</label></i></a>
+                                     <a onclick="ga('send', 'event', 'click', 'whitepaper_eng');" target="_blank" href="../whitepaper/pdf/WP_eng.pdf" class="btn blue"><i>WHITEPAPER <label>ENG</label></i></a>
                                 </div>
                                  <div class="col-xs-12 col-sm-4">
-                                     <a target="_blank" href="../whitepaper/pdf/WP_eng.pdf" class="btn blue"><i>WHITEPAPER <label>RUS</label></i></a>
+                                     <a onclick="ga('send', 'event', 'click', 'whitepaper_rus');" target="_blank" href="../whitepaper/pdf/WP_eng.pdf" class="btn blue"><i>WHITEPAPER <label>RUS</label></i></a>
                                 </div>
                                 <div class="col-xs-12 col-sm-4">
 
@@ -282,13 +287,13 @@
                                     <span class="caret"></span>
                                   </button>
 																	<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a target="_blank" href="../whitepaper/ru/index.html"><label>Russian</label><div style="background-image: url('../img/rus.png')" class="liteFlag"></div></a></li>
-                                    <li><a target="_blank" href="../whitepaper/de/index.html"><label>German</label><div style="background-image: url('../img/de.png')" class="liteFlag"></div></a></li>
-                                    <li><a target="_blank" href="../whitepaper/es/index.html"><label>Spanish</label><div style="background-image: url('../img/es.png')" class="liteFlag"></div></a></li>
-                                    <li><a target="_blank" href="../whitepaper/ko/index.html"><label>Korean</label><div style="background-image: url('../img/ko.png')" class="liteFlag"></div></a></li>
-                                    <li><a target="_blank" href="../whitepaper/zh/index.html"><label>Chinese</label><div style="background-image: url('../img/zh.png')" class="liteFlag"></div></a></li>
-                                    <li><a target="_blank" href="../whitepaper/en/index.html"><label>English</label><div style="background-image: url('../img/en.png')" class="liteFlag"></div></a></li>
-																		<li><a target="_blank" href="../whitepaper/ja/index.html"><label>Japanese</label><div style="background-image: url('../img/svg/japan.svg')" class="liteFlag"></div></a></li>
+                                    <li><a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/ru/index.html"><label>Russian</label><div style="background-image: url('../img/rus.png')" class="liteFlag"></div></a></li>
+                                    <li><a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/de/index.html"><label>German</label><div style="background-image: url('../img/de.png')" class="liteFlag"></div></a></li>
+                                    <li><a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/es/index.html"><label>Spanish</label><div style="background-image: url('../img/es.png')" class="liteFlag"></div></a></li>
+                                    <li><a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/ko/index.html"><label>Korean</label><div style="background-image: url('../img/ko.png')" class="liteFlag"></div></a></li>
+                                    <li><a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/zh/index.html"><label>Chinese</label><div style="background-image: url('../img/zh.png')" class="liteFlag"></div></a></li>
+                                    <li><a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/en/index.html"><label>English</label><div style="background-image: url('../img/en.png')" class="liteFlag"></div></a></li>
+																		<li><a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/ja/index.html"><label>Japanese</label><div style="background-image: url('../img/svg/japan.svg')" class="liteFlag"></div></a></li>
                                   </ul>
                                 </div>
                                 </div>
@@ -325,10 +330,10 @@
                            <h2>For whom?</h2>
                            <div class="row">
                                 <div class="col-xs-12 col-sm-6 text-right">
-                                     <a href="#" class="btn blue"><i>For AI specialists</i></a>
+                                     <a onclick="ga('send', 'event', 'click', 'for_ai_specialists');" href="#" class="btn blue"><i>For AI specialists</i></a>
                                 </div>
                                  <div class="col-xs-12 col-sm-6 text-left">
-                                     <a href="#" class="btn blue"><i>For blockchain specialists</i></a>
+                                     <a onclick="ga('send', 'event', 'click', 'for_blockchain_specialists');" href="#" class="btn blue"><i>For blockchain specialists</i></a>
                                 </div>
 
                             </div>
@@ -423,7 +428,7 @@
                                         <div class="item">
                                             <h3>TOO EXPENSIVE</h3>
                                             <div class="text">
-                                            Developers, data-science and NLP specialist cost a lot, and using them demands specific knowledge and the time to recruit and manage a development team – which is most frequently outside the business’s scope.
+                                            Developers, data-science and NLP specialist cost a lot, and using them demands specific knowledge and the time to recruit and manage a development team – which is most frequently outside the business's scope.
                                             </div>
                                         </div>
                                     </div>
@@ -547,7 +552,7 @@
 
                             <h3 class="text-center" style="color:white">Create your language solution with any type of initial data stream</h3>
                             <div class="text text-center" style="color:white">An Ai-designer is like a set of building blocks, because it allows combining several typical NLP modules of the GraphGrail Ai platform in any sequence to create the solution you need without programming!</div>
-                            <img src="../img/graphgrailai_3d_architecture_954_cr.png" alt="">
+                            <img width="100%" src="../img/graphgrailai_3d_architecture_954_cr.png" alt="">
                         </div>
                        </div>
                     </div>
@@ -1072,14 +1077,10 @@ Creating a Deep machine learning and future artificial intelligence prospective 
                            <div class="row teamWrapper">
                                <div class="col-xs-12 col-sm-6 col-md-3">
                                    <div class="item" style="top: 0px; opacity: 1;">
-                                       <div class="img" style="background-image: url('../img/victor.png')"></div>
+                                       <div class="img" style="background-image: url('../img/victor.jpg')"></div>
                                        <h3 class="text-center">Victor Nosko</h3>
                                        <div class="text text-center">
-                                         <p><span>CEO and founder, Ai, Data-science.</span><br>
-Python developer, Django framework. Data-science specialist, NLP stack:
-NLTK + Celery + Pymorphy2 + GLRparser etc. Victor has more than 6 years
-of experience in development and deep learning. Experienced in Google
-TensorFlow</p>
+                                         <p><span>CEO and founder, Ai, Data-science.</span><br> Python developer, Django framework. Data-science specialist, NLP stack: NLTK + Celery + Pymorphy2 + GLRparser etc. Victor has more than 6 years of experience in development and deep learning. Experienced in Google TensorFlow</p>
                                        </div>
                                    </div>
                                </div>
@@ -1118,8 +1119,8 @@ TensorFlow</p>
                                        <span>Python Developer & Data Science.</span><br>
                                        Responsible for developing programs in the field of machine learning, Python programming. <br>
                                         Has two university degrees: <br>
-                                        specialist’s degree “Computer Security” (Don State Technical University) (red diploma)<br>
-                                        Master’s program “Software Engineering” (Don State Technical University)
+                                        specialist's degree “Computer Security" (Don State Technical University) (red diploma)<br>
+                                        Master's program “Software Engineering" (Don State Technical University)
                                        </div>
                                    </div>
                                </div>
@@ -1129,8 +1130,8 @@ TensorFlow</p>
                                        <h3 class="text-center">Semyon Lipkin</h3>
                                        <div class="text text-center">
                                        <span>Python Developer & Data Science.</span> <br>
-                                       Field - development of machine training algorithms by means of the Python language. Education: engineer in Industrial Electronics, Master in “Information and Communications Technologies and Communication Systems” - both in South-Russian State Polytechnic University (NPI).<br>
-                                      Doctor of Science in 05.13.05 “Elements and devices of computer engineering and control systems”. More than 90 works were published, based on the scientific activities results, including articles (in magazines reviewed by Scopus, WoS, State Commission for Academic Degrees and Titles, Russian Science Citation Index), patents, teaching aids.
+                                       Field - development of machine training algorithms by means of the Python language. Education: engineer in Industrial Electronics, Master in “Information and Communications Technologies and Communication Systems" - both in South-Russian State Polytechnic University (NPI).<br>
+                                      Doctor of Science in 05.13.05 “Elements and devices of computer engineering and control systems". More than 90 works were published, based on the scientific activities results, including articles (in magazines reviewed by Scopus, WoS, State Commission for Academic Degrees and Titles, Russian Science Citation Index), patents, teaching aids.
                                        </div>
                                    </div>
                                </div>
@@ -1143,7 +1144,7 @@ TensorFlow</p>
                                         <span>Consultant in neural networks.</span><br>
                                         Engaged in neural networks and strong AI.<br>
                                         Game developer, based on XNA framework, TCP/ip chat, chat bots, text understanding systems.
-2 times was the first at the university conference on economics, 2 times at radio engineering. Once was the 1st in the IT park hackathon. Participated in the IT park acceleration program with “patterns recognition” project.
+2 times was the first at the university conference on economics, 2 times at radio engineering. Once was the 1st in the IT park hackathon. Participated in the IT park acceleration program with “patterns recognition" project.
 Good knowledge of C#.
 
                                        </div>
@@ -1167,7 +1168,7 @@ Good knowledge of C#.
                                        <h3 class="text-center">Marina Parinova</h3>
                                        <div class="text text-center">
                                        <span>HR manager</span> <br>
-                                       Responsible for IT recruitment, new employees’ adaptation, a comfortable and pleasant office atmosphere. The team is actively growing and reinforced with steep specialists. Join us! Send CV to <a href="mailto:m.parinova@graphgrail.com">m.parinova@graphgrail.com</a> , and we will be pleased to arrange an interview to our company.
+                                       Responsible for IT recruitment, new employees' adaptation, a comfortable and pleasant office atmosphere. The team is actively growing and reinforced with steep specialists. Join us! Send CV to <a href="mailto:m.parinova@graphgrail.com">m.parinova@graphgrail.com</a> , and we will be pleased to arrange an interview to our company.
                                        </div>
                                    </div>
                                </div>
@@ -1249,10 +1250,10 @@ Good knowledge of C#.
                                         </div>
                                         <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-4">
                                             <div class="footer-nav">
-                                                <div><a href="https://bitcointalk.org/index.php?topic=2040117">BitcoinTalk (англ)</a></div>
-                                                <div><a href="https://bitcointalk.org/index.php?topic=2016928">BitcoinTalk (рус)</a></div>
-                                                <div><a href="https://bitcointalk.org/index.php?topic=2173307.0">BitcoinTalk Bounty (англ)</a></div>
-                                                <div><a href="https://bitcointalk.org/index.php?topic=2091282">BitcoinTalk Баунти (рус)</a></div>
+                                                <div><a onclick="ga('send', 'event', 'click', 'bitcointalk');" href="https://bitcointalk.org/index.php?topic=2040117">BitcoinTalk (англ)</a></div>
+                                                <div><a onclick="ga('send', 'event', 'click', 'bitcointalk');" href="https://bitcointalk.org/index.php?topic=2016928">BitcoinTalk (рус)</a></div>
+                                                <div><a onclick="ga('send', 'event', 'click', 'bitcointalk');" href="https://bitcointalk.org/index.php?topic=2173307.0">BitcoinTalk Bounty (англ)</a></div>
+                                                <div><a onclick="ga('send', 'event', 'click', 'bitcointalk');" href="https://bitcointalk.org/index.php?topic=2091282">BitcoinTalk Баунти (рус)</a></div>
                                             </div>
                                         </div>
                                         <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-4">
@@ -1279,7 +1280,7 @@ Good knowledge of C#.
                             <div class="row">
                              <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
                              <div class="feedback text-center">
-                             <a href="https://t.me/joinchat/DAbHbQrAb5KHNtmMYfVsKA" class="btn red"><i>Feedback</i></a>
+                             <a onclick="ga('send', 'event', 'click', 'feedback');" href="https://t.me/joinchat/DAbHbQrAb5KHNtmMYfVsKA" class="btn red"><i>Feedback</i></a>
                              </div>
                              </div>
                              <div class="col-xs-12">

@@ -71,12 +71,12 @@
                                 </a>
 
                             </h1>
+                            <a id="menuBurger">
+                                        <span></span><span></span><span></span>
+                            </a>
                             <div class="menu-mobile visible-xs visible-sm hidden-md hidden-lg">
-                                <a class="menu-toggle">
-                                            <span></span><span></span><span></span>
-                                </a>
                                 <a href="#" class="logo-nav"><img src="../img/logo-nav.png" width="61" height="96" alt="" /></a>
-                                <a class="menu-close">
+                                <a id="closeMenu" class="menu-close">
                                   <i class="fas fa-times"></i>
                                 </a>
 
@@ -117,10 +117,10 @@
                                                             <a target="_blank" href="../whitepaper/ru/index.html" class="btn red"><i>Whitepaper</i></a>
                                                         </div>
                                                         <div class="col-xs-12 col-sm-4">
-                                                            <a href="../mvp/dest/views/index.html" class="btn blue"><i>Попробовать MVP</i></a>
+                                                            <a onclick="ga('send', 'event', 'click', 'try_mvp');" href="../mvp/dest/views/index.html" class="btn red"><i>Попробовать MVP</i></a>
                                                         </div>
                                                         <div class="col-xs-12 col-sm-4">
-                                                            <a href="https://t.me/GraphGrailAi" class="btn blue"><i>Чат</i></a>
+                                                            <a onclick="ga('send', 'event', 'click', 'chat');" href="https://t.me/GraphGrailAi" class="btn blue"><i>Чат</i></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -129,7 +129,7 @@
                                             <div class="col-xs-12 col-sm-12 col-md-2">
                                                  <div class="share">
                                                 <a href="https://bitcointalk.org/index.php?topic=2016928"><i class="fab fa-btc"></i></a>
-                                                <a href="http://www.facebook.com/graphgrailcom"><i class="fab fa-facebook-f"></i></a>
+                                                <a onclick="ga('send', 'event', 'click', 'facebook');" href="http://www.facebook.com/graphgrailcom"><i class="fab fa-facebook-f"></i></a>
                                             </div>
 
                                             </div>
@@ -182,7 +182,12 @@
                                                     </div>
                                             </div-->
                                             <div class="panel">
-                                                <div class="text timeSince"><b>старт ICO</b><br>За <span id="since"></span> часов</div>
+                                              <div class="bonus">
+                                                <p>Бонус 35% <br>
+                                                    <hr>
+                                              </div>
+                                                <div class="text timeSince">
+                                                  <span id="since">С 19 февраля 11:00</span></div>
                                                 <div class="blocks">
                                                     <div>
                                                           12432650
@@ -190,7 +195,7 @@
                                                     </div>
 
                                                     <div>
-                                                        380 126
+                                                        <span id="currentUSD">380 126</span>
                                                         <b>USD Raised</b>
                                                     </div>
                                                     <div>
@@ -198,7 +203,7 @@
                                                         <b>Purchasers</b>
                                                     </div>
                                                 </div>
-                                                <a href="/profile" class="btn red"><i>Вложить токены</i></a>
+                                                <a onclick="ga('send', 'event', 'click', 'attach_tokens');" href="/profile" class="btn red"><i>Вложить токены</i></a>
                                                     <script type="text/template" id="countdown-template">
                                                     <div class="time <%= label %>">
                                                       <span class="count curr top"><%= curr %></span>
@@ -216,8 +221,8 @@
                                                         <div class="preico">
                                                           <div class="cash">Pre ICO $200 K</div>
                                                         </div>
-                                                        <div class="raised">
-                                                          <div class="cash"><span>$180 126</span></div>
+                                                        <div id="raised" class="raised">
+                                                          <div class="cash">$<span id="USDClone"></span></div>
                                                         </div>
                                                         <label class="data left"><i class="fa fa-check"></i><b>Softcap</b></label>
                                                         <label class="data right"><i class="fa fa-check"></i><b>Hardcap</b></label>
@@ -233,7 +238,7 @@
                                 <div class="left">
                                     <a href="#about">О проекте</a>
                                     <a href="#platform">Платформа</a>
-                                    <a href="#roadmap">Дорожная карта</a>
+                                    <a class="outlaw" href="#roadmap">Дорожная карта</a>
                                 </div>
                                 <a href="#" class="logo-nav"><img src="../img/logo-nav.png" width="61" height="96" alt="" /></a>
                                  <div class="right">
@@ -259,7 +264,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
-                            <iframe width="100%" height="630" src="https://www.youtube.com/embed/-AoMVn-R12Q?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <iframe width="100%"  height="315" src="https://www.youtube.com/embed/V3SWIwXLQHE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="btns">
@@ -269,10 +274,10 @@
 
                             <div class="row">
                                 <div class="col-xs-12 col-sm-4">
-                                     <a target="_blank" href="../whitepaper/pdf/WP_eng.pdf" class="btn blue"><i>WHITEPAPER <label>ENG</label></i></a>
+                                     <a target="_blank" onclick="ga('send', 'event', 'click', 'whitepaper_eng');" href="../whitepaper/pdf/WP_eng.pdf" class="btn blue"><i>WHITEPAPER <label>ENG</label></i></a>
                                 </div>
                                  <div class="col-xs-12 col-sm-4">
-                                     <a target="_blank" href="../whitepaper/pdf/WP_rus.pdf" class="btn blue"><i>WHITEPAPER <label>RUS</label></i></a>
+                                     <a target="_blank" href="../whitepaper/pdf/WP_rus.pdf" onclick="ga('send', 'event', 'click', 'whitepaper_rus');" class="btn blue"><i>WHITEPAPER <label>RUS</label></i></a>
                                 </div>
                                 <div class="col-xs-12 col-sm-4">
 
@@ -282,13 +287,13 @@
                                     <span class="caret"></span>
                                   </button>
 																	<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a target="_blank" href="../whitepaper/ru/index.html"><label>Русский</label><div style="background-image: url('../img/rus.png')" class="liteFlag"></div></a></li>
-                                    <li><a target="_blank" href="../whitepaper/de/index.html"><label>Немецкий</label><div style="background-image: url('../img/de.png')" class="liteFlag"></div></a></li>
-                                    <li><a target="_blank" href="../whitepaper/es/index.html"><label>Испанский</label><div style="background-image: url('../img/es.png')" class="liteFlag"></div></a></li>
-                                    <li><a target="_blank" href="../whitepaper/ko/index.html"><label>Корейский</label><div style="background-image: url('../img/ko.png')" class="liteFlag"></div></a></li>
-                                    <li><a target="_blank" href="../whitepaper/zh/index.html"><label>Китайский</label><div style="background-image: url('../img/zh.png')" class="liteFlag"></div></a></li>
-																		<li><a target="_blank" href="../whitepaper/ja/index.html"><label>Японский</label><div style="background-image: url('../img/svg/japan.svg')" class="liteFlag"></div></a></li>
-                                    <li><a target="_blank" href="../whitepaper/en/index.html"><label>Английский</label><div style="background-image: url('../img/en.png')" class="liteFlag"></div></a></li>
+                                    <li><a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/ru/index.html"><label>Русский</label><div style="background-image: url('../img/rus.png')" class="liteFlag"></div></a></li>
+                                    <li><a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/de/index.html"><label>Немецкий</label><div style="background-image: url('../img/de.png')" class="liteFlag"></div></a></li>
+                                    <li><a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/es/index.html"><label>Испанский</label><div style="background-image: url('../img/es.png')" class="liteFlag"></div></a></li>
+                                    <li><a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/ko/index.html"><label>Корейский</label><div style="background-image: url('../img/ko.png')" class="liteFlag"></div></a></li>
+                                    <li><a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/zh/index.html"><label>Китайский</label><div style="background-image: url('../img/zh.png')" class="liteFlag"></div></a></li>
+																		<li><a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/ja/index.html"><label>Японский</label><div style="background-image: url('../img/svg/japan.svg')" class="liteFlag"></div></a></li>
+                                    <li><a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/en/index.html"><label>Английский</label><div style="background-image: url('../img/en.png')" class="liteFlag"></div></a></li>
                                   </ul>
                                 </div>
                                 </div>
@@ -325,10 +330,10 @@
                            <h2>Для кого?</h2>
                            <div class="row">
                                 <div class="col-xs-12 col-sm-6 text-right">
-                                     <a href="#" class="btn blue"><i>ДЛЯ AI СПЕЦИАЛИСТОВ</i></a>
+                                     <a onclick="ga('send', 'event', 'click', 'for_ai_specialists');" href="#" class="btn blue"><i>ДЛЯ AI СПЕЦИАЛИСТОВ</i></a>
                                 </div>
                                  <div class="col-xs-12 col-sm-6 text-left">
-                                     <a href="#" class="btn blue"><i>ДЛЯ BLOCKCHAIN СПЕЦИАЛИСТОВ</i></a>
+                                     <a onclick="ga('send', 'event', 'click', 'for_blockchain_specialists');" href="#" class="btn blue"><i>ДЛЯ BLOCKCHAIN СПЕЦИАЛИСТОВ</i></a>
                                 </div>
 
                             </div>
@@ -1107,7 +1112,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
                            <div class="row teamWrapper">
                                <div class="col-xs-12 col-sm-6 col-md-3">
                                    <div class="item" style="top: 0px; opacity: 1;">
-                                       <div class="img" style="background-image: url('../img/victor.png')"></div>
+                                       <div class="img" style="background-image: url('../img/victor.jpg')"></div>
                                        <h3 class="text-center">Виктор Носко</h3>
                                        <div class="text text-center">
                                          <p><span>CEO и основатель, ИИ, Data-science.</span><br>
@@ -1179,8 +1184,8 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
                                        <div class="text text-center">
                                        <span>Разработчик Python & Data Science.</span> <br>
                                        Сфера деятельности – разработка алгоритмов машинного обучения средствами языка Python.<br>
-                                      Образование: инженер по специальности “Промышленная электроника”, магистр по направлению “Инфокоммуникационные технологии и системы связи” - оба в ЮРГПУ(НПИ) <br>
-                                      Ученая степень кандидата технических наук по специальности 05.13.05 “Элементы и устройства вычислительной техники и систем управления”. По результатам научной деятельности опубликовано более 90 печатных работ, включая статьи (в журналах, рецензируемых Scopus, WoS, ВАК, РИНЦ), патенты, учебные пособия.
+                                      Образование: инженер по специальности “Промышленная электроника", магистр по направлению “Инфокоммуникационные технологии и системы связи" - оба в ЮРГПУ(НПИ) <br>
+                                      Ученая степень кандидата технических наук по специальности 05.13.05 “Элементы и устройства вычислительной техники и систем управления". По результатам научной деятельности опубликовано более 90 печатных работ, включая статьи (в журналах, рецензируемых Scopus, WoS, ВАК, РИНЦ), патенты, учебные пособия.
                                        </div>
                                    </div>
                                </div>
@@ -1300,10 +1305,10 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
                                         </div>
                                         <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-4">
                                             <div class="footer-nav">
-                                                <div><a href="https://bitcointalk.org/index.php?topic=2040117">BitcoinTalk (eng)</a></div>
-                                                <div><a href="https://bitcointalk.org/index.php?topic=2016928">BitcoinTalk (рус)</a></div>
-                                                <div><a href="https://bitcointalk.org/index.php?topic=2173307.0">BitcoinTalk Bounty (eng)</a></div>
-                                                <div><a href="https://bitcointalk.org/index.php?topic=2091282">BitcoinTalk Баунти (рус)</a></div>
+                                                <div><a onclick="ga('send', 'event', 'click', 'bitcointalk');" href="https://bitcointalk.org/index.php?topic=2040117">BitcoinTalk (eng)</a></div>
+                                                <div><a onclick="ga('send', 'event', 'click', 'bitcointalk');" href="https://bitcointalk.org/index.php?topic=2016928">BitcoinTalk (рус)</a></div>
+                                                <div><a onclick="ga('send', 'event', 'click', 'bitcointalk');" href="https://bitcointalk.org/index.php?topic=2173307.0">BitcoinTalk Bounty (eng)</a></div>
+                                                <div><a onclick="ga('send', 'event', 'click', 'bitcointalk');" href="https://bitcointalk.org/index.php?topic=2091282">BitcoinTalk Баунти (рус)</a></div>
                                             </div>
                                         </div>
                                         <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-4">
@@ -1316,7 +1321,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
 
                                 <div class="col-xs-12 col-sm-12 col-md-4">
                                          <div class="social">
-                                            <a href="http://www.facebook.com/graphgrailcom" class="fb"><i class="fab fa-facebook-f"></i></a>
+                                            <a onclick="ga('send', 'event', 'click', 'facebook');" href="http://www.facebook.com/graphgrailcom" class="fb"><i class="fab fa-facebook-f"></i></a>
                                             <a href="http://twitter.com/GraphGrail" class="tw"><i class="fab fa-twitter"></i></a>
                                             <a href="http://spark.ru/startup/5265b5450fcfc" class="vk"><i class="fab fa-vk"></i></a>
                                             <a href="https://vk.com/graphgrail" class="gp"><i class="fab fa-google-plus-g"></i></a>
@@ -1330,7 +1335,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
                             <div class="row">
                              <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
                              <div class="feedback text-center">
-                             <a href="https://t.me/joinchat/DAbHbQrAb5KHNtmMYfVsKA" class="btn red"><i>Обратная связь</i></a>
+                             <a onclick="ga('send', 'event', 'click', 'feedback');" href="https://t.me/joinchat/DAbHbQrAb5KHNtmMYfVsKA" class="btn red"><i>Обратная связь</i></a>
                              </div>
                              </div>
                              <div class="col-xs-12">
