@@ -1,7 +1,9 @@
 #!/bin/bash
 set -e  # Exit with non-zero if anything fails
 
-BUILD_BRANCH="master"
+MASTER_BRANCH="master"
+STAGING_BRANCH="staging"
+
 
 # Do not build a new version if it is a pull-request or commit not to BUILD_BRANCH
 if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
@@ -9,8 +11,8 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     exit 0
 fi
 
-if [ "$TRAVIS_BRANCH" != "$BUILD_BRANCH" ]; then
-    echo "Not $BUILD_BRANCH branch but $TRAVIS_BRANCH, skipping deploy;"
+if [ "$TRAVIS_BRANCH" != "$MASTER_BRANCH" ] && [ "$TRAVIS_BRANCH" != "$STAGING_BRANCH" ]; then
+    echo "Not $MASTER_BRANCH or $STAGING_BRANCH branch but $TRAVIS_BRANCH, skipping deploy;"
     exit 0
 fi
 
@@ -53,7 +55,7 @@ git config user.email "$COMMIT_AUTHOR_EMAIL"
 echo "Add new data to $BACKEND_REPO"
 git add -A .
 if ! [[ -z $(git status -s) ]] ; then
-  echo "Pushing changes to the $BACKEND_REPO branch"
+  echo "Pushing changes to the $BACKEND_REPO $BUILD_BRANCH branch"
   git commit -m "Add new build data from $FRONTEND_REPO frontend $FRONTEND_HEAD_COMMIT commit to $BUILD_BRANCH"
   git push origin $BUILD_BRANCH
   echo "All done."
