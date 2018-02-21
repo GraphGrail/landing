@@ -525,13 +525,16 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
 .intro .why a:hover{
   text-decoration: underline;
 }
+.intro .why .row .col-xs-12{
+	margin-top: -25px;
+}
 .intro .share{
-  white-space: nowrap;
-  margin-right: -10px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: 95px;
+	white-space: nowrap;
+	margin-right: -10px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	height: 90px;
 }
 .intro .share a{
   display: inline-block;
