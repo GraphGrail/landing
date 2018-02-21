@@ -710,13 +710,8 @@ $('#since').text('За '+ hSince + hword);
 $('#sinceEng').text('By '+ hSince + ' hours');
 });
 
-var obj = JSON.parse('{"number_investors":95,"usd_total":"290177.03116202734160468272","tokens_total":"3921350.03230236911166321672"}');
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myObj = JSON.parse(this.responseText);
-        document.getElementById("blocks").innerHTML = myObj.name;
-    }
-};
-xmlhttp.open("GET", "stat.json", true);
-xmlhttp.send();
+    jQuery.getJSON('https://ru.graphgrail.com/stat', {}, function(json){
+      jQuery('#totalWorth').html(Math.round(json.tokens_total).toFixed(0) + '<b>Worth of GAI tokens*</b>');
+      jQuery('#currentUSD').html(parseInt(Math.round(json.usd_total).toFixed(0)) + 200000);
+      jQuery('#investors').html(Math.round(json.number_investors + 90).toFixed(0) + '<b>Purchasers</b>');
+    });

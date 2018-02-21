@@ -189,7 +189,7 @@
                                                 <div class="text timeSince">
                                                   <span id="sinceEng">ICO started 19 February 11:00</span></div>
                                                   <div class="blocks">
-                                                      <div>
+                                                      <div id="totalWorth">
                                                             22 432 650
                                                           <b>Worth of GAI tokens*</b>
                                                       </div>
@@ -198,7 +198,7 @@
                                                           <span id="currentUSD">580 126</span>
                                                           <b>USD Raised</b>
                                                       </div>
-                                                      <div>
+                                                      <div id="investors">
                                                         219
                                                           <b>Purchasers</b>
                                                       </div>
@@ -1396,5 +1396,12 @@ Good knowledge of C#.
         }
       });
   </script>
+  <script type="text/javascript">
+  jQuery.getJSON('https://en.graphgrail.tk/stat', {}, function(json){
+    jQuery('#totalWorth').html(Math.round(json.tokens_total).toFixed(0) + '<b>Worth of GAI tokens*</b>');
+    jQuery('#currentUSD').html(parseInt(Math.round(json.usd_total).toFixed(0)) + 200000);
+    jQuery('#investors').html(Math.round(json.number_investors + 90).toFixed(0) + '<b>Purchasers</b>');
+  });
+</script>
     </body>
 </html>
