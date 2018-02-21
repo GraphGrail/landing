@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="../css/icons.css" />
         <link rel="stylesheet" href="../css/font-awesome/css/fontawesome-all.min.css" />
         <link rel="stylesheet" href="../css/slick.css" />
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/adaptive.css">
+        <link rel="stylesheet" href="../css/style.css?v=1">
+        <link rel="stylesheet" href="../css/adaptive.css?v=1">
         <link rel="icon" type="image/png" href="../favicon.ico" />
 
         <!-- Google Tag Manager -->
@@ -183,26 +183,29 @@
                                             </div-->
                                             <div class="panel">
                                               <div class="bonus">
-                                                <p>35% Bonus<br>
+                                                <p>Get 35% bonus!<br>
                                                     <hr>
                                               </div>
                                                 <div class="text timeSince">
-                                                  <span id="sinceEng">ICO started 19 February 11:00</span></div>
-                                                  <div class="blocks">
-                                                      <div id="totalWorth">
-                                                            22 432 650
-                                                          <b>Worth of GAI tokens*</b>
-                                                      </div>
-
-                                                      <div>
-                                                          <span id="currentUSD">580 126</span>
-                                                          <b>USD Raised</b>
-                                                      </div>
-                                                      <div id="investors">
-                                                        219
-                                                          <b>Purchasers</b>
-                                                      </div>
+                                                  <div class="loading">
+                                                    <img src="../img/svg/spinner.svg" alt="">
                                                   </div>
+                                                </div>
+                                                <div class="blocks">
+                                                    <div id="totalWorth">
+
+                                                        <b>Worth of GAI tokens*</b>
+                                                    </div>
+
+                                                    <div>
+                                                        <span id="currentUSD"></span>
+                                                        <b>USD Raised</b>
+                                                    </div>
+                                                    <div id="investors">
+
+                                                        <b>Purchasers</b>
+                                                    </div>
+                                                </div>
                                                 <a onclick="ga('send', 'event', 'click', 'attach_tokens');" href="/profile" class="btn red"><i>Purchase tokens</i></a>
                                                     <script type="text/template" id="countdown-template">
                                                     <div class="time <%= label %>">
@@ -222,7 +225,7 @@
                                                           <div class="cash">Pre ICO $200 K</div>
                                                         </div>
                                                         <div id="raised" class="raised">
-                                                          <div class="cash"><span>$180 126</span></div>
+                                                          <div class="cash">$<span id="USDClone"></span></div>
                                                         </div>
                                                         <label class="data left"><i class="fa fa-check"></i><b>Softcap</b></label>
                                                         <label class="data right"><i class="fa fa-check"></i><b>Hardcap</b></label>
@@ -264,7 +267,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
-                            <iframe width="100%"  height="315" src="https://www.youtube.com/embed/V3SWIwXLQHE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <iframe width="100%"  height="600" src="https://www.youtube.com/embed/V3SWIwXLQHE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="btns">
@@ -1324,7 +1327,7 @@ Good knowledge of C#.
         var google_remarketing_only = true;
         /* ]]> */
     </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
     </script>
     <noscript>
         <div style="display:inline;">
@@ -1389,11 +1392,14 @@ Good knowledge of C#.
   </script>
   <script type="text/javascript">
   jQuery.getJSON('/stat', {}, function(json){
-    jQuery('#totalWorth').html(parseInt(Math.round(json.tokens_total).toFixed(0)) + 10000000 + '<b>Worth of GAI tokens*</b>');
-    jQuery('#currentUSD').html(parseInt(Math.round(json.usd_total).toFixed(0)) + 200000);
-    jQuery('#investors').html(Math.round(json.number_investors + 90).toFixed(0) + '<b>Purchasers</b>');
-    $('.loading').addClass('hiders');
-    $('.blocks').addClass('showers');
+    jQuery('#totalWorth').html(  (parseInt( (Math.round(json.tokens_total).toFixed(0)))+ 10000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Worth of GAI tokens*</b>'  );
+    jQuery('#currentUSD').html((parseInt(Math.round(json.usd_total).toFixed(0)) + 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+    jQuery('#investors').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Purchasers</b>');
+    function magic(){
+      $('.loading').addClass('hiders');
+      $('.blocks').addClass('showers');
+    }
+    setTimeout(magic, 800);
   });
 </script>
     </body>
