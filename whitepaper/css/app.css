@@ -164,8 +164,8 @@ body:after{
 }
 .language{
 	position: fixed;
-  top: 10px;
-  right: 23px;
+  top: 0px;
+  right: 40px;
   z-index: 10001;
   display: flex;
   flex-direction: column;
@@ -178,6 +178,7 @@ body:after{
 }
 .language .opened{
   height: 260px;
+  background-color: #f9f9f9;
 }
 .moved .section{
   padding-top: 50px;
@@ -209,6 +210,13 @@ margin: 18px 0;
   top: 58px;
   background-color: #dbe6ff;
 }
+.showed .goBack{
+  top: 0px;
+}
+.showed .buyit{
+  top: 0px;
+  left: 220px;
+}
 .buyit a{
   color: black;
 }
@@ -223,7 +231,8 @@ nav ul{
 }
 nav ul li{
   list-style-type: none;
-  margin: 30px 0;
+  margin: 20px 0;
+  max-width: 250px;
   text-align: right;
 }
 nav ul li a{
@@ -240,6 +249,7 @@ nav ul li a{
   background-color: #dbe6ff;
   padding: 10px;
   cursor: pointer;
+  margin-bottom: 15px;
   outline: none;
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -256,8 +266,8 @@ nav ul li a{
   border: 1px solid #1a205c;
 }
 .language .langes a div{
-  width: 40px;
-  height: 26px;
+  width: 55px;
+  height: 34px;
   background-size: cover;
   border: 1px solid #6b6b6b;
   margin: 5px auto;
@@ -267,6 +277,9 @@ nav ul li a{
 .banner p{
   text-align: center;
   margin: 20px auto 0 auto;
+}
+.main_container .hided{
+  display: none;
 }
 .bigTitle{
   font-size: 33px;
@@ -461,7 +474,7 @@ nav ul li a{
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #060d31;
-  z-index: 100;
+  z-index: 5;
 }
 .showed .goBack, .showed .language, .showed .buyit{
   opacity: 1;
@@ -471,7 +484,7 @@ nav ul li a{
   opacity: 1;
   border-radius: 19px;
   padding: 18px 0px;
-  z-index: 10000;
+  z-index: 9;
   background-color: #060e31;
 }
 
@@ -481,7 +494,7 @@ nav ul li a{
   }
   .fp-viewing-initial .counter li:nth-child(1) a, .fp-viewing-problems .counter li:nth-child(2) a, .fp-viewing-solution .counter li:nth-child(2) a, .fp-viewing-advantages .counter li:nth-child(3) a, .fp-viewing-architecture .counter li:nth-child(4) a, .fp-viewing-team .counter li:nth-child(5) a, .fp-viewing-cases .counter li:nth-child(6) a, .fp-viewing-roadmap .counter li:nth-child(7) a, .fp-viewing-tokensale .counter li:nth-child(8) a{
     padding: 4px;
-    line-height: 25px;
+    line-height: 20px;
   }
 }
 @media all and (max-width: 1600px){
@@ -508,7 +521,7 @@ nav ul li a{
     height: 70px;
   }
   .moved .mobile_header .language, .moved .mobile_header .goBack{
-    position: static;
+    position: fixed;
   }
   .navBurger{
     display: block;
@@ -540,10 +553,12 @@ nav ul li a{
     justify-content: space-between;
   }
   .moved .mobile_header .goBack{
-    margin-left: 40px;
+    margin-left: 0px;
   }
   .moved .mobile_header .language{
-    margin-right: 40px;
+    margin-right: 20px;
+    top: 0px;
+    right: 23px;
   }
   .moved .mobile_header .buyit{
     margin-left: 0;
@@ -563,15 +578,18 @@ nav ul li a{
   }
   .moved nav{
     width: 94%;
-    top: 20%;
+    top: 14%;
   }
   .moved nav ul li{
     text-align: left;
-    width: 95%;
+    width: 92%;
+    max-width: 400px;
+    padding: 0;
     margin: 30px 0;
   }
   .moved nav ul li a{
-    font-size: 20px;
+    font-size: 23px;
+padding: 20px 0px;
   }
 }
 @media all and (max-width: 1150px){
@@ -667,7 +685,7 @@ nav ul li a{
 }
 .fp-viewing-initial .counter li:nth-child(1) a, .fp-viewing-problems .counter li:nth-child(2) a, .fp-viewing-solution .counter li:nth-child(2) a, .fp-viewing-advantages .counter li:nth-child(3) a, .fp-viewing-architecture .counter li:nth-child(4) a, .fp-viewing-team .counter li:nth-child(5) a, .fp-viewing-cases .counter li:nth-child(6) a, .fp-viewing-roadmap .counter li:nth-child(7) a, .fp-viewing-tokensale .counter li:nth-child(8) a{
   color: #000000;
-  padding: 3px;
+  padding: 0px;
   background-color: #ffffff;
 }
 .fp-viewing-menu nav{
