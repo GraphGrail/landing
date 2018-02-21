@@ -37,6 +37,12 @@ git clone $BACKEND_REPO $BACKEND_NAME
 echo "Return back to the original repo"
 popd
 
+if [ "$TRAVIS_BRANCH" == "$MASTER_BRANCH" ]; then
+  BUILD_BRANCH=$MASTER_BRANCH
+else
+  BUILD_BRANCH=$STAGING_BRANCH
+fi
+
 echo "Checkout to $BUILD_BRANCH branch in backend repo"
 pushd ../$BACKEND_NAME
 git checkout $BUILD_BRANCH
