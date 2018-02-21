@@ -1389,7 +1389,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
         var google_remarketing_only = true;
         /* ]]> */
     </script>
-    <!-- <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"> -->
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
     </script>
     <noscript>
         <div style="display:inline;">
@@ -1454,14 +1454,14 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
   </script>
   <script type="text/javascript">
   jQuery.getJSON('/stat', {}, function(json){
-    jQuery('#totalWorth').html(parseInt(Math.round(json.tokens_total).toFixed(0)) + 10000000 + '<b>Worth of GAI tokens*</b>');
-    jQuery('#currentUSD').html(parseInt(Math.round(json.usd_total).toFixed(0)) + 200000);
-    jQuery('#investors').html(Math.round(json.number_investors + 90).toFixed(0) + '<b>Purchasers</b>');
+    jQuery('#totalWorth').html(  (parseInt( (Math.round(json.tokens_total).toFixed(0)))+ 10000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Worth of GAI tokens*</b>'  );
+    jQuery('#currentUSD').html((parseInt(Math.round(json.usd_total).toFixed(0)) + 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+    jQuery('#investors').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Purchasers</b>');
     function magic(){
       $('.loading').addClass('hiders');
       $('.blocks').addClass('showers');
     }
-    setTimeout(magic, 1000);
+    setTimeout(magic, 800);
   });
 </script>
     </body>
