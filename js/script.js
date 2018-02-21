@@ -710,9 +710,13 @@ $('#since').text('За '+ hSince + hword);
 $('#sinceEng').text('By '+ hSince + ' hours');
 });
 
-$.ajax({
-  data: {"number_investors":95,"usd_total":"290177.03116202734160468272","tokens_total":"3921350.03230236911166321672"},
-  success: function(){
-    console.log(data)
-  }
-});
+var obj = JSON.parse('{"number_investors":95,"usd_total":"290177.03116202734160468272","tokens_total":"3921350.03230236911166321672"}');
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("blocks").innerHTML = myObj.name;
+    }
+};
+xmlhttp.open("GET", "stat.json", true);
+xmlhttp.send();
