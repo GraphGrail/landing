@@ -7,8 +7,6 @@ body{
   background-color: #e8e7ec;
   color: #1a205c;
   font-family: 'Ubuntu', sans-serif;
-}
-body {
   width: 100%;
   height: 100%;
   position: relative;
@@ -18,11 +16,12 @@ body {
   line-height: 1;
   background-color: #060d31;
 }
-.main__container{
+.main_container{
 	max-width: 1050px;
 	padding: 0 70px;
-	background-color: #e7e7eb;
+	background-color: #f9f9f9;
 	margin: 0 auto;
+  transition: all 0.1s;
 }
 body:after{
   position: absolute;
@@ -47,6 +46,7 @@ body:after{
   z-index: 1;
   background: url("../img/noise.png") repeat top left;
 }
+
 .lines{
  position: relative;
   z-index: 6;
@@ -166,7 +166,7 @@ body:after{
 	position: fixed;
   top: 10px;
   right: 23px;
-  z-index: 1000;
+  z-index: 10001;
   display: flex;
   flex-direction: column;
   color: black;
@@ -178,6 +178,9 @@ body:after{
 }
 .language .opened{
   height: 260px;
+}
+.moved .section{
+  padding-top: 50px;
 }
 .goBack{
   box-sizing: border-box;
@@ -209,10 +212,32 @@ margin: 18px 0;
 .buyit a{
   color: black;
 }
+nav{
+  position: fixed;
+  right: 20px;
+  top: 32%;
+  transition: all 0.2s;
+}
+nav ul{
+  padding: 0;
+}
+nav ul li{
+  list-style-type: none;
+  margin: 30px 0;
+  text-align: right;
+}
+nav ul li a{
+  color: #e7e7eb;
+  text-align: right;
+  padding: 5px 0;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
 #langToggle{
   box-sizing: border-box;
   border-radius: 6px;
-  background-color: white;
+  background-color: #dbe6ff;
   padding: 10px;
   cursor: pointer;
   outline: none;
@@ -423,7 +448,137 @@ margin: 18px 0;
 .tokensale .smallTitle{
   margin: 43px auto 0 0
 }
+.navBurger{
+  display: none;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  padding: 0px;
+  border-radius: 10px;
+  right: 40px;
+  top: 84px;
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #060d31;
+  z-index: 100;
+}
+.showed .goBack, .showed .language, .showed .buyit{
+  opacity: 1;
+  z-index: 10001;
+}
+.showed nav{
+  opacity: 1;
+  border-radius: 19px;
+  padding: 18px 0px;
+  z-index: 10000;
+  background-color: #060e31;
+}
 
+@media all and (max-width: 1750px){
+  nav ul li{
+    width: 170px;
+  }
+  .fp-viewing-initial .counter li:nth-child(1) a, .fp-viewing-problems .counter li:nth-child(2) a, .fp-viewing-solution .counter li:nth-child(2) a, .fp-viewing-advantages .counter li:nth-child(3) a, .fp-viewing-architecture .counter li:nth-child(4) a, .fp-viewing-team .counter li:nth-child(5) a, .fp-viewing-cases .counter li:nth-child(6) a, .fp-viewing-roadmap .counter li:nth-child(7) a, .fp-viewing-tokensale .counter li:nth-child(8) a{
+    padding: 4px;
+    line-height: 25px;
+  }
+}
+@media all and (max-width: 1600px){
+  .main_container{
+    max-width: 1000px;
+    padding: 0 10px;
+  }
+  nav ul li{
+    margin: 23px;
+  }
+  nav{
+    right: 10px;
+    top: 26%;
+  }
+}
+@media all and (max-width: 1450px){
+  .moved .mobile_header{
+    background-color: black;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 10;
+    height: 70px;
+  }
+  .moved .mobile_header .language, .moved .mobile_header .goBack{
+    position: static;
+  }
+  .navBurger{
+    display: block;
+  }
+  .main_container.moved{
+    margin: 0 auto 0 0;
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+  }
+  .moved .section{
+    padding: 0px 260px 0 30px;
+  }
+  .moved .language .langes a div{
+    width: 55px;
+    height: 34px;
+  }
+  nav, .goBack, .language, .buyit{
+    opacity: 0;
+    z-index: -1;
+  }
+  nav ul{
+  padding: 0;
+}
+}
+@media all and (max-width: 1280px){
+  .moved .mobile_header{
+    position: fixed;
+    justify-content: space-between;
+  }
+  .moved .mobile_header .goBack{
+    margin-left: 40px;
+  }
+  .moved .mobile_header .language{
+    margin-right: 40px;
+  }
+  .moved .mobile_header .buyit{
+    margin-left: 0;
+  }
+  .showed{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: #060e31;
+  }
+  .navBurger{
+    z-index: 200;
+  }
+  .fp-viewing-menu .moved nav{
+    opacity: 1;
+  }
+  .moved nav{
+    width: 94%;
+    top: 20%;
+  }
+  .moved nav ul li{
+    text-align: left;
+    width: 95%;
+    margin: 30px 0;
+  }
+  .moved nav ul li a{
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 1150px){
+  .section{
+      padding: 0 100px 0 40px;
+  }
+}
 @media all and (max-width: 1200px){
   .person .avatar{
     width: 160px;
@@ -455,7 +610,7 @@ margin: 18px 0;
     margin-right: 30px;
   }
   .section{
-    padding: 0 30px;
+    padding: 0 90px 0 30px;
   }
   .advantage .blackTitle{
     margin-right: 20px;
@@ -506,6 +661,17 @@ margin: 18px 0;
   .advantage .blackTitle{
     font-size: 22px;
   }
+}
+.counter li a{
+  transition: all 0.2s;
+}
+.fp-viewing-initial .counter li:nth-child(1) a, .fp-viewing-problems .counter li:nth-child(2) a, .fp-viewing-solution .counter li:nth-child(2) a, .fp-viewing-advantages .counter li:nth-child(3) a, .fp-viewing-architecture .counter li:nth-child(4) a, .fp-viewing-team .counter li:nth-child(5) a, .fp-viewing-cases .counter li:nth-child(6) a, .fp-viewing-roadmap .counter li:nth-child(7) a, .fp-viewing-tokensale .counter li:nth-child(8) a{
+  color: #000000;
+  padding: 3px;
+  background-color: #ffffff;
+}
+.fp-viewing-menu nav{
+  opacity: 0;
 }
 @media all and (max-width: 800px){
   .together{

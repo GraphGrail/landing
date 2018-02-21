@@ -383,7 +383,7 @@ header nav a, header nav a:visited{
   cursor: pointer;
   display: inline-block;
   padding: 12px 0 0 0;
-  font-size: 16px;
+  margin: 0 7px;
   border-bottom: 1px solid transparent;
   text-transform: uppercase;
   background-color: transparent !important;
@@ -391,8 +391,10 @@ header nav a, header nav a:visited{
   width: initial;
   text-align: center;
 }
-header nav a, header nav a{
+
+header nav a{
   padding: 12px 0 0 0;
+  font-size: 14px;
 }
 header nav a, header nav a.outlaw{
   padding: 2px 0 0 0;
@@ -2580,7 +2582,28 @@ header nav .back .container{
   margin: unset !important;
 }
 .lang-menu.open li{display: block;}
-
+.blocks{
+  opacity: 0;
+  transition: all 0.1s;
+}
+.loading{
+  opacity: 1;
+  transition: all 0.1s;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 190px;
+  position: absolute;
+  width: 233px;
+}
+.hiders{
+  opacity: 0;
+  z-index: -10;
+}
+.showers{
+  opacity: 1;
+}
 .panel .blocks > div{
   border-radius: 10px;
   background-color: #e7e7eb;

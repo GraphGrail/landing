@@ -14,7 +14,16 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js"></script>
   </head>
   <body>
-		<div class="main__container">
+		<div class="main_container">
+      <div class="navBurger" style="background-image:url('../assets/images/navburger.png')"></div>
+      <div class="mobile">
+        <div class="mobile_header">
+    <div class="goBack">
+     <a href="https://ru.graphgrail.com">← На основной сайт</a>
+    </div>
+    <div class="goBack buyit">
+     <a href="https://ru.graphgrail.com/profile">Вложить токены</a>
+    </div>
     <div class="language">
       <p id="langToggle">Language</p>
       <div class="langes">
@@ -26,11 +35,19 @@
 				<a href="../ja/index.html"><div style="background-image: url('../assets/images/japan.svg')"></div></a>
       </div>
     </div>
-    <div class="goBack">
-     <a href="https://ru.graphgrail.com">← На основной сайт</a>
-    </div>
-    <div class="goBack buyit">
-     <a href="https://ru.graphgrail.com/profile">Вложить токены</a>
+  </div>
+    <nav>
+      <ul class="counter">
+        <li><a href="#initial">GraphGrail Ai</a></li>
+        <li><a href="#solution">Решение</a></li>
+        <li><a href="#advantages">Преимущества и инновация</a></li>
+        <li><a href="#architecture">Архитектура платформы</a></li>
+        <li><a href="#team">Команда</a></li>
+        <li><a href="#cases">Кейсы</a></li>
+        <li><a href="#roadmap">Дорожная карта</a></li>
+        <li><a href="#tokensale">Tokensale условия</a></li>
+      </ul>
+    </nav>
     </div>
     <div id="fullpage">
       <div class="section menu">
@@ -46,7 +63,7 @@
         </ul>
       </div>
 
-      <div data-anchor="initial" class="section banner">
+      <div data-anchor="initial" id="initial2" class="section banner">
         <img src="../assets/images/graphgrail_png_main.png" alt="">
         <p class="bigTitle">GraphGrail Ai - платформа Искусственного интеллекта для Блокчейна
 </p>
@@ -56,7 +73,7 @@ GraphGrail Ai – это первая в мире платформа Искус�
 <p class="smallTitle">Наша миссия: создание сильного искуственного интеллекта</p>
       </div>
 
-	    <div data-anchor="problems" class="section problems">
+	    <div data-anchor="problems" id="problems2" class="section problems">
         <p class="bigTitle">Ключевые проблемы</p>
         <p class="smallTitle">Проблемы рынка</p>
         <ul>
@@ -86,14 +103,14 @@ GraphGrail Ai – это первая в мире платформа Искус�
         </ul>
       </div>
 
-      <div data-anchor="solution" class="section solution">
+      <div data-anchor="solution" id="solution2" class="section solution">
         <p class="bigTitle">Решение</p>
         <p class="smallTitle">GraphGrail Ai предоставляет единое решение полного цикла для анализа текстовых данных.</p>
         <p class="plainText">Платформа предлагает все необходимые модули для подготовки и обработки данных: сбор и парсинг, очистка, разметка (тегирование) с помощью Ai-designer для построения языковой модели предметной области, тестирование, машинное обучение и настройка нейронной сети под задачу, интеграция по API в ваш бизнес.</p>
 <p class="plainText">Готовое решение размещается в Децентрализованном Маркетплейсе и начинает зарабатывать деньги. Теперь не нужно использовать другие сервисы и делать сложные интеграции - все задачи решаются на платформе GraphGrail Ai.</p>
       </div>
 
-	    <div data-anchor="advantages" class="section advantages">
+	    <div data-anchor="advantages" id="advantages2" class="section advantages">
         <p class="bigTitle advanTitle">Приемущества и инновация</p>
         <div class="advantage">
           <div class="advantImage" style="background-image: url('../assets/images/monitor.svg')"></div>
@@ -125,17 +142,17 @@ GraphGrail Ai – это первая в мире платформа Искус�
         </div>
       </div>
 
-      <div data-anchor="architecture" class="section architecture">
+      <div data-anchor="architecture" id="architecture2" class="section architecture">
         <p class="bigTitle">Архитектура платформы</p>
         <p class="plainText">Искусственный интеллект, особенно наука о данных и машинное обучение (DS&ML), изменят способ получения данных, их анализа и управления ими. Сегодня ввиду сложности это в основном делается людьми, часто разработчиками, нанятыми внешними сервис-провайдерами. Однако DS&ML — это движущие силы будущих сервисов данных и аналитики (D&A). Со временем последуют более сложные и нетривиальные задачи, что приведет к „интеллектуальной“ автоматизации.</p>
 <p class="plainText">Готовое решение размещается в Децентрализованном Маркетплейсе и начинает зарабатывать деньги. Теперь не нужно использовать другие сервисы и делать сложные интеграции - все задачи решаются на платформе GraphGrail Ai.</p>
         <p class="plainRed">Платформа GraphGrailAi - это слоистая структура, состоящая из уровня NLP компонентов, алгоритмов и приложений, благодаря гибкости которой data-science специалисты смогут многократно использовать компоненты и строить пайплайны обработки данных.</p>
       </div>
-      <div data-anchor="team" class="team section">
+      <div data-anchor="team" id="team2" class="team section">
         <p class="bigTitle">Команда</p>
         <div class="teamWrapper">
           <div class="person">
-            <div class="avatar" style="background-image: url(../assets/images/victor.png)"></div>
+            <div class="avatar" style="background-image: url(../assets/images/victor.jpg)"></div>
             <p class="personName">VICTOR NOSKO</p>
             <p class="profes">CEO and founder, Ai, Data-science</p>
           </div>
@@ -209,7 +226,7 @@ GraphGrail Ai – это первая в мире платформа Искус�
           </div>
         </div>
       </div>
-      <div data-anchor="cases" class="section cases">
+      <div data-anchor="cases" id="cases2" class="section cases">
         <p class="bigTitle">Кейсы</p>
         <p class="smallTitle together">Бизнес использует сейчас</p>
         <ul>
@@ -278,7 +295,7 @@ GraphGrail Ai – это первая в мире платформа Искус�
           <li>Создание Лаборатории перспективных решений глубокого машинного обучения и Искусственного интеллекта будущего на базе моделей платформы (RnD Laboratory with deep learning)</li>
         </ul>
       </div>
-      <div data-anchor="rokensale" class="section tokensale">
+      <div data-anchor="tokensale" id="tokensale2" class="section tokensale">
         <p class="bigTitle togetherDown">Tokensale условия</p>
         <p class="redItalic">Старт TGE: 19, Feb <br>
           Окончание TGE: 15, Apr <br>
