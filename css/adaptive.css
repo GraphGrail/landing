@@ -74,10 +74,6 @@ span.size{ display: none; }
     .container {
         border: 1px solid violet;
     }
-
-     .intro .share a{
-        margin-right: 5px;
-       }
        .countdown .time{
         width: 62px;
         margin-right: 1px;
@@ -126,11 +122,11 @@ span.size{ display: none; }
         margin-top: -15px;
        }
        .intro .share a{
-        margin-right: 0px;
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
-        font-size: 20px;
+				 margin-right: 0px;
+ 				width: 40px;
+ 				height: 40px;
+ 				line-height: 35px;
+ 				font-size: 20px;
        }
        .intro .btns .btn{
         margin-right: 0;
@@ -159,7 +155,7 @@ span.size{ display: none; }
        }
 
        .intro .databar label{
-        float: none;
+        float: right;
         display: block;
        }
        .intro .databar label:last-child{
@@ -194,6 +190,7 @@ span.size{ display: none; }
     .intro .share{
       float: none;
       margin: 30px 0;
+			height: 70px;
       text-align: center;
     }
 
