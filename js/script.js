@@ -709,9 +709,3 @@ if((hSince.substr(hSince.length-1,1)) > 4 || (hSince.substr(hSince.length-1,1)) 
 $('#since').text('За '+ hSince + hword);
 $('#sinceEng').text('By '+ hSince + ' hours');
 });
-
-    jQuery.getJSON('https://ru.graphgrail.com/stat', {}, function(json){
-      jQuery('#totalWorth').html(Math.round(json.tokens_total).toFixed(0) + '<b>Worth of GAI tokens*</b>');
-      jQuery('#currentUSD').html(parseInt(Math.round(json.usd_total).toFixed(0)) + 200000);
-      jQuery('#investors').html(Math.round(json.number_investors + 90).toFixed(0) + '<b>Purchasers</b>');
-    });
