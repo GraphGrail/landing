@@ -46,6 +46,7 @@ body:after{
   z-index: 1;
   background: url("../img/noise.png") repeat top left;
 }
+
 .lines{
  position: relative;
   z-index: 6;

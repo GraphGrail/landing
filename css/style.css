@@ -2582,7 +2582,28 @@ header nav .back .container{
   margin: unset !important;
 }
 .lang-menu.open li{display: block;}
-
+.blocks{
+  opacity: 0;
+  transition: all 0.1s;
+}
+.loading{
+  opacity: 1;
+  transition: all 0.1s;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 190px;
+  position: absolute;
+  width: 233px;
+}
+.hiders{
+  opacity: 0;
+  z-index: -10;
+}
+.showers{
+  opacity: 1;
+}
 .panel .blocks > div{
   border-radius: 10px;
   background-color: #e7e7eb;

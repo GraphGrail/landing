@@ -1401,6 +1401,8 @@ Good knowledge of C#.
     jQuery('#totalWorth').html(Math.round(json.tokens_total).toFixed(0) + '<b>Worth of GAI tokens*</b>');
     jQuery('#currentUSD').html(parseInt(Math.round(json.usd_total).toFixed(0)) + 200000);
     jQuery('#investors').html(Math.round(json.number_investors + 90).toFixed(0) + '<b>Purchasers</b>');
+    $('.loading').addClass('hiders');
+    $('.blocks').addClass('showers');
   });
 </script>
     </body>

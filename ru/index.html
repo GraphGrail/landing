@@ -186,8 +186,10 @@
                                                 <p>Получи бонус 35% <br>
                                                     <hr>
                                               </div>
-                                                <div class="text timeSince">
-                                                  </div>
+                                                <div class="text timeSince"></div>
+                                                    <div class="loading">
+                                                      <img src="../img/svg/spinner.svg" alt="">
+                                                    </div>
                                                   <div class="blocks">
                                                       <div id="totalWorth">
                                                             22 432 650
@@ -1455,6 +1457,8 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
     jQuery('#totalWorth').html(Math.round(json.tokens_total).toFixed(0) + '<b>Worth of GAI tokens*</b>');
     jQuery('#currentUSD').html(parseInt(Math.round(json.usd_total).toFixed(0)) + 200000);
     jQuery('#investors').html(Math.round(json.number_investors + 90).toFixed(0) + '<b>Purchasers</b>');
+    $('.loading').addClass('hiders');
+    $('.blocks').addClass('showers');
   });
 </script>
     </body>
