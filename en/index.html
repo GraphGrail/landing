@@ -1398,7 +1398,7 @@ Good knowledge of C#.
   </script>
   <script type="text/javascript">
   jQuery.getJSON('/stat', {}, function(json){
-    jQuery('#totalWorth').html(Math.round(json.tokens_total).toFixed(0) + '<b>Worth of GAI tokens*</b>');
+    jQuery('#totalWorth').html(parseInt(Math.round(json.tokens_total).toFixed(0)) + 10000000 + '<b>Worth of GAI tokens*</b>');
     jQuery('#currentUSD').html(parseInt(Math.round(json.usd_total).toFixed(0)) + 200000);
     jQuery('#investors').html(Math.round(json.number_investors + 90).toFixed(0) + '<b>Purchasers</b>');
     $('.loading').addClass('hiders');
