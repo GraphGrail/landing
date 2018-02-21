@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="../css/icons.css" />
         <link rel="stylesheet" href="../css/font-awesome/css/fontawesome-all.min.css" />
         <link rel="stylesheet" href="../css/slick.css" />
-        <link rel="stylesheet" href="../css/style.css?v=1">
-        <link rel="stylesheet" href="../css/adaptive.css?v=1">
+        <link rel="stylesheet" href="../css/style.css?cssv=2">
+        <link rel="stylesheet" href="../css/adaptive.css?cssv=2">
         <link rel="icon" type="image/png" href="../favicon.ico" />
 
         <!-- Google Tag Manager -->
@@ -130,6 +130,8 @@
                                                  <div class="share">
                                                 <a href="https://bitcointalk.org/index.php?topic=2016928"><i class="fab fa-btc"></i></a>
                                                 <a onclick="ga('send', 'event', 'click', 'facebook');" href="http://www.facebook.com/graphgrailcom"><i class="fab fa-facebook-f"></i></a>
+                                                <a href="https://medium.com/@graphgrail.ico"><img src="../img/svg/medium.svg" alt=""></a>
+                                                <a href="https://github.com/GraphGrail"><img src="../img/svg/github.svg" alt=""></a>
                                             </div>
 
                                             </div>
@@ -1361,6 +1363,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
 
      <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+     <script type="text/javascript" src="../js/languechanger.js"></script>
      <script type="text/javascript" src="../js/bootstrap.min.js"></script>
      <script type="text/javascript" src="../js/validator.min.js"></script>
      <script type="text/javascript" src="../js/bootstrap-select.min.js"></script>
@@ -1444,7 +1447,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
       });
   </script>
   <script type="text/javascript">
-  jQuery.getJSON('/stat', {}, function(json){
+  jQuery.getJSON('./stat', {}, function(json){
     jQuery('#totalWorth').html(  (parseInt( (Math.round(json.tokens_total).toFixed(0)))+ 10000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Worth of GAI tokens*</b>'  );
     jQuery('#currentUSD').html((parseInt(Math.round(json.usd_total).toFixed(0)) + 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
     jQuery('#investors').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Purchasers</b>');

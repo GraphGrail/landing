@@ -557,8 +557,6 @@ nav ul li a{
   }
   .moved .mobile_header .language{
     margin-right: 20px;
-    top: 0px;
-    right: 23px;
   }
   .moved .mobile_header .buyit{
     margin-left: 0;
@@ -578,7 +576,7 @@ nav ul li a{
   }
   .moved nav{
     width: 94%;
-    top: 14%;
+    top: 20%;
   }
   .moved nav ul li{
     text-align: left;
@@ -785,9 +783,16 @@ padding: 20px 0px;
     padding: 0 10px;
   }
 }
+@media all and (max-width: 540px){
+  .moved .mobile_header .language{
+    top: 71px;
+width: 101px;
+left: 23px;
+  }
+}
 @media all and (max-width: 500px){
   .section{
-    padding: 0 20px;
+    padding: 0 5px;
   }
   .menu ul li a, .liTitle{
     font-size: 20px;
@@ -809,6 +814,12 @@ padding: 20px 0px;
   }
   .problems .smallTitle{
     font-size: 20px;
+  }
+  .navBurger{
+    opacity: 0.5;
+  }
+  .moved .navBurger{
+    opacity: 1;
   }
   .problems ul li{
     padding-left: 0;
@@ -864,5 +875,34 @@ padding: 20px 0px;
   }
   .person .avatar{
     margin: 20px auto 15px auto;
+  }
+}
+@media all and (max-width:400px){
+  .goBack{
+    width: 96px;
+    height: 60px;
+  }
+  .moved .mobile_header .buyit{
+    left: 130px;
+  }
+  .moved .navBurger{
+    opacity: 1;
+    top: 15px;
+    width: 55px;
+    height: 58px;
+    right: 30px;
+  }
+  .goBack a{
+    font-size: 16px;
+    padding: 4px 10px;
+  }
+  .moved .mobile_header .language{
+    top: 90px;
+    width: 101px;
+    right: 9px;
+    left:initial;
+  }
+  .moved .mobile_header{
+    height: 100px;
   }
 }
