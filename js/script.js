@@ -248,6 +248,7 @@ $('.constructormokap .slider2').slick({
     //$('.lang-menu').width($('.lang-menu ul li:first-child').width()+12);
 
     $(document).on("click",'.lang-menu a',function(){
+      $(this).toggleClass('open');
        var clickedId = $(this).attr("id");
        var activeId = $('.lang-menu li:first-child a').attr("id");
        var first = $('.lang-menu li:first-child').html();
@@ -671,16 +672,13 @@ $('#menuBurger').click(function(){
 $('#closeMenu').click(function(){
   $('body').removeClass('open');
 })
-$('.lang-menu').click(function(){
-  $(this).toggleClass('open');
-})
 
 function moveBar(){
   var currentUSD = parseInt($('#currentUSD').text().replace(/\s/g, ''));
   var usdPercent = (12000000/100);
   finalWidth = ((currentUSD+600000)/usdPercent);
   $('#raised').width(finalWidth + "%");
-  $('#USDClone').text(currentUSD - 200000);
+  $('#USDClone').text((currentUSD - 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
 }
 moveBar();
 $('#currentUSD').on('DOMSubtreeModified',function(){
