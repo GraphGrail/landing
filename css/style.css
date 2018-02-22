@@ -1048,10 +1048,12 @@ display: block;
   position: absolute;
 }
 .intro .databar .raised{
+  transition: all 0.5s;
   position: absolute;
   z-index: 99;
+  opacity: 1;
   margin-top: -16px;
-  width: 15px;
+  width: 1px;
   height: 16px;
   left: 10px;
   border-radius: 4px;
@@ -1189,6 +1191,9 @@ display: block;
   font-size: 18px;
   margin: 50px 0 25px;
   padding: 0 15px;
+}
+.news .item h3 a{
+  color: #e30613;
 }
 .news .item h3{
   margin-top: 15px;
