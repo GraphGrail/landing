@@ -884,6 +884,7 @@ left: 23px;
   }
   .moved .mobile_header .buyit{
     left: 130px;
+        height: 44px;
   }
   .moved .navBurger{
     opacity: 1;
