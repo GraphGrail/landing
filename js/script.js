@@ -21,11 +21,11 @@ sliderHome.slick({
 });
 
 $( function() {
-    $( "#faqardion" ).accordion({
+    $( ".faqardion" ).accordion({
       collapsible: true,
       active: false
     });
-  } );
+});
 
 $('.constructormokap .slider2').slick({
   dots: false,

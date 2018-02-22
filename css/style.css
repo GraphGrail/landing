@@ -1048,10 +1048,12 @@ display: block;
   position: absolute;
 }
 .intro .databar .raised{
+  transition: all 0.5s;
   position: absolute;
   z-index: 99;
+  opacity: 1;
   margin-top: -16px;
-  width: 15px;
+  width: 1px;
   height: 16px;
   left: 10px;
   border-radius: 4px;
@@ -1189,6 +1191,9 @@ display: block;
   font-size: 18px;
   margin: 50px 0 25px;
   padding: 0 15px;
+}
+.news .item h3 a{
+  color: #e30613;
 }
 .news .item h3{
   margin-top: 15px;
@@ -1347,7 +1352,7 @@ display: block;
   text-align: left;
   margin-top: 60px;
   padding: 0 50px;
-  font-weight: bold;
+  font-weight: 300;
 }
 .constructormokap .content .text ul{
   margin-top: 30px;
@@ -2242,29 +2247,30 @@ footer .feedback {
 footer .feedback .btn{
   width: 100%;
 }
-#faqardion{
-  border: 1px solid #c1c1c1;
+.faqardion{
   border-radius: 23px;
+  margin: 20px auto;
+  width: 73%;
 }
 .economic .ui-accordion-header{
-  background-color: #f7f7f7;
   cursor: pointer;
-  padding: 10px 0;
+  padding: 11px 0;
   outline: none;
   margin: 0;
-  border-radius: 22px;
+  border-bottom: 2px dashed #b3b3b3;
+  border-radius: 0px;
 }
 .economic .content.white.with-angle{
   padding-top: 50px;
 }
 .economic .ui-accordion-header:hover{
-  background-color: #dadada;
+  background-color: #f5f5f5;
 }
 .economic .magner{
   height: 20px;
   width: 100%;
 }
-.economic #faqardion p{
+.economic .faqardion p{
   padding: 20px;
 }
 footer .copyright{
