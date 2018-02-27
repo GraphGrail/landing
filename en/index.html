@@ -1365,7 +1365,7 @@ Good knowledge of C#.
         if ('gtag' in window) {
           $('a.btn').click(function(){
             var href = $(this).attr('href');
-            if (href && $.isString(href)) {
+            if (href && $.type(href) === 'string') {
               if (href.match(/whitepaper/)) {
                 window.gtag('event', 'get_wp', { category: 'UX' });
               }
@@ -1391,7 +1391,7 @@ Good knowledge of C#.
           });
           $('.share a').click(function(){
             var href = $(this).attr('href');
-            if (href && $.isString(href)) {
+            if (href && $.type(href) === 'string') {
               if (href.match(/bitcointalk/)) {
                 window.gtag('event', 'bitcointalk', { category: 'UX' });
               }
