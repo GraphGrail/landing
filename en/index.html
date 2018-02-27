@@ -1476,7 +1476,7 @@ Good knowledge of C#.
         var google_remarketing_only = true;
         /* ]]> */
     </script>
-    <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+    <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
     </script>
     <noscript>
         <div style="display:inline;">
@@ -1489,7 +1489,7 @@ Good knowledge of C#.
         if ('gtag' in window) {
           $('a.btn').click(function(){
             var href = $(this).attr('href');
-            if (href && $.isString(href)) {
+            if (href && $.type(href) === 'string') {
               if (href.match(/whitepaper/)) {
                 window.gtag('event', 'get_wp', { category: 'UX' });
               }
@@ -1515,7 +1515,7 @@ Good knowledge of C#.
           });
           $('.share a').click(function(){
             var href = $(this).attr('href');
-            if (href && $.isString(href)) {
+            if (href && $.type(href) === 'string') {
               if (href.match(/bitcointalk/)) {
                 window.gtag('event', 'bitcointalk', { category: 'UX' });
               }
@@ -1568,5 +1568,22 @@ Good knowledge of C#.
     setTimeout(postMagic, 1000);
   });
 </script>
+
+    <!-- Begin Verbox {literal} -->
+    <script type='text/javascript'>
+        (function(d, w, m) {
+            window.supportAPIMethod = m;
+            var s = d.createElement('script');
+            s.type ='text/javascript'; s.id = 'supportScript'; s.charset = 'utf-8';
+            s.async = true;
+            var id = '095e5c4530f3ca515c5e4adc1ed2aa3a';
+            s.src = 'https://admin.verbox.ru/support/support.js?h='+id;
+            var sc = d.getElementsByTagName('script')[0];
+            w[m] = w[m] || function() { (w[m].q = w[m].q || []).push(arguments); };
+            if (sc) sc.parentNode.insertBefore(s, sc);
+            else d.documentElement.firstChild.appendChild(s);
+        })(document, window, 'Verbox');
+    </script>
+    <!-- {/literal} End Verbox -->
     </body>
 </html>
