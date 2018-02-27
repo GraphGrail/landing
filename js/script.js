@@ -20,10 +20,17 @@ sliderHome.slick({
   variableWidth: false
 });
 
-$( function() {
-    $( ".faqardion" ).accordion({
-      collapsible: true,
-      active: false
+
+$(function() {
+    var activeAccordian = null;
+    var $accordions = $(".faqardion").on('click', function() {
+        activeAccordian = this;
+    }).accordion({
+        collapsible: true,
+        active: false,
+        icons: true
+    }).on('accordionchange', function(event, ui) {
+        $accordions.not(activeAccordian).accordion('activate', false);
     });
 });
 
@@ -673,27 +680,44 @@ $('#closeMenu').click(function(){
   $('body').removeClass('open');
 })
 
-function moveBar(){
-  var currentUSD = parseInt($('#currentUSD').text().replace(/\s/g, ''));
-  var usdPercent = (12000000/100);
-  finalWidth = ((currentUSD+600000)/usdPercent);
-  $('#raised').width(finalWidth + "%");
-  $('#USDClone').text((currentUSD - 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
-}
-moveBar();
-$('#currentUSD').on('DOMSubtreeModified',function(){
-  moveBar();
-})
 
+// hSince - Hours
 
 moment.locale('ru');
 
 var now = moment();
-var icoStart = moment('2018-02-19T11:00:00');
 
-hSince = (now.diff(icoStart, 'hours')).toString();
-$('#since').text(hSince);
+var hSince;
+var bonusOneGone = moment('2018-03-06T12:00:00');
+var bonusTwoGone = moment('2018-03-16T12:00:00');
+var bonusThreeGone = moment('2018-03-26T12:00:00');
+var currentBonus;
+
+if(bonusOneGone.diff(now, 'days') < 10){
+  currentBonus = $('.firstBonusLeft');
+  currentEngBonus = $('.firstEngBonusLeft');
+  hSince = (bonusOneGone.diff(now, 'days')).toString();
+  bonusPercent = 25;
+}
+if(bonusTwoGone.diff(now, 'days') < 10){
+  $('.firstBonus').hide();
+  currentBonus = $('.secondBonusLeft');
+  currentEngBonus = $('.secondEngBonusLeft');
+  hSince = (bonusTwoGone.diff(now, 'days')).toString();
+  bonusPercent = 20;
+}
+if(bonusThreeGone.diff(now, 'days') < 10){
+  $('.firstBonus').hide();
+  $('.secondBonus').hide();
+  currentBonus = $('.thirdBonusLeft');
+  currentEngBonus = $('.thirdEngBonusLeft');
+  hSince = (bonusThreeGone.diff(now, 'days')).toString();
+  bonusPercent = 15;
+}
+
 var hword;
+var dword;
+
 if((hSince.substr(hSince.length-1,1)) == 1 ){
   hword = ' час';
 }
@@ -703,6 +727,35 @@ if((hSince.substr(hSince.length-1,1)) > 1 && (hSince.substr(hSince.length-1,1)) 
 if((hSince.substr(hSince.length-1,1)) > 4 || (hSince.substr(hSince.length-1,1)) == 0 ){
   hword = ' часов';
 }
-$('#since').text('За '+ hSince + hword);
-$('#sinceEng').text('By '+ hSince + ' hours');
+
+if((hSince.substr(hSince.length-1,1)) == 1 ){
+  dword = ' день';
+  edword = ' day';
+}
+if((hSince.substr(hSince.length-1,1)) > 1 && (hSince.substr(hSince.length-1,1)) < 5 ){
+  dword = ' дня';
+}
+if((hSince.substr(hSince.length-1,1)) > 4 || (hSince.substr(hSince.length-1,1)) == 0 ){
+  dword = ' дней';
+}
+
+if((hSince.substr(hSince.length-1,1)) == 1 ){
+  edword = ' day';
+} else {
+  edword = ' days';
+}
+$('#daysLeft').text(hSince + dword);
+$('#edaysLeft').text(hSince + edword);
+daysleftPercent = (2.5*hSince);
+$('.bonuses .firstBonus').width(daysleftPercent + '%');
+currentBonus.text(hSince + dword);
+currentEngBonus.text(hSince + edword);
+
+$('.bonusPercent').text(bonusPercent+'%');
+
+function showBonuses(){
+  $('.firstBonus, .secondBonus, .thirdBonus').css('opacity', '1');
+}
+
+setTimeout(showBonuses, 1500);
 });

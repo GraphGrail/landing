@@ -153,20 +153,89 @@ span.size{ display: none; }
        .social a i{
         font-size: 20px;
        }
-
-       .intro .databar label{
-        float: right;
-        display: block;
-       }
        .intro .databar label:last-child{
         float: none;
        }
 
   }
-@media (min-width:768px){
-
+@media (max-width:768px){
+  .tapToView{
+    display: block;
+  }
+  .loading{
+    width: calc(100% - 100px);
+  }
+  .loading img{
+    width: 60px;
+    height: 65px;
+  }
+  .login{
+    left: -33px;
+  }
+  .hcap{
+    right: calc( 1% - -27px );
+  }
+  .bonusLefter{
+    font-size: 19px;
+    top: 15px;
+  }
+  .intro .databar{
+    padding: 98px 30px 0 30px;
+    height: 280px;
+  }
+  .bonuses{
+    display: none;
+  }
+  .Mbonuses{
+    display: flex;
+  }
+  .intro .databar .raised.raisedMobile{
+    width: 5px;
+  }
+  .advantable{
+    padding: 50px;
+  }
+  .docPreview{
+    margin: 30px 20px 20px 20px;
+  }
+}
+@media (max-width:568px){
+  .intro .databar{
+    padding: 120px 7px 0 15px;
+    height: 360px;
+    border-radius: 10px;
+  }
+  .intro .databar .raised.raisedSmallMobile{
+    width: 7px;
+  }
+  .Mbonuses{
+    flex-wrap: wrap;
+  }
+  .Mbonuses .bonuso{
+    font-size: 21px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .Mbonuses .firstBonus, .Mbonuses .secondBonus, .Mbonuses .thirdBonus{
+    width: 30%;
+    text-align: center;
+  }
+  .docPreview p{
+    font-size: 20px;
+  }
+  .docPreview{
+    margin: 35px 5px 20px 5px;
+  }
 }
 @media (min-width:768px) and (max-width:991px) {
+    .loading{
+      width: calc(100% - 100px);
+    }
+    .loading img{
+      width: 60px;
+      height: 65px;
+    }
     .container{
         border: 1px solid cyan;
     }
@@ -490,7 +559,6 @@ background-image: none;
   -moz-background-size: 100%;
   -o-background-size: 100%;
 }
-
 
 }
 @media (max-width:921px) {
@@ -849,9 +917,9 @@ width: 151px;
 
 
  .top .lang-menu{
-        margin-top: -55px;
-        margin-left: 0;
-        right: 0;
+      margin-top: -55px;
+      margin-left: 0;
+      right: 22px;
        }
        .fixedHeaderMobile .top .lang-menu{
          margin-top: -55px;
@@ -1132,9 +1200,19 @@ footer .content{
 
 
 @media (max-width:480px) {
+  .tapToView{
+    font-size: 12px;
+  }
+  .docPreview{
+    margin: 35px 5px 20px 5px;
+  }
   .fixedHeaderMobile .top .login{
     width: 73%;
     top: 30px;
+  }
+  .doc{
+    width: 120px;
+    height: 170px;
   }
   .top .lang-menu{
     margin-top: -83px;
@@ -1282,7 +1360,7 @@ background-color: #1e245e;
     }
 
     .intro .databar label{
-        float: none;
+        float: left;
         display: block;
        }
        .intro .databar label:last-child{

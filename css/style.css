@@ -164,7 +164,7 @@ h2{
   line-height: 1;
   font-weight: bold;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
   font-family: "Ubuntu";
 }
@@ -187,7 +187,7 @@ header a{
   text-align: center;
   position: relative;
   z-index: 1;
-  padding: 65px 0;
+  padding: 25px 0 65px;
   margin: 0;
 }
 .logo-large a{
@@ -357,7 +357,7 @@ header nav .logo-nav img{
   width: initial;
 }
 .intro .content.gray {
-  margin-bottom: 34px;
+  margin-bottom: 87px;
 }
 body.fixedHeader .intro {
   top: -150px;
@@ -487,7 +487,7 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   text-transform: uppercase;
   font-size: 20px;
   color: #e10019;
-  padding: 0 0 30px 0;
+  padding: 0 0 20px 0;
   line-height: 1.2;
 }
  .intro .btns .btn{
@@ -499,7 +499,7 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
     }
 
 .intro .items{
-  margin: 0 0 45px;
+  margin: 0 0 15px;
 }
 .intro .items .item{
   font-size: 18px;
@@ -560,25 +560,39 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   margin-right: 0;
 }
 
-
+.bonusLefter{
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  left: 0;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+}
 .intro .databar{
   position: relative;
+  margin-top: 0px;
+  padding: 110px 55px 0 55px;
+  background-color: white;
+  border-radius: 28px;
+  height: 250px;
 }
-
+.scap, .hcap{
+  position: absolute;
+  margin-top: -108px;
+}
+.hcap{
+  right: calc( 1% - -47px );
+}
+.scap{
+  left: 31%;
+}
 .intro .bar{
   margin-top: 40px;
-    background-color: #c1c1c1;
-    background-image: -moz-linear-gradient(top, #e30613 8px, #fa3f53 100%);
-    background-image: -o-linear-gradient(top, #e30613 8px, #fa3f53 100%);
-    background-image: -ms-linear-gradient(top, #e30613 8px, #fa3f53 100%);
-    background-image: linear-gradient(top, #e30613 8px, #fa3f53 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e30613', endColorstr='#fa3f53',GradientType=0 );
-    border-radius: 10px;
-    height: 16px;
-    position: relative;
+    background-color: #e2e2e2;
     background-position: 50% 50%;
     border-radius: 10px;
-    height: 16px;
+    height: 20px;
     position: relative;
   }
 .intro .bar:after,.intro .bar:before{
@@ -588,31 +602,48 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   width: 1px;
   height: 100%;
   top: 0;
-  left: 38px;
+  left: calc( 28% + 32px );
+  z-index: 100;
 }
 .intro .bar:before{
-left: auto;
-right: 38px;
-  }
-
+  left: auto;
+  right: calc( 1% - -26px );
+}
+.whiter{
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  height: 240px;
+  z-index: -5;
+  bottom: 0;
+  left: 0;
+}
   .intro .bar span{
-      position: absolute;
-      top: -22px;
-      font-size: 14px;
+    position: absolute;
+    top: -65px;
+    font-size: 14px;
   }
   .intro .bar span:first-child{
-    left: 25px;
+    left: 28%;
   }
   .intro .bar span:last-child{
-    right: 25px;
+    right: 1%;
   }
 .intro .databar label{color: #999999;font-size: 14px;margin-top: 15px;font-weight: normal;}
-.intro .databar label b{color: #000000; font-weight: normal;}
+.intro .databar label b{
+  color: #ffffff;
+  font-weight: normal;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background-color: #4a69cc;
+  box-shadow: 1px 2px 5px 0px #b1b1b1;
+}
 .intro .databar label:last-child{ float: right;}
 .intro .databar label i{color: #e30613;margin-right: 5px;}
 .intro .databar label{
   float: left;
-display: block;
+  display: block;
 }
 
 .home{
@@ -704,9 +735,61 @@ display: block;
   width: 300px;
   margin-bottom: 20px;
 }
+.docs{
+  display: flex;
+  justify-content: center;
+}
+.docPreview{
+  margin: 0 20px 20px 20px;
+}
+.doc{
+  width: 150px;
+  height: 210px;
+  position: relative;
+  background-color: white;
+  background-size: cover;
+}
+.tapToView{
+  position: absolute;
+  display: none;
+  color: white;
+}
+.docPreview p{
+  color: white;
+  text-align: center;
+  font-size: 24px;
+}
+.docPreview a p{
+  padding: 10px 0;
+  background-color: #2c407c7a;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+.doc .docCover{
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  opacity: 0;
+  background-color: #2c407c7a;
+}
+.doc:hover .docCover{
+  opacity: 1;
+}
+.doc .docCover i{
+  position: absolute;
+  font-size: 50px;
+  color: white;
+}
 .panel {
   margin-top: 20px;
-  padding: 25px 25px 50px 25px;
+  padding: 25px 25px 25px 25px;
   background-color: #ffffff;
   border-radius: 10px;
    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -728,6 +811,31 @@ display: block;
 }
 .panel .btn{
   width: 100%;
+}
+.advantable{
+  background-color: white;
+  padding: 50px 100px;
+}
+.advantable h1{
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+.betterness{
+  width: 100%;
+}
+.betterness tr{
+  height: 50px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.betterness tr td:nth-child(2){
+  color: #bdbdbd;
+}
+.betterness tr td:last-child{
+  color: #3949e6;
+}
+.betterness tr td:not(:first-child){
+  text-align: center;
 }
 
 .points{
@@ -1043,58 +1151,148 @@ display: block;
   margin-left: 0;
   top: auto;
 }
+.data.left{
+  margin-left: 0;
+}
+.intro .databar .data.right{
+  margin-right: 0;
+  float: right;
+}
 .intro .databar .preico, .intro .databar .raised{
-  top: 16px;
-  position: absolute;
+  top: 0;
+  position: relative;
 }
 .intro .databar .raised{
-  transition: all 0.5s;
-  position: absolute;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  position: relative;
   z-index: 99;
   opacity: 1;
-  margin-top: -16px;
+  margin-top: -46px;
   width: 1px;
-  height: 16px;
+  height: 24px;
+  box-shadow: 1px 2px 7px 0px #00000061;
   left: 10px;
-  border-radius: 4px;
-  box-shadow: 2px 0px 7px 0px #ff0013;
-  background-color: #ef211e;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#ffbdbd), to(#ff0000));
+  background: -webkit-linear-gradient(left, #ffbdbd, #ff0000);
+  background: -o-linear-gradient(left, #ffbdbd, #ff0000);
+  background: linear-gradient(to right, #ffbdbd, #ff0000);
+}
+.bonuses{
+  position: absolute;
+  left: 20%;
+  margin-top: 4px;
+  width: 60%;
+  font-weight: bold;
+  font-size: 15px;
+  color: #424242;
+}
+.bonuses p{
+  margin: 0;
+}
+.bonuses .bonuso{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.bonuses img{
+  opacity: 0.4;
+  width: 100%;
+  height: 8px;
+}
+.firstBonus, .secondBonus, .thirdBonus{
+  width: 25%;
+  min-width: 65px;
+  opacity: 0;
+  transition: all 0.5s;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+.firstBonus p:first-child, .secondBonus p:first-child, .thirdBonus p:first-child{
+  margin-bottom: -7px;
+}
+#investorsInLine{
+  position: absolute;
+  margin-top: -41px;
+  left: 19%;
+  z-index: 300;
+  color: black;
+  font-size: 15px;
 }
 .intro .databar .preico{
-  width: 16px;
+  width: 30px;
   z-index: 100;
   display: block;
   left: 0;
-  top: 0;
-  height: 16px;
-  border-radius: 37px;
-  background-color: #2c407c;
-  box-shadow: -1px 0px 6px 1px #1e245e;
+  height: 24px;
+  top: -22px;
+  box-shadow: 1px 2px 7px 0px #00000061;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#6b90ff), to(#27439a));
+  background: -webkit-linear-gradient(left, #6b90ff, #27439a);
+  background: -o-linear-gradient(left, #6b90ff, #27439a);
+  background: linear-gradient(to right, #6b90ff, #27439a);
 }
 .intro .cash{
   margin-top: 20px;
 }
-.intro .databar .raised .cash, .intro .databar .preico .cash{
-  border-radius: 5px;
-  background-color: white;
-  padding: 5px;
+.Mbonuses{
   display: none;
-  border: 1px solid #000000;
+  margin-top: 44px;
+  justify-content: space-around;
+}
+.Mbonuses .firstBonus p:first-child, .Mbonuses .secondBonus p:first-child, .Mbonuses .thirdBonus p:first-child{
+  margin-bottom: 3px;
+  font-size: 25px;
+}
+.Mbonuses .secondBonus{
+  width: 25%;
+}
+.Mbonuses .firstBonus, .Mbonuses .secondBonus, .Mbonuses .thirdBonus{
+  text-align: left;
+  display: inline-block;
+  width: 80px;
+  font-size: 14px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+.Mbonuses .bonuso{
+  font-size: 21px;
+  font-weight: bold;
+  margin: 13px 0 0 0;
+}
+.intro .databar .raised .cash, .intro .databar .preico .cash, .barCloud{
+  width: 60px;
+  height: 60px;
+  transition: all 0.1s;
+  opacity: 1;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   position: absolute;
-  width: 200px;
-  transition: all 0.3s;
+  font-size: 13px;
+  color: white;
+  padding: 13px 3px 0 7px;
+  text-align: center;
+  background-image: url('../img/svg/infoCloud.svg');
+  font-weight: bold;
+}
+.intro .databar .preico .cash{
+  top: -85px;
+  left: -21px;
+}
+.intro .databar .raised .cash{
+  top: -85px;
+  left: 35%;
+  opacity: 0;
+  z-index: 1000;
 }
 .intro .databar .raised:hover .cash{
-  display: block;
   opacity: 1;
-  z-index: 10;
-  height: initial;
-}
-.intro .databar .preico:hover .cash{
-  display: block;
-  opacity: 1;
-  z-index: 10;
-  height: initial;
 }
 .panel hr{
   margin-top: 10px;
@@ -2505,7 +2703,7 @@ background-color: #e6e4e8;
 }
 .fixedHeaderMobile .top .login a:last-child{
 background-color: #1e245e;
-margin-left: 70px;
+margin-left: 10px;
 }
 .login a{
   color: #ffffff;
@@ -2616,7 +2814,7 @@ header nav .back .container{
   align-items: center;
   height: 170px;
   position: absolute;
-  width: 231px;
+  width: 230px;
 }
 .loading img{
   margin: 0;

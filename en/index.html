@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="../css/icons.css" />
         <link rel="stylesheet" href="../css/font-awesome/css/fontawesome-all.min.css" />
         <link rel="stylesheet" href="../css/slick.css" />
-        <link rel="stylesheet" href="../css/style.css?cssv=6">
-        <link rel="stylesheet" href="../css/adaptive.css?cssv=6">
+        <link rel="stylesheet" href="../css/style.css?cssv=9">
+        <link rel="stylesheet" href="../css/adaptive.css?cssv=9">
         <link rel="icon" type="image/png" href="../favicon.ico" />
 
         <!-- Google Tag Manager -->
@@ -114,7 +114,7 @@
                                                 <div class="btns">
                                                     <div class="row">
                                                         <div class="col-xs-12 col-sm-4">
-                                                            <a onclick="ga('send', 'event', 'click', 'whitepaper');" target="_blank" href="../whitepaper/en/index.html" class="btn red"><i>Whitepaper</i></a>
+                                                            <a onclick="ga('send', 'event', 'click', 'whitepaper');" target="_blank" href="../whitepaper/pdf/WP_eng.pdf" class="btn red"><i>Whitepaper</i></a>
                                                         </div>
                                                         <div class="col-xs-12 col-sm-4">
                                                             <a onclick="ga('send', 'event', 'click', 'try_mvp');" href="../mvp/dest/views/index.html" class="btn red"><i>Try MVP</i></a>
@@ -181,7 +181,7 @@
                                             </div-->
                                             <div class="panel">
                                               <div class="bonus">
-                                                <p>Get 35% bonus!<br>
+                                                <p>Token sale is live!<br>
                                                     <hr>
                                               </div>
                                                 <div class="text timeSince">
@@ -214,23 +214,62 @@
                                                       <span class="label"><%= label.length < 8 ? label : label.substr(0, 3)  %></span>
                                                     </div>
                                                     </script>
-
-                                                    <div class="databar">
-                                                        <div class="bar">
-                                                        <span>$2 M</span><span>$12 M</span>
-                                                        </div>
-                                                        <div class="preico">
-                                                          <div class="cash">Pre ICO $200 K</div>
-                                                        </div>
-                                                        <div id="raised" class="raised">
-                                                          <div class="cash">$<span id="USDClone"></span></div>
-                                                        </div>
-                                                        <label class="data left"><i class="fa fa-check"></i><b>Softcap</b></label>
-                                                        <label class="data right"><i class="fa fa-check"></i><b>Hardcap</b></label>
-                                                    </div>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="databar">
+                                      <p class="bonusLefter"><span class="bonusPercent">25%</span> bonus ends in <span id="edaysLeft"></span><br></p>
+                                        <div class="bar">
+                                        <span class="barCloud">$2 M</span>
+                                        <span class="barCloud">$12 M</span>
+                                        </div>
+                                        <span class="scap">Softcap</span>
+                                        <span class="hcap">Hardcap</span>
+                                        <div class="preico">
+                                          <div class="cash">Pre ICO<br>$200 K</div>
+                                        </div>
+                                        <div id="investorsInLine"></div>
+                                        <div id="raised" class="raised raisedMobile raisedSmallMobile">
+                                          <div class="cash">$<span id="USDClone"></span></div>
+                                        </div>
+                                        <div class="bonuses">
+                                          <span class="bonuso">Bonuses:</span>
+                                          <div class="firstBonus">
+                                            <p>25%</p>
+                                            <img src="../img/skobaPNG.png" alt="">
+                                            <p class="firstEngBonusLeft"></p>
+                                          </div>
+                                          <div class="secondBonus">
+                                            <p>20%</p>
+                                            <img src="../img/skobaPNG.png" alt="">
+                                            <p class="secondEngBonusLeft">10 days</p>
+                                          </div>
+                                          <div class="thirdBonus">
+                                            <p>15%</p>
+                                            <img src="../img/skobaPNG.png" alt="">
+                                            <p class="thirdEngBonusLeft">10 days</p>
+                                          </div>
+                                        </div>
+                                        <label class="data left"><b>19 febr.</b></label>
+                                        <label class="data right"><b>15 apr.</b></label>
+                                        <div class="Mbonuses">
+                                          <p class="bonuso">Bonuses:</p>
+                                          <div class="firstBonus">
+                                            <p>25%</p>
+                                            <p><span class="firstEngBonusLeft"></span> left</p>
+                                          </div>
+                                          <div class="secondBonus">
+                                            <p>20%</p>
+                                            <p class="secondEngBonusLeft">10 days</p>
+                                          </div>
+                                          <div class="thirdBonus">
+                                            <p>15%</p>
+                                            <p class="thirdEngBonusLeft">10 days</p>
+                                          </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <nav>
@@ -324,25 +363,106 @@
             </section>
 
             <section class="forwhom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                        <div class="content white">
-                           <h2>For whom?</h2>
-                           <div class="row">
-                                <div class="col-xs-12 col-sm-6 text-right">
-                                     <a onclick="ga('send', 'event', 'click', 'for_ai_specialists');" href="../whitepaper/ru/index.html#cases" class="btn blue"><i>For AI specialists</i></a>
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-xs-12">
+                          <div class="content white">
+                            <h2>Downloads</h2>
+                             <div class="docs">
+                                <p class="tapToView">(Tap on file to view online)</p>
+                               <div class="docPreview">
+                                 <p>Whitepaper</p>
+                                 <div style="background-image: url('../img/docs/preview2.png')" class="doc">
+                                   <a onclick="ga('send', 'event', 'click', 'whitepaper');" target="_blank" href="../whitepaper/pdf/WP_eng.pdf">
+                                     <div class="docCover"><i class="fas fa-search"></i></div>
+                                   </a>
+                                 </div>
+                                 <a onclick="ga('send', 'event', 'click', 'whitepaper');" href="../whitepaper/pdf/WP_eng.pdf" download><p>Download</p></a>
+                               </div>
+                              <div class="docPreview">
+                                <p>Litepaper</p>
+                                <div style="background-image: url('../img/docs/preview3.png')" class="doc">
+                                  <a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/ru/index.html">
+                                    <div class="docCover"><i class="fas fa-search"></i></div>
+                                  </a>
                                 </div>
-                                 <div class="col-xs-12 col-sm-6 text-left">
-                                     <a onclick="ga('send', 'event', 'click', 'for_blockchain_specialists');" href="../whitepaper/ru/index.html#cases" class="btn blue"><i>For blockchain specialists</i></a>
-                                </div>
+                              </div>
+                              <!-- <div class="docPreview">
+                                <div style="background-image: url('../img/docs/legals.png')" class="doc">
 
-                            </div>
-                        </div>
-                       </div>
-                    </div>
-                </div>
-            </section>
+                                </div>
+                              </div> -->
+                             </div>
+                          </div>
+                        <!-- <div class="advantable">
+                            <h1>Our features</h1>
+                            <table class="betterness">
+                              <tr class="headerness">
+                                <td></td>
+                                <td style="color:black">Another platform</td>
+                                <td style="font-weight:bold">GraphGrail</td>
+                              </tr>
+                              <tr>
+                                <td>Параметр 1</td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                              </tr>
+                              <tr>
+                                <td>Преимущество 2</td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                              </tr>
+                              <tr>
+                                <td>Преимущество 3</td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                              </tr>
+                              <tr>
+                                <td>Преимущество 4</td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                              </tr>
+                              <tr>
+                                <td>Преимущество 5</td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                              </tr>
+                              <tr>
+                                <td>Преимущество 6</td>
+                                <td></td>
+                                <td><i class="fas fa-check"></i></td>
+                              </tr>
+                              <tr>
+                                <td>Преимущество 7</td>
+                                <td></td>
+                                <td><i class="fas fa-check"></i></td>
+                              </tr>
+                              <tr>
+                                <td>Преимущество 8</td>
+                                <td></td>
+                                <td><i class="fas fa-check"></i></td>
+                              </tr>
+                              <tr>
+                                <td>Преимущество 9</td>
+                                <td></td>
+                                <td><i class="fas fa-check"></i></td>
+                              </tr>
+                              <tr>
+                                <td>Преимущество 10</td>
+                                <td></td>
+                                <td><i class="fas fa-check"></i></td>
+                              </tr>
+                              <tr>
+                                <td>Преимущество 11</td>
+                                <td></td>
+                                <td><i class="fas fa-check"></i></td>
+                              </tr>
+                            </table>
+                          </div> -->
+                         </div>
+                      </div>
+                  </div>
+              </section>
 
 
              <section class="points">
@@ -1398,16 +1518,32 @@ Good knowledge of C#.
       });
   </script>
   <script type="text/javascript">
-  jQuery.getJSON('./stat', {}, function(json){
+  jQuery.getJSON('/stat', {}, function(json){
     jQuery('#totalWorth').html(  (parseInt( (Math.round(json.tokens_total).toFixed(0)))+ 10000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Worth of GAI tokens*</b>'  );
     jQuery('#currentUSD').html((parseInt(Math.round(json.usd_total).toFixed(0)) + 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
     jQuery('#investors').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Purchasers</b>');
+    jQuery('#investorsInLine').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<span> Contributors</span>');
     function magic(){
       $('.loading').addClass('hiders');
       $('.blocks').addClass('showers');
-      $('.raised').css('opacity', '1');
     }
-    setTimeout(magic, 800);
+    function postMagic(){
+      var currentUSD = parseInt($('#currentUSD').text().replace(/\s/g, ''));
+      var usdPercent = (12000000/100);
+      finalWidth = ((currentUSD+600000)/usdPercent);
+      finalMobileWidth = ((currentUSD+1000000)/usdPercent)
+      finalSmallMobileWidth = ((currentUSD+1500000)/usdPercent)
+      $('#raised').width(finalWidth + "%");
+      $('#USDClone').text((currentUSD - 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+      if($('#raised').width() > 4 ){
+        $('#raised').width(finalMobileWidth + "%");
+      }
+      if($('#raised').width() > 6 ){
+        $('#raised').width(finalSmallMobileWidth + "%");
+      }
+    }
+    setTimeout(magic, 1000);
+    setTimeout(postMagic, 1000);
   });
 </script>
     </body>
