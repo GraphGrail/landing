@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="../css/icons.css" />
         <link rel="stylesheet" href="../css/font-awesome/css/fontawesome-all.min.css" />
         <link rel="stylesheet" href="../css/slick.css" />
-        <link rel="stylesheet" href="../css/style.css?cssv=11">
-        <link rel="stylesheet" href="../css/adaptive.css?cssv=11">
+        <link rel="stylesheet" href="../css/style.css?cssv=12">
+        <link rel="stylesheet" href="../css/adaptive.css?cssv=12">
         <link rel="icon" type="image/png" href="../favicon.ico" />
 
         <!-- Google Tag Manager -->
@@ -63,7 +63,7 @@
                         <div class="col-xs-12">
 
                             <h1 class="logo-large">
-                                <a href="index.html" title="GraphGrail Ai">
+                                <a href="#" title="GraphGrail Ai">
                                     <img src="../img/logo_large.png" width="97" height="127" alt="" />
                                     <span class="ring ring1"><img src="../img/ring1.png" width="209" height="208" alt="" /></span>
                                     <span class="ring ring2"><img src="../img/ring2.png" width="209" height="208" alt="" /></span>
@@ -373,7 +373,7 @@
                               <p class="tapToView">(Нажмите на файл, чтобы посмотреть его online)</p>
                              <div class="docPreview">
                                <p>Whitepaper</p>
-                               <div style="background-image: url('../img/docs/preview2.png')" class="doc">
+                               <div style="background-image: url('../img/docs/wpaperRu.png')" class="doc">
                                  <a onclick="ga('send', 'event', 'click', 'whitepaper');" target="_blank" href="../whitepaper/pdf/WP_eng.pdf">
                                    <div class="docCover"><i class="fas fa-search"></i></div>
                                  </a>
@@ -382,7 +382,7 @@
                              </div>
                             <div class="docPreview">
                               <p>Litepaper</p>
-                              <div style="background-image: url('../img/docs/preview3.png')" class="doc">
+                              <div style="background-image: url('../img/docs/lpaperRu.png')" class="doc">
                                 <a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/ru/index.html">
                                   <div class="docCover"><i class="fas fa-search"></i></div>
                                 </a>
@@ -1684,32 +1684,32 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
       });
   </script>
   <script type="text/javascript">
-  jQuery.getJSON('/stat', {}, function(json){
-    jQuery('#totalWorth').html(  (parseInt( (Math.round(json.tokens_total).toFixed(0)))+ 10000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Worth of GAI tokens*</b>'  );
-    jQuery('#currentUSD').html((parseInt(Math.round(json.usd_total).toFixed(0)) + 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
-    jQuery('#investors').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Purchasers</b>');
-    jQuery('#investorsInLine').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<span> Contributors</span>');
-    function magic(){
-      $('.loading').addClass('hiders');
-      $('.blocks').addClass('showers');
-    }
-    function postMagic(){
-      var currentUSD = parseInt($('#currentUSD').text().replace(/\s/g, ''));
-      var usdPercent = (12000000/100);
-      finalWidth = ((currentUSD+600000)/usdPercent);
-      finalMobileWidth = ((currentUSD+1000000)/usdPercent)
-      finalSmallMobileWidth = ((currentUSD+1500000)/usdPercent)
-      $('#raised').width(finalWidth + "%");
-      $('#USDClone').text((currentUSD - 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
-      if($('#raised').width() > 4 ){
-        $('#raised').width(finalMobileWidth + "%");
+  $(document).ready(function() {
+    jQuery.getJSON('/stat', {}, function(json){
+      jQuery('#totalWorth').html((parseInt( (Math.round(json.tokens_total).toFixed(0)))+ 10000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Worth of GAI tokens*</b>'  );
+      jQuery('#currentUSD').html((parseInt(Math.round(json.usd_total).toFixed(0)) + 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+      jQuery('#investors').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Purchasers</b>');
+      jQuery('#investorsInLine').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<span> Contributors</span>');
+      function magic(){
+        $('.loading').addClass('hiders');
+        $('.blocks').addClass('showers');
       }
-      if($('#raised').width() > 6 ){
-        $('#raised').width(finalSmallMobileWidth + "%");
+      function postMagic(){
+        var currentUSD = parseInt(Math.round(json.usd_total).toFixed(0))+200000;
+        var usdPercent = (12000000/100);
+        finalWidth = ((currentUSD+600000)/usdPercent);
+        if($(window).width()<768){
+          finalWidth = ((currentUSD+1000000)/usdPercent);
+        }
+        if($(window).width()<568){
+          finalWidth = ((currentUSD+1300000)/usdPercent);
+        }
+        $('#raised').width(finalWidth + "%");
+        $('#USDClone').text((currentUSD - 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
       }
-    }
-    setTimeout(magic, 1000);
-    setTimeout(postMagic, 1000);
+      setTimeout(magic, 1000);
+      setTimeout(postMagic, 1000);
+    });
   });
 </script>
     </body>

@@ -1219,7 +1219,7 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   width: 1px;
   height: 24px;
   box-shadow: 1px 2px 7px 0px #00000061;
-  left: 10px;
+  left: 8px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background: -webkit-gradient(linear, left top, right top, from(#ffbdbd), to(#ff0000));

@@ -189,9 +189,6 @@ span.size{ display: none; }
   .Mbonuses{
     display: flex;
   }
-  .intro .databar .raised.raisedMobile{
-    width: 5px;
-  }
   .advantable{
     padding: 50px;
   }
@@ -210,9 +207,6 @@ span.size{ display: none; }
     padding: 120px 15px 0 15px;
     height: 360px;
     border-radius: 10px;
-  }
-  .intro .databar .raised.raisedSmallMobile{
-    width: 7px;
   }
   .Mbonuses{
     flex-wrap: wrap;
