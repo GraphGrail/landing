@@ -56,21 +56,8 @@ body:after{
   -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
 
-/*  animation-name: movement;
-  animation-duration: 855s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;*/
-
 }
 
-@keyframes movement
-{
-  from {
-      background-position: 0 0;
-  }
-  to {
-      background-position: 0 -8550px;
-  }
 }
 
 .dots1{
@@ -83,12 +70,6 @@ body:after{
   -webkit-background-size: 100% auto;
   -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
-
- /* animation-name: movementdots;
-  animation-duration: 1155s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;*/
-
 }
 
 .dots2{
@@ -101,12 +82,6 @@ body:after{
   -webkit-background-size: 100% auto;
   -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
-
-  /*animation-name: movementdots;
-  animation-duration: 1555s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;*/
-
 }
 
 
@@ -120,22 +95,6 @@ body:after{
   -webkit-background-size: 100% auto;
   -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
-
- /* animation-name: movementdots;
-  animation-duration: 855s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;*/
-
-}
-
-@keyframes movementdots
-{
-  from {
-      background-position: 0 0;
-  }
-  to {
-      background-position: 0 -15000px;
-  }
 }
 
 .equal, .equal > div[class*='col-'] {
@@ -842,9 +801,8 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
 .betterness tr{
   border-bottom: 1px solid #e6e6e6;
 }
-.boldo td{
-  font-weight: bold;
-  font-size: 20px;
+.betterness td{
+  font-size: 13px;
 }
 .betterness tr td i{
   color: #5f5f5f;
@@ -852,14 +810,14 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   font-size: 14px;
 }
 .betterness tr:not(.headerness) td{
-  padding: 13px 10px;
+  padding: 14px 10px;
 }
 .betterness tr td:first-child{
   max-width: 170px;
 }
 .betterness tr td:not(:first-child){
   text-align: center;
-  max-width: 60px;
+  width: 90px;
 }
 .headAngle{
   height: 0px;
@@ -885,6 +843,46 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
 .HAdiv .leftBottom{
   bottom: 15px;
   left: 10px;
+}
+.advantable .legend{
+  display: none;
+  margin-bottom: 20px;
+  padding: 0 30px;
+}
+.topRightCorner{
+  border-top-right-radius: 10px;
+}
+.legendMap{
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.legendMap p{
+  width: 50%;
+}
+.legend span{
+  font-weight: bold;
+}
+.betterness .abbrev{
+  display: none;
+}
+.legend .legendTitle{
+  font-size: 24px;
+  font-weight: bold;
+}
+.boldo td{
+  font-weight: bold;
+  font-size: 17px;
+  border-top: 1px solid #a7a7a7;
+  padding: 10px 0 10px 10px !important;
+}
+.advantable tr td:nth-child(2) .fa-plus{
+  color: #6191ce;
+}
+.advantable tr:not(.headerness) td:not(:first-child){
+  padding: 10px 5px;
+  font-size: 11px;
 }
 .points{
   position: relative;
@@ -1425,6 +1423,17 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   overflow: hidden;
   margin-top: 20px;
   position: relative;
+}
+.newWrapper{
+  transition: all 300ms ease;
+}
+.newWrapper:hover{
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, .15);
+-webkit-filter: none;
+filter: none;
+-webkit-transform: translate(0px, -10px);
+-ms-transform: translate(0px, -10px);
+transform: translate(0px, -10px);
 }
 .presscentre .item img, .news .item img{
   width: 100%;
@@ -2551,7 +2560,7 @@ footer .container{
      -o-filter: blur(3px);
         filter: blur(3px);*/
   background: transparent;
-  box-shadow:
+  /*box-shadow:
   10px 100px #e10019 , 300px 300px #e10019, 800px 100px #e10019, 1400px 200px #e10019, 1600px 300px #e10019,
   30px 800px #e10019 , 400px 700px #e10019, 800px 1000px #e10019, 1500px 700px #e10019, 1200px 300px #e10019,
   50px 1800px #e10019 , 100px 1300px #e10019, 1060px 2000px #e10019, 1600px 1000px #e10019, 1700px 2300px #e10019,
@@ -2593,14 +2602,12 @@ footer .container{
   70px 24800px #e10019 , 200px 19100px #e10019, 1100px 21300px #e10019, 1900px 16000px #e10019, 1840px 19100px #e10019,
   50px 25800px #e10019 , 60px 22300px #e10019, 1350px 16900px #e10019, 1700px 19000px #e10019, 1700px 18300px #e10019,
   10px 26100px #e10019 , 120px 21900px #e10019, 1620px 19700px #e10019, 1550px 20400px #e10019, 1490px 19500px #e10019,
-  10px 25000px #e10019 , 145px 25400px #e10019, 1410px 20000px #e10019, 1400px 21000px #e10019, 1550px 22900px #e10019;
+  10px 25000px #e10019 , 145px 25400px #e10019, 1410px 20000px #e10019, 1400px 21000px #e10019, 1550px 22900px #e10019;*/
 
-  animation: animStar 150s linear infinite;
   position: relative;
   top: -60px;
   left: 120px;
 }
-@keyframes animStar{from{transform:translateY(0px)}to{transform:translateY(-2000px)}}
 
 
 
@@ -2614,7 +2621,7 @@ footer .container{
   height: 15px;
   border-radius: 50%;
   background: transparent;
-  box-shadow:
+  /*box-shadow:
   0px 100px #e10019 , 20px 300px #e10019, 200px 100px #e10019, 1500px 200px #e10019, 1800px 300px #e10019,
   23px 800px #e10019 , 40px 700px #e10019, 100px 1000px #e10019, 1300px 700px #e10019, 1500px 300px #e10019,
   20px 1800px #e10019 , 30px 1300px #e10019, 60px 2000px #e10019, 1530px 1000px #e10019, 1400px 2300px #e10019,
@@ -2656,9 +2663,8 @@ footer .container{
   70px 24800px #e10019 , 20px 19100px #e10019, 1500px 21300px #e10019, 1280px 16000px #e10019, 1880px 19100px #e10019,
   150px 25800px #e10019 , 160px 22300px #e10019, 1750px 16900px #e10019, 1340px 19000px #e10019, 1780px 18300px #e10019,
   110px 26100px #e10019 , 42px 21900px #e10019, 1820px 19700px #e10019, 1750px 20400px #e10019, 1670px 19500px #e10019,
-  40px 25000px #e10019 , 32px 25400px #e10019, 1310px 20000px #e10019, 1350px 21000px #e10019, 1350px 22900px #e10019;
+  40px 25000px #e10019 , 32px 25400px #e10019, 1310px 20000px #e10019, 1350px 21000px #e10019, 1350px 22900px #e10019;*/
 
-  animation: animStar 100s linear infinite;
  position: relative;
  top: -50px;
  left: 200px;

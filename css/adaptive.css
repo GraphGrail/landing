@@ -159,9 +159,6 @@ span.size{ display: none; }
 
   }
 @media (max-width:768px){
-  .betterness tr td:not(:first-child){
-    width: 115px;
-  }
   .tapToView{
     display: block;
   }
@@ -569,6 +566,35 @@ background-image: none;
   -o-background-size: 100%;
 }
 
+}
+@media (max-width:991px) {
+  .advantable{
+    padding: 50px 15px;
+  }
+  .advantable .legend{
+    display: block;
+  }
+  .betterness tr td:first-child{
+    max-width: initial;
+  }
+  .betterness span{
+    display: none;
+  }
+  .betterness .abbrev{
+    display: block;
+  }
+  .betterness tr td:not(:first-child){
+    max-width: initial;
+    font-size: 12px;
+    width: 60px;
+  }
+  .betterness tr:not(.headerness) td{
+    padding: 10px 5px;
+  }
+  .betterness tr td i{
+    font-size: 11px;
+    margin-right: 4px;
+  }
 }
 @media (max-width:921px) {
   .fixedHeaderMobile nav{
@@ -1209,27 +1235,26 @@ footer .content{
 
 @media (max-width:580px) {
   .advantable{
-    padding: 29px 25px 80px 25px;
-  }
-  .betterness tr td:first-child{
-    font-size: 15px;
-    font-weight: bold;
-  }
-}
-@media (max-width:480px) {
-  .tapToView{
-    font-size: 12px;
+      padding: 29px 0px 80px 0px;
   }
   .docPreview{
     margin: 35px 5px 20px 5px;
   }
-  .fixedHeaderMobile .top .login{
-    width: 73%;
-    top: 30px;
-  }
   .doc{
     width: 120px;
     height: 170px;
+  }
+}
+@media (max-width:480px) {
+  .docs{
+    flex-wrap: wrap;
+  }
+  .tapToView{
+    font-size: 12px;
+  }
+  .fixedHeaderMobile .top .login{
+    width: 73%;
+    top: 30px;
   }
   .top .lang-menu{
     margin-top: -83px;
@@ -1489,5 +1514,58 @@ background-color: #1e245e;
   }
   .open header nav{
     z-index: 200;
+  }
+}
+@media (max-width:700px){
+  .HAdiv .rightTop{
+    top: 15px;
+    right: 15px;
+  }
+  .HAdiv .leftBottom{
+    bottom: 7px;
+    left: 7px;
+  }
+  .losted{
+    display: none;
+  }
+  .betterness tr td i{
+    font-size: 13px;
+  }
+  .boldo td{
+    font-size: 16px;
+  }
+  .betterness tr:not(.headerness) td{
+    padding: 10px 3px;
+  }
+  .betterness tr:not(.headerness) td:first-child{
+    padding: 5px 5px 5px 10px;
+  }
+  .betterness tr td:not(:first-child){
+    width: 30px;
+  }
+
+}
+@media (max-width:480px){
+  .legendMap p{
+    width: 100%;
+  }
+  .betterness td{
+    font-size: 12px;
+  }
+  .betterness tr:not(.headerness) td{
+    padding: 10px 4px;
+    min-width: 20px;
+  }
+  .HAdiv{
+    border-top-left-radius: 0;
+  }
+  .topRightCorner{
+    border-top-right-radius: 0;
+  }
+  .advantable tr:not(.headerness) td:not(:first-child){
+    padding: 10px 2px;
+  }
+  .betterness tr td:not(:first-child){
+    width: 25px;
   }
 }

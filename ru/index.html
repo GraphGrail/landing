@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0" />
+        <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0" />
         <title>GraphGrail Ai RU</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="../css/icons.css" />
         <link rel="stylesheet" href="../css/font-awesome/css/fontawesome-all.min.css" />
         <link rel="stylesheet" href="../css/slick.css" />
-        <link rel="stylesheet" href="../css/style.css?cssv=10">
-        <link rel="stylesheet" href="../css/adaptive.css?cssv=10">
+        <link rel="stylesheet" href="../css/style.css?cssv=11">
+        <link rel="stylesheet" href="../css/adaptive.css?cssv=11">
         <link rel="icon" type="image/png" href="../favicon.ico" />
 
         <!-- Google Tag Manager -->
@@ -399,8 +399,25 @@
                             </div>
                            </div>
                         </div>
-                      <!-- <div class="advantable">
+                      <div class="advantable">
                           <h2>Сравнение с другими платформами</h2>
+                          <div class="legend">
+                            <p class="legendTitle">Сокращения:</p>
+                            <div class="legendMap">
+                              <p><span>GG</span> - GraphGrail</p>
+                              <p><span>MA</span> - MS Azure</p>
+                              <p><span>IW</span> - IBM Watson</p>
+                              <p><span>YT</span> - Yandex.Toloka</p>
+                              <p><span>DA</span> - Dandelion API</p>
+                            </div>
+                            <div class="legendMap icons">
+                              <p><i class="fas fa-plus"></i> - Имеется</p>
+                              <p><i class="fas fa-minus"></i> - Не имеется</p>
+                              <p><i class="fas fa-dollar-sign"></i> - Нужно платить</p>
+                              <p><i class="fas fa-male"></i> - Нужно платить зарплату</p>
+                              <p><i class="far fa-calendar-minus"></i> - Нужно заказывать специальное решение</p>
+                            </div>
+                          </div>
                           <table class="betterness">
                             <tr class="headerness">
                               <td class="headAngle">
@@ -412,158 +429,70 @@
                                   <p class="leftBottom">Параметр</p>
                                 </div>
                               </td>
-                              <td><span>GraphGrail</span></td>
-                              <td><span>MS Azure</span></td>
-                              <td><span>IBM Watson</span></td>
-                              <td><span>Yandex.Toloka</span></td>
-                              <td style="border-top-right-radius: 10px;"><span>Dandelion API</span></td>
+                              <td><span>GraphGrail</span><span class="abbrev">GG</span></td>
+                              <td><span>MS Azure</span><span class="abbrev">MA</span></td>
+                              <td><span>IBM Watson</span><span class="abbrev">IW</span></td>
+                              <td><span>Yandex Toloka</span><span class="abbrev">YT</span></td>
+                              <td class="topRightCorner"><span>Dandelion API</span><span class="abbrev">DA</span></td>
                             </tr>
                             <tr class="boldo">
                               <td>Удобство работы с платформой</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>Заточен на работу с обработкой текста, гибкий АПИ для запросов и получения ответов, данные размечает сообщество.</td>
                               <td><i class="fas fa-plus"></i></td>
                               <td><i class="fas fa-plus"></i><i class="fas fa-minus"></i></td>
                               <td><i class="fas fa-plus"></i><i class="fas fa-minus"></i></td>
                               <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
                               <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Заточен на работу с обработкой текста</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-plus"></i><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-plus"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Гибкий АПИ для запросов и получения ответов</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-plus"></i><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-plus"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Данные размечает сообщество</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
                             </tr>
                             <tr class="boldo">
                               <td>Функциональность: работа с текстом</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>Без программирования: легкий в использовании конструктор ИИ, drag-n-Drop интерфейс для перетаскивания компонентов, готовые к использованию алгоритмы, классификация текста, Алгоритм связывания сущностей</td>
                               <td><i class="fas fa-plus"></i></td>
                               <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
                               <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
                               <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
                               <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Без программирования: легкий в использовании  конструктор ИИ</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-plus"></i><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Drag-n-Drop интерфейс для перетаскивания компонентов</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Готовые к использованию алгоритмы</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-plus"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Классификация текста</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-plus"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Алгоритм связывания сущностей (система понимает, что Путин и ВВП это одно лицо)</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
                             </tr>
                             <tr class="boldo">
                               <td>Интеграция с вашим бизнесом</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
                             </tr>
                             <tr>
-                              <td>Решение полного цикла работы с текстовыми данными, все шаги обработки данных выполняются на платформе</td>
+                              <td>Решение полного цикла работы с текстовыми данными, все шаги обработки данных выполняются на платформе, подключение к любому типу источников данных - социальные медиа, внутренние базы и тп., преднастроенная интеграция шаблонов, импорт - экспорт данных в разных форматах</td>
                               <td><i class="fas fa-plus"></i></td>
                               <td><i class="fas fa-minus"></i></td>
                               <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Подключение к любому типу источников данных - социальные медиа, внутренние базы и тп.</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Преднастроенная интеграция шаблонов</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Импорт - экспорт данных в разных форматах</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-plus"></i></td>
                               <td><i class="fas fa-minus"></i></td>
                               <td><i class="fas fa-minus"></i></td>
                             </tr>
                             <tr class="boldo">
                               <td>Блокчейн и экономика токенов встроены</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
                             </tr>
                             <tr>
-                              <td>Прозрачная и честная торговая площадка на блокчейне со смарт-контрактами</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Система проверки качества разметки данных сообществом. Инструмент развития экосистемы</td>
-                              <td><i class="fas fa-plus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                              <td><i class="fas fa-minus"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Система выплат вознаграждений за работу на платформе</td>
+                              <td>Прозрачная и честная торговая площадка на блокчейне со смарт-контрактами, система проверки качества разметки данных сообществом. Инструмент развития экосистемы, система выплат вознаграждений за работу на платформе</td>
                               <td><i class="fas fa-plus"></i></td>
                               <td><i class="fas fa-minus"></i></td>
                               <td><i class="fas fa-minus"></i></td>
@@ -581,28 +510,28 @@
                             <tr>
                               <td>Готовые к использованию наборы семантических категорий</td>
                               <td><i class="fas fa-plus"></i></td>
-                              <td>Need to buy</td>
-                              <td>Need to buy</td>
-                              <td>Need to buy</td>
-                              <td>Need to buy</td>
+                              <td><span>Нужно платить</span><span class="abbrev"><i class="fas fa-dollar-sign"></i></span></td>
+                              <td><span>Нужно платить</span><span class="abbrev"><i class="fas fa-dollar-sign"></i></span></td>
+                              <td><span>Нужно платить</span><span class="abbrev"><i class="fas fa-dollar-sign"></i></span></td>
+                              <td><span>Нужно платить</span><span class="abbrev"><i class="fas fa-dollar-sign"></i></span></td>
                             </tr>
                             <tr>
                               <td>Автоматизация типичного для бизнеса воркфлоу</td>
                               <td><i class="fas fa-plus"></i></td>
-                              <td>Need to pay salarity</td>
-                              <td>Need to pay salarity</td>
-                              <td>Need to pay salarity</td>
-                              <td>Need to pay salarity</td>
+                              <td><span>Нужно платить зарплату</span><span class="abbrev"><i class="fas fa-male"></i></span></td>
+                              <td><span>Нужно платить зарплату</span><span class="abbrev"><i class="fas fa-male"></i></span></td>
+                              <td><span>Нужно платить зарплату</span><span class="abbrev"><i class="fas fa-male"></i></span></td>
+                              <td><span>Нужно платить зарплату</span><span class="abbrev"><i class="fas fa-male"></i></span></td>
                             </tr>
                             <tr>
                               <td>Легко изменить/настроить решение под себя</td>
                               <td><i class="fas fa-plus"></i></td>
-                              <td>Need to order custom solution</td>
-                              <td>Need to order custom solution</td>
-                              <td>Need to order custom solution</td>
-                              <td>Need to order custom solution</td>
+                              <td><span>Нужно заказывать специальное решение</span><span class="abbrev"><i class="fas fa-calendar-minus"></i></span></td>
+                              <td><span>Нужно заказывать специальное решение</span><span class="abbrev"><i class="fas fa-calendar-minus"></i></span></td>
+                              <td><span>Нужно заказывать специальное решение</span><span class="abbrev"><i class="fas fa-calendar-minus"></i></span></td>
+                              <td><span>Нужно заказывать специальное решение</span><span class="abbrev"><i class="fas fa-calendar-minus"></i></span></td>
                             </tr>
-                            <tr>
+                            <tr class="losted">
                               <td>Модель монетизации</td>
                               <td>От 3000 запросов в день, от 30 до 500 долл в мес.</td>
                               <td></td>
@@ -618,16 +547,8 @@
                               <td><i class="fas fa-minus"></i></td>
                               <td><i class="fas fa-minus"></i></td>
                             </tr>
-                            <tr>
-                              <td>Итоговые баллы:</td>
-                              <td>50</td>
-                              <td>32</td>
-                              <td>36</td>
-                              <td>23</td>
-                              <td>28</td>
-                            </tr>
                           </table>
-                        </div>-->
+                        </div>
                        </div>
                     </div>
                 </div>
@@ -712,7 +633,7 @@
                             <div class="items">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-4">
-                                        <div class="item">
+                                        <div class="item newWrapper">
                                             <h3>Долго</h3>
                                             <div class="text">
                                                Полный цикл работ может занимать от 5 до 10 месяцев, включая разработку и тестирование. Все это время команда разработки нужно оплачивать.
@@ -720,7 +641,7 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-4">
-                                        <div class="item">
+                                        <div class="item newWrapper">
                                             <h3>Дорого</h3>
                                             <div class="text">
                                               Даже если такие датасеты есть, бизнесу все равно очень сложно и затратно
@@ -729,7 +650,7 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-4">
-                                        <div class="item">
+                                        <div class="item newWrapper">
                                             <h3>Разрозненно</h3>
                                             <div class="text">
                                               Бизнесу приходится использовать разные сервисы и API для решения своих задач, а затем делать сложные интеграции сторонних сервисов со своими системами аналитики.
@@ -1297,29 +1218,33 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
                            <h2 class="aligner">Новости проекта</h2>
                             <div class="row">
                               <div class="col-xs-12 col-sm-12 col-md-4">
-                                 <div class="item" style="opacity:1;">
+                                <a href="https://medium.com/graphgrailai/graphgrail-ai-to-establish-partnership-with-russian-universities-19c4611b5843" target="_blank">
+                                 <div class="item newWrapper" style="opacity:1;">
                                      <div class="img"><img src="../img/new1.png" alt="" /></div>
                                      <div class="date">13.02.2018</div>
-                                     <h3><a href="https://medium.com/graphgrailai/graphgrail-ai-to-establish-partnership-with-russian-universities-19c4611b5843" target="_blank">GraphGrail Ai to Establish Partnership with Russian Universities</a></h3>
+                                     <h3>GraphGrail Ai to Establish Partnership with Russian Universities</h3>
                                      <div class="text">
                                        The GraphGrail Ai project has begun conducting operations directed at establishing working relations with leading Russian universities. After a series of successful meetings, GraphGrail Ai is entering negotiations with MEPhI (Moscow Engineering Physics Institute), RUSNANO, ROSATOM, SFEDU and other universities.
                                      </div>
                                  </div>
+                               </a>
                              </div>
 
                              <div class="col-xs-12 col-sm-12 col-md-4">
-                                 <div class="item" style="opacity:1;">
+                               <a target="_blank" href="https://medium.com/graphgrailai/what-is-the-gai-token-graphgrail-ai-ae9986b9f1d9">
+                                 <div class="item newWrapper" style="opacity:1;">
                                      <div class="img"><img src="../img/new2.png" alt="" /></div>
                                      <div class="date">08.02.2018</div>
-                                     <h3><a target="_blank" href="https://medium.com/graphgrailai/what-is-the-gai-token-graphgrail-ai-ae9986b9f1d9">What is the GAI token (GraphGrail AI)?</a></h3>
+                                     <h3>What is the GAI token (GraphGrail AI)?</h3>
                                      <div class="text">
                                           A token is a unit of account in the blockchain network used to represent the digital balance of a certain asset. Accounting for tokens is based on technologies that are available through special applications using electronic signature algorithms.
                                      </div>
                                  </div>
+                               </a>
                              </div>
 
                              <div class="col-xs-12 col-sm-12 col-md-4">
-                                 <div class="item" style="opacity:1;">
+                                 <div class="item newWrapper" style="opacity:1;">
                                      <div class="img"><img style="background-color: black" src="../img/new3.png" alt="" /></div>
                                      <div class="date">15.01.2018</div>
                                      <h3>Opentalks.ai Conference</h3>
@@ -1345,7 +1270,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
 
                            <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-4">
-                                   <div class="item" style="top: 0px; opacity: 1;">
+                                   <div class="item newWrapper" style="top: 0px; opacity: 1;">
                                        <div class="img"><img src="../img/presscentre1.jpg" alt=""></div>
                                        <h3>Криптовалюты.рф</h3>
                                        <div class="text">
@@ -1355,7 +1280,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
                                </div>
 
                                <div class="col-xs-12 col-sm-12 col-md-4">
-                                   <div class="item" style="top: 0px; opacity: 1;">
+                                   <div class="item newWrapper" style="top: 0px; opacity: 1;">
                                        <div class="img"><img src="../img/presscentre2.jpg" alt=""></div>
                                        <h3>Firrma.ru</h3>
                                        <div class="text">
@@ -1365,7 +1290,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
                                </div>
 
                                <div class="col-xs-12 col-sm-12 col-md-4">
-                                   <div class="item" style="top: 0px; opacity: 1;">
+                                   <div class="item newWrapper" style="top: 0px; opacity: 1;">
                                        <div class="img"><img src="../img/presscentre3.jpg" alt=""></div>
                                        <h3>Golos.io</h3>
                                        <div class="text">

@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="../css/icons.css" />
         <link rel="stylesheet" href="../css/font-awesome/css/fontawesome-all.min.css" />
         <link rel="stylesheet" href="../css/slick.css" />
-        <link rel="stylesheet" href="../css/style.css?cssv=10">
-        <link rel="stylesheet" href="../css/adaptive.css?cssv=10">
+        <link rel="stylesheet" href="../css/style.css?cssv=11">
+        <link rel="stylesheet" href="../css/adaptive.css?cssv=11">
         <link rel="icon" type="image/png" href="../favicon.ico" />
 
         <!-- Google Tag Manager -->
@@ -367,7 +367,7 @@
                       <div class="row">
                           <div class="col-xs-12">
                           <div class="content white">
-                            <h2>Downloads</h2>
+                            <h2 class="downloadsTitle">Downloads</h2>
                              <div class="docs">
                                 <p class="tapToView">(Tap on file to view online)</p>
                                <div class="docPreview">
@@ -382,7 +382,7 @@
                               <div class="docPreview">
                                 <p>Litepaper</p>
                                 <div style="background-image: url('../img/docs/preview4.png')" class="doc">
-                                  <a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/ru/index.html">
+                                  <a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/en/index.html">
                                     <div class="docCover"><i class="fas fa-search"></i></div>
                                   </a>
                                 </div>
@@ -398,72 +398,156 @@
                               </div>
                              </div>
                           </div>
-                        <!-- <div class="advantable">
-                            <h1>Our features</h1>
-                            <table class="betterness">
-                              <tr class="headerness">
-                                <td></td>
-                                <td style="color:black">Other platforms</td>
-                                <td style="font-weight:bold">GraphGrail</td>
-                              </tr>
-                              <tr>
-                                <td>Advantage 1</td>
-                                <td><i class="fas fa-check"></i></td>
-                                <td><i class="fas fa-check"></i></td>
-                              </tr>
-                              <tr>
-                                <td>Advantage 2</td>
-                                <td><i class="fas fa-check"></i></td>
-                                <td><i class="fas fa-check"></i></td>
-                              </tr>
-                              <tr>
-                                <td>Advantage 3</td>
-                                <td><i class="fas fa-check"></i></td>
-                                <td><i class="fas fa-check"></i></td>
-                              </tr>
-                              <tr>
-                                <td>Advantage 4</td>
-                                <td><i class="fas fa-check"></i></td>
-                                <td><i class="fas fa-check"></i></td>
-                              </tr>
-                              <tr>
-                                <td>Advantage 5</td>
-                                <td><i class="fas fa-check"></i></td>
-                                <td><i class="fas fa-check"></i></td>
-                              </tr>
-                              <tr>
-                                <td>Advantage 6</td>
-                                <td></td>
-                                <td><i class="fas fa-check"></i></td>
-                              </tr>
-                              <tr>
-                                <td>Advantage 7</td>
-                                <td></td>
-                                <td><i class="fas fa-check"></i></td>
-                              </tr>
-                              <tr>
-                                <td>Advantage 8</td>
-                                <td></td>
-                                <td><i class="fas fa-check"></i></td>
-                              </tr>
-                              <tr>
-                                <td>Advantage 9</td>
-                                <td></td>
-                                <td><i class="fas fa-check"></i></td>
-                              </tr>
-                              <tr>
-                                <td>Advantage 10</td>
-                                <td></td>
-                                <td><i class="fas fa-check"></i></td>
-                              </tr>
-                              <tr>
-                                <td>Advantage 11</td>
-                                <td></td>
-                                <td><i class="fas fa-check"></i></td>
-                              </tr>
-                            </table>
-                          </div> -->
-                         </div>
+                          <div class="advantable">
+                              <h2>Other platforms comparition</h2>
+                              <div class="legend">
+                                <p class="legendTitle">Legend:</p>
+                                <div class="legendMap">
+                                  <p><span>GG</span> - GraphGrail</p>
+                                  <p><span>MA</span> - MS Azure</p>
+                                  <p><span>IW</span> - IBM Watson</p>
+                                  <p><span>YT</span> - Yandex.Toloka</p>
+                                  <p><span>DA</span> - Dandelion API</p>
+                                </div>
+                                <div class="legendMap icons">
+                                  <p><i class="fas fa-plus"></i> - Have</p>
+                                  <p><i class="fas fa-minus"></i> - Don't have</p>
+                                  <p><i class="fas fa-dollar-sign"></i> - Need to buy</p>
+                                  <p><i class="fas fa-male"></i> - Need to pay salary</p>
+                                  <p><i class="far fa-calendar-minus"></i> - Need to order custom solution</p>
+                                </div>
+                              </div>
+                              <table class="betterness">
+                                <tr class="headerness">
+                                  <td class="headAngle">
+                                    <div class="HAdiv">
+                                      <p class="rightTop">Platform</p>
+                                      <svg style='width: 100%; height: 100%;'>
+                                        <line x1="90%" y1="100%" x2="0" y2="0" style="stroke:#ffffff;stroke-width:1"/>
+                                      </svg>
+                                      <p class="leftBottom">Parameter</p>
+                                    </div>
+                                  </td>
+                                  <td><span>GraphGrail</span><span class="abbrev">GG</span></td>
+                                  <td><span>MS Azure</span><span class="abbrev">MA</span></td>
+                                  <td><span>IBM Watson</span><span class="abbrev">IW</span></td>
+                                  <td><span>Yandex.Toloka</span><span class="abbrev">YT</span></td>
+                                  <td class="topRightCorner"><span>Dandelion API</span><span class="abbrev">DA</span></td>
+                                </tr>
+                                <tr class="boldo">
+                                  <td>Platform easy of use, usability</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>Text targeting, API provided, crowd labeling data</td>
+                                  <td><i class="fas fa-plus"></i></td>
+                                  <td><i class="fas fa-plus"></i><i class="fas fa-minus"></i></td>
+                                  <td><i class="fas fa-plus"></i><i class="fas fa-minus"></i></td>
+                                  <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
+                                  <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
+                                </tr>
+                                <tr class="boldo">
+                                  <td>Features: Ai components and algorithms</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>No programing: easy to use Ai-designer, drag-n-Drop interface to create your custom solution with components, ready to use algorithms, text classification, NEL</td>
+                                  <td><i class="fas fa-plus"></i></td>
+                                  <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
+                                  <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
+                                  <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
+                                  <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
+                                </tr>
+                                <tr class="boldo">
+                                  <td>Easy solution integration with your business, full cycle</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>Full cycle solution, connect with any type of source (Social media, internal database), Pre-configured integration with data templates: chat-bot builder, classification, Import & Export data the way you want (JSON, email, etc.)</td>
+                                  <td><i class="fas fa-plus"></i></td>
+                                  <td><i class="fas fa-minus"></i></td>
+                                  <td><i class="fas fa-minus"></i></td>
+                                  <td><i class="fas fa-minus"></i></td>
+                                  <td><i class="fas fa-minus"></i></td>
+                                </tr>
+                                <tr class="boldo">
+                                  <td>Blockchain and token economy to cut the costs</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>Transparent and honest blockchain-based marketplace datastore, blockchain-based quality checking for crowd data-labeling, automatic rating system for platform participants</td>
+                                  <td><i class="fas fa-plus"></i></td>
+                                  <td><i class="fas fa-minus"></i></td>
+                                  <td><i class="fas fa-minus"></i></td>
+                                  <td><i class="fas fa-minus"></i></td>
+                                  <td><i class="fas fa-minus"></i></td>
+                                </tr>
+                                <tr class="boldo">
+                                  <td>Get more, pay less: ready to use workflows</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>Ready to use semantic categories</td>
+                                  <td><i class="fas fa-plus"></i></td>
+                                  <td><span>Need to buy</span><span class="abbrev"><i class="fas fa-dollar-sign"></i></span></td>
+                                  <td><span>Need to buy</span><span class="abbrev"><i class="fas fa-dollar-sign"></i></span></td>
+                                  <td><span>Need to buy</span><span class="abbrev"><i class="fas fa-dollar-sign"></i></span></td>
+                                  <td><span>Need to buy</span><span class="abbrev"><i class="fas fa-dollar-sign"></i></span></td>
+                                </tr>
+                                <tr>
+                                  <td>Typical business workflow automatization</td>
+                                  <td><i class="fas fa-plus"></i></td>
+                                  <td><span>Need to pay salary</span><span class="abbrev"><i class="fas fa-male"></i></span></td>
+                                  <td><span>Need to pay salary</span><span class="abbrev"><i class="fas fa-male"></i></span></td>
+                                  <td><span>Need to pay salary</span><span class="abbrev"><i class="fas fa-male"></i></span></td>
+                                  <td><span>Need to pay salary</span><span class="abbrev"><i class="fas fa-male"></i></span></td>
+                                </tr>
+                                <tr>
+                                  <td>Easy to customize solution</td>
+                                  <td><i class="fas fa-plus"></i></td>
+                                  <td><span>Need to order custom solution</span><span class="abbrev"><i class="fas fa-calendar-minus"></i></span></td>
+                                  <td><span>Need to order custom solution</span><span class="abbrev"><i class="fas fa-calendar-minus"></i></span></td>
+                                  <td><span>Need to order custom solution</span><span class="abbrev"><i class="fas fa-calendar-minus"></i></span></td>
+                                  <td><span>Need to order custom solution</span><span class="abbrev"><i class="fas fa-calendar-minus"></i></span></td>
+                                </tr>
+                                <tr class="losted">
+                                  <td>Monetization model</td>
+                                  <td>From 3000 queryes per day, from $30 to $500 per month</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>From 2000 queryes per day, up to $750 per month</td>
+                                </tr>
+                                <tr>
+                                  <td>Your business specific crowd labeling specialist on the platform</td>
+                                  <td><i class="fas fa-plus"></i></td>
+                                  <td><i class="fas fa-minus"></i></td>
+                                  <td><i class="fas fa-minus"></i></td>
+                                  <td><i class="fas fa-minus"></i></td>
+                                  <td><i class="fas fa-minus"></i></td>
+                                </tr>
+                              </table>
+                            </div>
                       </div>
                   </div>
               </section>
@@ -542,7 +626,7 @@
                             <div class="items">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-4">
-                                        <div class="item">
+                                        <div class="item newWrapper">
                                             <h3>TOO SLOW</h3>
                                             <div class="text">
                                                To automate a process and resolve an end task, a business might need to spend 5-10 months on performing case studies, data analysis, formalizing the development task, testing and finalizing a solution.
@@ -550,7 +634,7 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-4">
-                                        <div class="item">
+                                        <div class="item newWrapper">
                                             <h3>TOO EXPENSIVE</h3>
                                             <div class="text">
                                             Developers, data-science and NLP specialist cost a lot, and using them demands specific knowledge and the time to recruit and manage a development team – which is most frequently outside the business's scope.
@@ -558,7 +642,7 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-4">
-                                        <div class="item">
+                                        <div class="item newWrapper">
                                             <h3>DISPARATE SOLUTIONS</h3>
                                             <div class="text">
                                               Using an off-the-shelf solution, a business loses the ability to update the neural network with new data or has to resort to using different services, which complicates data processing, integration, software code development and requirements even further.
@@ -1104,29 +1188,33 @@ Creating a Deep machine learning and future artificial intelligence prospective 
                            <h2>Project news</h2>
                             <div class="row">
                               <div class="col-xs-12 col-sm-12 col-md-4">
-                                 <div class="item" style="opacity:1;">
+                                <a href="https://medium.com/graphgrailai/graphgrail-ai-to-establish-partnership-with-russian-universities-19c4611b5843" target="_blank">
+                                 <div class="item newWrapper" style="opacity:1;">
                                      <div class="img"><img src="../img/new1.png" alt="" /></div>
                                      <div class="date">13.02.2018</div>
-                                     <h3><a href="https://medium.com/graphgrailai/graphgrail-ai-to-establish-partnership-with-russian-universities-19c4611b5843" target="_blank">GraphGrail Ai to Establish Partnership with Russian Universities</a></h3>
+                                     <h3>GraphGrail Ai to Establish Partnership with Russian Universities</h3>
                                      <div class="text">
                                        The GraphGrail Ai project has begun conducting operations directed at establishing working relations with leading Russian universities. After a series of successful meetings, GraphGrail Ai is entering negotiations with MEPhI (Moscow Engineering Physics Institute), RUSNANO, ROSATOM, SFEDU and other universities.
                                      </div>
                                  </div>
+                                 </a>
                              </div>
 
                              <div class="col-xs-12 col-sm-12 col-md-4">
-                                 <div class="item" style="opacity:1;">
+                               <a target="_blank" href="https://medium.com/graphgrailai/what-is-the-gai-token-graphgrail-ai-ae9986b9f1d9">
+                                 <div class="item newWrapper" style="opacity:1;">
                                      <div class="img"><img src="../img/new2.png" alt="" /></div>
                                      <div class="date">08.02.2018</div>
-                                     <h3><a target="_blank" href="https://medium.com/graphgrailai/what-is-the-gai-token-graphgrail-ai-ae9986b9f1d9">What is the GAI token (GraphGrail AI)?</a></h3>
+                                     <h3>What is the GAI token (GraphGrail AI)?</h3>
                                      <div class="text">
                                           A token is a unit of account in the blockchain network used to represent the digital balance of a certain asset. Accounting for tokens is based on technologies that are available through special applications using electronic signature algorithms.
                                      </div>
                                  </div>
+                                 </a>
                              </div>
 
                              <div class="col-xs-12 col-sm-12 col-md-4">
-                                 <div class="item" style="opacity:1;">
+                                 <div class="item newWrapper" style="opacity:1;">
                                      <div class="img"><img style="background-color: black" src="../img/new3.png" alt="" /></div>
                                      <div class="date">15.01.2018</div>
                                      <h3>Opentalks.ai Conference</h3>
@@ -1152,7 +1240,7 @@ Creating a Deep machine learning and future artificial intelligence prospective 
 
                            <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-4">
-                                   <div class="item" style="top: 0px; opacity: 1;">
+                                   <div class="item newWrapper" style="top: 0px; opacity: 1;">
                                        <div class="img"><img src="../img/presscentre1.jpg" alt=""></div>
                                        <h3>Криптовалюты.рф</h3>
                                        <div class="text">
@@ -1162,7 +1250,7 @@ Creating a Deep machine learning and future artificial intelligence prospective 
                                </div>
 
                                <div class="col-xs-12 col-sm-12 col-md-4">
-                                   <div class="item" style="top: 0px; opacity: 1;">
+                                   <div class="item newWrapper" style="top: 0px; opacity: 1;">
                                        <div class="img"><img src="../img/presscentre2.jpg" alt=""></div>
                                        <h3>Firrma.ru</h3>
                                        <div class="text">
@@ -1172,7 +1260,7 @@ Creating a Deep machine learning and future artificial intelligence prospective 
                                </div>
 
                                <div class="col-xs-12 col-sm-12 col-md-4">
-                                   <div class="item" style="top: 0px; opacity: 1;">
+                                   <div class="item newWrapper" style="top: 0px; opacity: 1;">
                                        <div class="img"><img src="../img/presscentre3.jpg" alt=""></div>
                                        <h3>Golos.io</h3>
                                        <div class="text">
