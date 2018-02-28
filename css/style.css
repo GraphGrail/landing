@@ -317,6 +317,7 @@ header nav .logo-nav img{
 }
 .intro .content.gray {
   margin-bottom: 87px;
+  padding-bottom: 30px;
 }
 body.fixedHeader .intro {
   top: -150px;
@@ -533,7 +534,7 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   margin-top: 0px;
   padding: 110px 55px 0 55px;
   background-color: white;
-  border-radius: 28px;
+  border-radius: 10px;
   height: 250px;
 }
 .scap, .hcap{
