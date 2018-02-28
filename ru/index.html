@@ -1620,7 +1620,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
         var google_remarketing_only = true;
         /* ]]> */
     </script>
-    <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+    <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
     </script>
     <noscript>
         <div style="display:inline;">
@@ -1633,7 +1633,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
         if ('gtag' in window) {
           $('a.btn').click(function(){
             var href = $(this).attr('href');
-            if (href && $.isString(href)) {
+            if (href && $.type(href) === 'string') {
               if (href.match(/whitepaper/)) {
                 window.gtag('event', 'get_wp', { category: 'UX' });
               }
@@ -1659,7 +1659,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
           });
           $('.share a').click(function(){
             var href = $(this).attr('href');
-            if (href && $.isString(href)) {
+            if (href && $.type(href) === 'string') {
               if (href.match(/bitcointalk/)) {
                 window.gtag('event', 'bitcointalk', { category: 'UX' });
               }
