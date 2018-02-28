@@ -688,9 +688,9 @@ moment.locale('ru');
 var now = moment();
 
 var hSince;
-var bonusOneGone = moment('2018-03-06T12:00:00');
-var bonusTwoGone = moment('2018-03-16T12:00:00');
-var bonusThreeGone = moment('2018-03-26T12:00:00');
+var bonusOneGone = moment('2018-03-07T12:00:00');
+var bonusTwoGone = moment('2018-03-17T12:00:00');
+var bonusThreeGone = moment('2018-03-27T12:00:00');
 var currentBonus;
 
 if(bonusOneGone.diff(now, 'days') < 10){
@@ -698,6 +698,8 @@ if(bonusOneGone.diff(now, 'days') < 10){
   currentEngBonus = $('.firstEngBonusLeft');
   hSince = (bonusOneGone.diff(now, 'days')).toString();
   bonusPercent = 25;
+  daysleftPercent = (2.5*hSince);
+  $('.bonuses .firstBonus').width(daysleftPercent + '%');
 }
 if(bonusTwoGone.diff(now, 'days') < 10){
   $('.firstBonus').hide();
@@ -705,6 +707,8 @@ if(bonusTwoGone.diff(now, 'days') < 10){
   currentEngBonus = $('.secondEngBonusLeft');
   hSince = (bonusTwoGone.diff(now, 'days')).toString();
   bonusPercent = 20;
+  daysleftPercent = (2.5*hSince);
+  $('.bonuses .secondBonus').width(daysleftPercent + '%');
 }
 if(bonusThreeGone.diff(now, 'days') < 10){
   $('.firstBonus').hide();
@@ -713,6 +717,8 @@ if(bonusThreeGone.diff(now, 'days') < 10){
   currentEngBonus = $('.thirdEngBonusLeft');
   hSince = (bonusThreeGone.diff(now, 'days')).toString();
   bonusPercent = 15;
+  daysleftPercent = (2.5*hSince);
+  $('.bonuses .thirdBonus').width(daysleftPercent + '%');
 }
 
 var hword;
@@ -746,8 +752,6 @@ if((hSince.substr(hSince.length-1,1)) == 1 ){
 }
 $('#daysLeft').text(hSince + dword);
 $('#edaysLeft').text(hSince + edword);
-daysleftPercent = (2.5*hSince);
-$('.bonuses .firstBonus').width(daysleftPercent + '%');
 currentBonus.text(hSince + dword);
 currentEngBonus.text(hSince + edword);
 
