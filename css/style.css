@@ -58,8 +58,6 @@ body:after{
 
 }
 
-}
-
 .dots1{
  position: relative;
   z-index: 3;
@@ -950,6 +948,7 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
 .keyproblem{
   z-index: 9;
   position: relative;
+  margin-top: 20px;
 }
 .keyproblem .content, .platform .content,
 .team .content,.news .content,.roadmap .content, .interface .content{
@@ -1424,6 +1423,7 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   margin-top: 20px;
   position: relative;
 }
+
 .newWrapper{
   transition: all 300ms ease;
 }
@@ -1474,12 +1474,13 @@ transform: translate(0px, -10px);
 .economic{
   position: relative;
   top: 60px !important;
-  z-index: 1;
+  z-index: 8;
 }
 
 .roadmap{
   position: relative;
   z-index: 7;
+  margin-top: -80px;
 }
 .roadmap .items{
   position: relative;
@@ -1551,6 +1552,9 @@ transform: translate(0px, -10px);
  .roadmap .item .text{
    padding: 0 15px 10px;
    line-height: 1.4;
+ }
+ .cases{
+       z-index: 9;
  }
 .cases .item{
   margin: 40px 0;
