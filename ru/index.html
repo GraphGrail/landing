@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0" />
+        <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0" />
         <title>GraphGrail Ai RU</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="../css/icons.css" />
         <link rel="stylesheet" href="../css/font-awesome/css/fontawesome-all.min.css" />
         <link rel="stylesheet" href="../css/slick.css" />
-        <link rel="stylesheet" href="../css/style.css?cssv=8">
-        <link rel="stylesheet" href="../css/adaptive.css?cssv=8">
+        <link rel="stylesheet" href="../css/style.css?cssv=15">
+        <link rel="stylesheet" href="../css/adaptive.css?cssv=15">
         <link rel="icon" type="image/png" href="../favicon.ico" />
 
         <!-- Google Tag Manager -->
@@ -63,7 +63,7 @@
                         <div class="col-xs-12">
 
                             <h1 class="logo-large">
-                                <a href="index.html" title="GraphGrail Ai">
+                                <a href="#" title="GraphGrail Ai">
                                     <img src="../img/logo_large.png" width="97" height="127" alt="" />
                                     <span class="ring ring1"><img src="../img/ring1.png" width="209" height="208" alt="" /></span>
                                     <span class="ring ring2"><img src="../img/ring2.png" width="209" height="208" alt="" /></span>
@@ -114,7 +114,7 @@
                                                 <div class="btns">
                                                     <div class="row">
                                                         <div class="col-xs-12 col-sm-4">
-                                                            <a target="_blank" href="../whitepaper/ru/index.html" class="btn red"><i>Whitepaper</i></a>
+                                                            <a onclick="ga('send', 'event', 'click', 'whitepaper');" target="_blank" href="../whitepaper/pdf/WP_eng.pdf" class="btn red"><i>Whitepaper</i></a>
                                                         </div>
                                                         <div class="col-xs-12 col-sm-4">
                                                             <a onclick="ga('send', 'event', 'click', 'try_mvp');" href="../mvp/dest/views/index.html" class="btn red"><i>Попробовать MVP</i></a>
@@ -185,7 +185,7 @@
                                             </div-->
                                             <div class="panel">
                                               <div class="bonus">
-                                                <p>Получи бонус 25% <br>
+                                                <p>Продажа токенов началась!</p>
                                                     <hr>
                                               </div>
                                                 <div class="text timeSince"></div>
@@ -217,21 +217,58 @@
                                                       <span class="label"><%= label.length < 8 ? label : label.substr(0, 3)  %></span>
                                                     </div>
                                                     </script>
-
-                                                    <div class="databar">
-                                                        <div class="bar">
-                                                        <span>$2 M</span><span>$12 M</span>
-                                                        </div>
-                                                        <div class="preico">
-                                                          <div class="cash">Pre ICO $200 K</div>
-                                                        </div>
-                                                        <div id="raised" class="raised">
-                                                          <div class="cash">$<span id="USDClone"></span></div>
-                                                        </div>
-                                                        <label class="data left"><i class="fa fa-check"></i><b>Softcap</b></label>
-                                                        <label class="data right"><i class="fa fa-check"></i><b>Hardcap</b></label>
-                                                    </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="databar">
+                                      <p class="bonusLefter">Бонус <span class="bonusPercent">25%</span> заканчивается через <span id="daysLeft"></span><br></p>
+                                        <div class="bar">
+                                        <span class="barCloud">$2 M</span>
+                                        <span class="barCloud">$12 M</span>
+                                        </div>
+                                        <span class="scap">Softcap</span>
+                                        <span class="hcap">Hardcap</span>
+                                        <div class="preico">
+                                          <div class="cash">Pre ICO<br>$200 K</div>
+                                        </div>
+                                        <div id="investorsInLine"></div>
+                                        <div id="raised" class="raised raisedMobile raisedSmallMobile">
+                                          <div class="cash">$<span id="USDClone"></span></div>
+                                        </div>
+                                        <div class="bonuses">
+                                          <span class="bonuso">Бонусы:</span>
+                                          <div class="firstBonus">
+                                            <p>25%</p>
+                                            <img src="../img/skobaPNG.png" alt="">
+                                            <p class="firstBonusLeft"></p>
+                                          </div>
+                                          <div class="secondBonus">
+                                            <p>20%</p>
+                                            <img src="../img/skobaPNG.png" alt="">
+                                            <p class="secondBonusLeft">10 дней</p>
+                                          </div>
+                                          <div class="thirdBonus">
+                                            <p>15%</p>
+                                            <img src="../img/skobaPNG.png" alt="">
+                                            <p class="thirdBonusLeft">10 дней</p>
+                                          </div>
+                                        </div>
+                                        <label class="data left"><b>19 февр.</b></label>
+                                        <label class="data right"><b>15 апр.</b></label>
+                                        <div class="Mbonuses">
+                                          <p class="bonuso">Бонусы:</p>
+                                          <div class="firstBonus">
+                                            <p>25%</p>
+                                            <p>Осталось <span class="firstBonusLeft"></span></p>
+                                          </div>
+                                          <div class="secondBonus">
+                                            <p>20%</p>
+                                            <p class="secondBonusLeft">10 дней</p>
+                                          </div>
+                                          <div class="thirdBonus">
+                                            <p>15%</p>
+                                            <p class="thirdBonusLeft">10 дней</p>
+                                          </div>
                                         </div>
                                     </div>
                                 </div>
@@ -326,21 +363,191 @@
                 </div>
             </section>
 
-            <section class="forwhom">
+          <section class="forwhom">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
                         <div class="content white">
-                           <h2>Для кого?</h2>
-                           <div class="row">
-                                <div class="col-xs-12 col-sm-6 text-right">
-                                     <a onclick="ga('send', 'event', 'click', 'for_ai_specialists');" href="../whitepaper/ru/index.html#cases" class="btn blue"><i>ДЛЯ AI СПЕЦИАЛИСТОВ</i></a>
-                                </div>
-                                 <div class="col-xs-12 col-sm-6 text-left">
-                                     <a onclick="ga('send', 'event', 'click', 'for_blockchain_specialists');" href="../whitepaper/ru/index.html#cases" class="btn blue"><i>ДЛЯ BLOCKCHAIN СПЕЦИАЛИСТОВ</i></a>
-                                </div>
-
+                          <h2 class="downloadsTitle">Загрузки</h2>
+                           <div class="docs">
+                              <p class="tapToView">(Нажмите на файл, чтобы посмотреть его online)</p>
+                             <div class="docPreview">
+                               <p>Whitepaper</p>
+                               <div style="background-image: url('../img/docs/wpaperRu.png')" class="doc">
+                                 <a onclick="ga('send', 'event', 'click', 'whitepaper');" target="_blank" href="../whitepaper/pdf/WP_eng.pdf">
+                                   <div class="docCover"><i class="fas fa-search"></i></div>
+                                 </a>
+                               </div>
+                               <a onclick="ga('send', 'event', 'click', 'whitepaper');" href="../whitepaper/pdf/WP_eng.pdf" download><p>Скачать</p></a>
+                             </div>
+                            <div class="docPreview">
+                              <p>Litepaper</p>
+                              <div style="background-image: url('../img/docs/lpaperRu.png')" class="doc">
+                                <a onclick="ga('send', 'event', 'click', 'litepaper');" target="_blank" href="../whitepaper/ru/index.html">
+                                  <div class="docCover"><i class="fas fa-search"></i></div>
+                                </a>
+                              </div>
                             </div>
+                            <div class="docPreview">
+                              <p>Legal opinion</p>
+                              <div style="background-image: url('../img/docs/legals.jpg')" class="doc">
+                                <a target="_blank" href="../legals/GraphGrailLegal.pdf">
+                                  <div class="docCover"><i class="fas fa-search"></i></div>
+                                </a>
+                              </div>
+                              <a href="../legals/GraphGrailLegal.pdf" download><p>Скачать</p></a>
+                            </div>
+                           </div>
+                        </div>
+                      <div class="advantable">
+                          <h2>Сравнение с другими платформами</h2>
+                          <div class="legend">
+                            <p class="legendTitle">Сокращения:</p>
+                            <div class="legendMap">
+                              <p><span>GG</span> - GraphGrail</p>
+                              <p><span>MA</span> - MS Azure</p>
+                              <p><span>IW</span> - IBM Watson</p>
+                              <p><span>YT</span> - Yandex.Toloka</p>
+                              <p><span>DA</span> - Dandelion API</p>
+                            </div>
+                            <div class="legendMap icons">
+                              <p><i class="fas fa-plus"></i> - Имеется</p>
+                              <p><i class="fas fa-minus"></i> - Не имеется</p>
+                              <p><i class="fas fa-dollar-sign"></i> - Нужно платить</p>
+                              <p><i class="fas fa-male"></i> - Нужно платить зарплату</p>
+                              <p><i class="far fa-calendar-minus"></i> - Нужно заказывать специальное решение</p>
+                            </div>
+                          </div>
+                          <table class="betterness">
+                            <tr class="headerness">
+                              <td class="headAngle">
+                                <div class="HAdiv">
+                                  <p class="rightTop">Платформа</p>
+                                  <svg style='width: 100%; height: 100%;'>
+                                    <line x1="90%" y1="100%" x2="0" y2="0" style="stroke:#ffffff;stroke-width:1"/>
+                                  </svg>
+                                  <p class="leftBottom">Параметр</p>
+                                </div>
+                              </td>
+                              <td><span>GraphGrail</span><span class="abbrev">GG</span></td>
+                              <td><span>MS Azure</span><span class="abbrev">MA</span></td>
+                              <td><span>IBM Watson</span><span class="abbrev">IW</span></td>
+                              <td><span>Yandex Toloka</span><span class="abbrev">YT</span></td>
+                              <td class="topRightCorner"><span>Dandelion API</span><span class="abbrev">DA</span></td>
+                            </tr>
+                            <tr class="boldo">
+                              <td>Удобство работы с платформой</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>Заточен на работу с обработкой текста, гибкий АПИ для запросов и получения ответов, данные размечает сообщество.</td>
+                              <td><i class="fas fa-plus"></i></td>
+                              <td><i class="fas fa-plus"></i><i class="fas fa-minus"></i></td>
+                              <td><i class="fas fa-plus"></i><i class="fas fa-minus"></i></td>
+                              <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
+                              <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
+                            </tr>
+                            <tr class="boldo">
+                              <td>Функциональность: работа с текстом</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>Без программирования: легкий в использовании конструктор ИИ, drag-n-Drop интерфейс для перетаскивания компонентов, готовые к использованию алгоритмы, классификация текста, Алгоритм связывания сущностей</td>
+                              <td><i class="fas fa-plus"></i></td>
+                              <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
+                              <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
+                              <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
+                              <td><i class="fas fa-minus"></i><i class="fas fa-plus"></i></td>
+                            </tr>
+                            <tr class="boldo">
+                              <td>Интеграция с вашим бизнесом</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>Решение полного цикла работы с текстовыми данными, все шаги обработки данных выполняются на платформе, подключение к любому типу источников данных - социальные медиа, внутренние базы и тп., преднастроенная интеграция шаблонов, импорт - экспорт данных в разных форматах</td>
+                              <td><i class="fas fa-plus"></i></td>
+                              <td><i class="fas fa-minus"></i></td>
+                              <td><i class="fas fa-minus"></i></td>
+                              <td><i class="fas fa-minus"></i></td>
+                              <td><i class="fas fa-minus"></i></td>
+                            </tr>
+                            <tr class="boldo">
+                              <td>Блокчейн и экономика токенов встроены</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>Прозрачная и честная торговая площадка на блокчейне со смарт-контрактами, система проверки качества разметки данных сообществом. Инструмент развития экосистемы, система выплат вознаграждений за работу на платформе</td>
+                              <td><i class="fas fa-plus"></i></td>
+                              <td><i class="fas fa-minus"></i></td>
+                              <td><i class="fas fa-minus"></i></td>
+                              <td><i class="fas fa-minus"></i></td>
+                              <td><i class="fas fa-minus"></i></td>
+                            </tr>
+                            <tr class="boldo">
+                              <td>Стоимостные и затратные характеристики</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>Готовые к использованию наборы семантических категорий</td>
+                              <td><i class="fas fa-plus"></i></td>
+                              <td><span>Нужно платить</span><span class="abbrev"><i class="fas fa-dollar-sign"></i></span></td>
+                              <td><span>Нужно платить</span><span class="abbrev"><i class="fas fa-dollar-sign"></i></span></td>
+                              <td><span>Нужно платить</span><span class="abbrev"><i class="fas fa-dollar-sign"></i></span></td>
+                              <td><span>Нужно платить</span><span class="abbrev"><i class="fas fa-dollar-sign"></i></span></td>
+                            </tr>
+                            <tr>
+                              <td>Автоматизация типичного для бизнеса воркфлоу</td>
+                              <td><i class="fas fa-plus"></i></td>
+                              <td><span>Нужно платить зарплату</span><span class="abbrev"><i class="fas fa-male"></i></span></td>
+                              <td><span>Нужно платить зарплату</span><span class="abbrev"><i class="fas fa-male"></i></span></td>
+                              <td><span>Нужно платить зарплату</span><span class="abbrev"><i class="fas fa-male"></i></span></td>
+                              <td><span>Нужно платить зарплату</span><span class="abbrev"><i class="fas fa-male"></i></span></td>
+                            </tr>
+                            <tr>
+                              <td>Легко изменить/настроить решение под себя</td>
+                              <td><i class="fas fa-plus"></i></td>
+                              <td><span>Нужно заказывать специальное решение</span><span class="abbrev"><i class="fas fa-calendar-minus"></i></span></td>
+                              <td><span>Нужно заказывать специальное решение</span><span class="abbrev"><i class="fas fa-calendar-minus"></i></span></td>
+                              <td><span>Нужно заказывать специальное решение</span><span class="abbrev"><i class="fas fa-calendar-minus"></i></span></td>
+                              <td><span>Нужно заказывать специальное решение</span><span class="abbrev"><i class="fas fa-calendar-minus"></i></span></td>
+                            </tr>
+                            <tr class="losted">
+                              <td>Модель монетизации</td>
+                              <td>От 3000 запросов в день, от 30 до 500 долл в мес.</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td>От 2000 в день, до 750 долл в мес.</td>
+                            </tr>
+                            <tr>
+                              <td>Специалисты, разбирающиеся в разметке текстовых данных именно вашего сегмента бизнеса</td>
+                              <td><i class="fas fa-plus"></i></td>
+                              <td><i class="fas fa-minus"></i></td>
+                              <td><i class="fas fa-minus"></i></td>
+                              <td><i class="fas fa-minus"></i></td>
+                              <td><i class="fas fa-minus"></i></td>
+                            </tr>
+                          </table>
                         </div>
                        </div>
                     </div>
@@ -426,7 +633,7 @@
                             <div class="items">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-4">
-                                        <div class="item">
+                                        <div class="item newWrapper">
                                             <h3>Долго</h3>
                                             <div class="text">
                                                Полный цикл работ может занимать от 5 до 10 месяцев, включая разработку и тестирование. Все это время команда разработки нужно оплачивать.
@@ -434,7 +641,7 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-4">
-                                        <div class="item">
+                                        <div class="item newWrapper">
                                             <h3>Дорого</h3>
                                             <div class="text">
                                               Даже если такие датасеты есть, бизнесу все равно очень сложно и затратно
@@ -443,7 +650,7 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-4">
-                                        <div class="item">
+                                        <div class="item newWrapper">
                                             <h3>Разрозненно</h3>
                                             <div class="text">
                                               Бизнесу приходится использовать разные сервисы и API для решения своих задач, а затем делать сложные интеграции сторонних сервисов со своими системами аналитики.
@@ -817,9 +1024,9 @@
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
                                        <div class="text">
-                                            Лидер блокчейн-проекта
-GraphGrail Ai принял участие в конференции и экспертной панели WeAre
-Ecosystem 14 декабря в Москве.
+                                         Умный чат (e-commerce)
+Понимает потребности покупателя, проведение по всем этапам продажи, понимание возражений клиента, повышение конверсии в продажи
+Технологии: Natural Language Understanding, Syntax similarity, Multi-class classification, RNN, LSTM, Neural Turing Machines
                                         </div>
                                     </div>
                                 </div>
@@ -891,8 +1098,6 @@ utility token и выполняет роль внутренней валюты �
 
                             <h3 class="text-center">Преимущества держателей токенов</h3>
                             <div class="text text-center">
-                                <p>Токен растет в цене потому, что экосистема растет и развивается - больше клиентов, больше людей на разметке данных.
-                                </p>
                                 <p>
                                   Полезность экосистемы обеспечивается за счет баланса спроса и предложения услуг и заказов от бизнес-клиентов - больше клиентов, больше людей на разметке данных, больших охват сегментов для каждого из которых требуются кастомные языковые модели.
   Для доступа на платформу представителю бизнеса необходимо купить на бирже от 5000 до 10000 токенов. Таким образом, из свободного оборота изымается ликвидность. Эти токены бизнес сможет потратить на покупку внутренних услуг платформы: сбор, очистку, разметку данных, кастомные настройки для обучения нейросети и т.п. Чем больше участников в системе и чем больше заказов размещается в маркетплейсе приложений, тем большую пользу бизнесу приносит платформа,
@@ -1013,31 +1218,35 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
                            <h2 class="aligner">Новости проекта</h2>
                             <div class="row">
                               <div class="col-xs-12 col-sm-12 col-md-4">
-                                 <div class="item" style="opacity:1;">
+                                <a href="https://medium.com/graphgrailai/graphgrail-ai-to-establish-partnership-with-russian-universities-19c4611b5843" target="_blank">
+                                 <div class="item newWrapper" style="opacity:1;">
                                      <div class="img"><img src="../img/new1.png" alt="" /></div>
                                      <div class="date">13.02.2018</div>
-                                     <h3><a href="https://medium.com/graphgrailai/graphgrail-ai-to-establish-partnership-with-russian-universities-19c4611b5843" target="_blank">GraphGrail Ai to Establish Partnership with Russian Universities</a></h3>
+                                     <h3>GraphGrail Ai to Establish Partnership with Russian Universities</h3>
                                      <div class="text">
                                        The GraphGrail Ai project has begun conducting operations directed at establishing working relations with leading Russian universities. After a series of successful meetings, GraphGrail Ai is entering negotiations with MEPhI (Moscow Engineering Physics Institute), RUSNANO, ROSATOM, SFEDU and other universities.
                                      </div>
                                  </div>
+                               </a>
                              </div>
 
                              <div class="col-xs-12 col-sm-12 col-md-4">
-                                 <div class="item" style="opacity:1;">
+                               <a target="_blank" href="https://medium.com/graphgrailai/what-is-the-gai-token-graphgrail-ai-ae9986b9f1d9">
+                                 <div class="item newWrapper" style="opacity:1;">
                                      <div class="img"><img src="../img/new2.png" alt="" /></div>
                                      <div class="date">08.02.2018</div>
-                                     <h3><a target="_blank" href="https://medium.com/graphgrailai/what-is-the-gai-token-graphgrail-ai-ae9986b9f1d9">What is the GAI token (GraphGrail AI)?</a></h3>
+                                     <h3>What is the GAI token (GraphGrail AI)?</h3>
                                      <div class="text">
                                           A token is a unit of account in the blockchain network used to represent the digital balance of a certain asset. Accounting for tokens is based on technologies that are available through special applications using electronic signature algorithms.
                                      </div>
                                  </div>
+                               </a>
                              </div>
 
                              <div class="col-xs-12 col-sm-12 col-md-4">
-                                 <div class="item" style="opacity:1;">
+                                 <div class="item newWrapper" style="opacity:1;">
                                      <div class="img"><img style="background-color: black" src="../img/new3.png" alt="" /></div>
-                                     <div class="date">08.02.2018</div>
+                                     <div class="date">15.01.2018</div>
                                      <h3>Opentalks.ai Conference</h3>
                                      <div class="text">
                                           Participation in the prominent Opentalks.Ai conference in Moscow at the Mail.ru Group company's head office. The founder negotiated several partnerships, pitched the project to investment funds, and met with top speakers in the field of AI, including David Janov from ABBYY, and K. Vorontsov of Samsung Inc. Russia.
@@ -1061,7 +1270,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
 
                            <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-4">
-                                   <div class="item" style="top: 0px; opacity: 1;">
+                                   <div class="item newWrapper" style="top: 0px; opacity: 1;">
                                        <div class="img"><img src="../img/presscentre1.jpg" alt=""></div>
                                        <h3>Криптовалюты.рф</h3>
                                        <div class="text">
@@ -1071,7 +1280,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
                                </div>
 
                                <div class="col-xs-12 col-sm-12 col-md-4">
-                                   <div class="item" style="top: 0px; opacity: 1;">
+                                   <div class="item newWrapper" style="top: 0px; opacity: 1;">
                                        <div class="img"><img src="../img/presscentre2.jpg" alt=""></div>
                                        <h3>Firrma.ru</h3>
                                        <div class="text">
@@ -1081,7 +1290,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
                                </div>
 
                                <div class="col-xs-12 col-sm-12 col-md-4">
-                                   <div class="item" style="top: 0px; opacity: 1;">
+                                   <div class="item newWrapper" style="top: 0px; opacity: 1;">
                                        <div class="img"><img src="../img/presscentre3.jpg" alt=""></div>
                                        <h3>Golos.io</h3>
                                        <div class="text">
@@ -1348,7 +1557,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
                                             <a href="http://spark.ru/startup/5265b5450fcfc" class="vk"><i class="fab fa-vk"></i></a>
                                             <a href="https://vk.com/graphgrail" class="gp"><i class="fab fa-google-plus-g"></i></a>
                                             <a href="https://plus.google.com/u/0/b/108596133658749594638/108596133658749594638" class="rss"><i class="fas fa-rss"></i></a>
-                                            <a href="#" class="vimeo"><i class="fab fa-rss-v"></i></a>
+                                            <a href="#" class="vimeo"><i class="fab fa-vimeo-v"></i></a>
                                         </div>
                                 </div>
                             </div>
@@ -1362,6 +1571,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
                              </div>
                              <div class="col-xs-12">
                              <div class="copyright text-center">
+                               <p>Geneva Place, Waterfront Drive, PO Box 3469, Road Town, Tortola, British Virgin Islands</p>
                                         Все права защищены. Графовый Грааль, 2014-2017. Основан в 2014 году &copy; GraphGrail Ai.
                                     </div>
                               </div>
@@ -1474,16 +1684,32 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
       });
   </script>
   <script type="text/javascript">
-  jQuery.getJSON('./stat', {}, function(json){
-    jQuery('#totalWorth').html(  (parseInt( (Math.round(json.tokens_total).toFixed(0)))+ 10000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Worth of GAI tokens*</b>'  );
-    jQuery('#currentUSD').html((parseInt(Math.round(json.usd_total).toFixed(0)) + 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
-    jQuery('#investors').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Purchasers</b>');
-    function magic(){
-      $('.loading').addClass('hiders');
-      $('.blocks').addClass('showers');
-      $('.raised').css('opacity', '1');
-    }
-    setTimeout(magic, 800);
+  $(document).ready(function() {
+    jQuery.getJSON('/stat', {}, function(json){
+      jQuery('#totalWorth').html((parseInt( (Math.round(json.tokens_total).toFixed(0)))+ 10000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Worth of GAI tokens*</b>'  );
+      jQuery('#currentUSD').html((parseInt(Math.round(json.usd_total).toFixed(0)) + 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+      jQuery('#investors').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Purchasers</b>');
+      jQuery('#investorsInLine').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<span> Contributors</span>');
+      function magic(){
+        $('.loading').addClass('hiders');
+        $('.blocks').addClass('showers');
+      }
+      function postMagic(){
+        var currentUSD = parseInt(Math.round(json.usd_total).toFixed(0))+200000;
+        var usdPercent = (12000000/100);
+        finalWidth = ((currentUSD+600000)/usdPercent);
+        if($(window).width()<768){
+          finalWidth = ((currentUSD+1000000)/usdPercent);
+        }
+        if($(window).width()<568){
+          finalWidth = ((currentUSD+1300000)/usdPercent);
+        }
+        $('#raised').width(finalWidth + "%");
+        $('#USDClone').text((currentUSD - 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+      }
+      setTimeout(magic, 1000);
+      setTimeout(postMagic, 1000);
+    });
   });
 </script>
     </body>
