@@ -112,4 +112,78 @@ $(function () {
         });
     }
     $(".carousel").carousel();
+    if($('.m-js-tags').length > 0){
+        $('.m-js-tags').select2({
+            placeholder: "теги тут",
+            tags: true
+        });
+    }
+    if($(".m-js-select2").length > 0){
+        $('.m-js-select2').select2({minimumResultsForSearch: Infinity});
+    }
+
+
+
+    if ($('#json_data').length) {
+
+
+        var dataJSONArray = Storage.get('table');
+        if(dataJSONArray.length == 0){
+            dataJSONArray.push({
+                'cat_id': '***',
+                'cat': 'Продукты / Одежда / Халаты',
+                'text': 'Есть халат для медсестры с защитой от жидкости, недорогой?'
+            });
+        }
+
+        dataJSONArray.push({
+            'cat_id': '***',
+            'cat': 'Продукты / Одежда / Халаты',
+            'text': 'Есть халат для доктора хауса, средней цены?'
+        });
+
+        var datatable = $('#json_data').mDatatable({
+
+            data: {
+                type: 'local',
+                source: dataJSONArray,
+                pageSize: 10
+            },
+
+            // layout definition
+            layout: {
+                theme: 'default',
+                class: '',
+                scroll: false,
+                footer: false
+            },
+
+            // column sorting
+            sortable: true,
+            pagination: true,
+            columns: [ {
+                field: "text",
+                title: "Текст",
+            }, {
+                field: "cat",
+                title: "Категория",
+                template: function (row) {
+                    return '<span class="m-badge m-badge--brand m-badge--wide">' + row.cat + '</span>';
+                }
+            }, {
+                field: "cat_id",
+                title: "ID Категории",
+                //sortable: false,
+            }]
+        });
+    }
+
+    if($("#to_table").length > 0){
+        $("#to_table").on('click', function (e) {
+            //e.preventDefault();
+            Storage.set('table', Categorization.getData());
+            console.log(Categorization.getData());
+        })
+    }
+
 });

@@ -107,4 +107,34 @@ body,
 .carousel-control-next {
   background: linear-gradient(to left, #f7f8fa, #f7f8fa, transparent); }
 
+.input-group {
+  flex-wrap: nowrap; }
+
+.m-accordion__item-body.collapse,
+.m-accordion__item-body.collapsed {
+  display: block;
+  height: 0 !important;
+  overflow: hidden; }
+
+.m-accordion__item-body.collapse.show,
+.m-accordion__item-body.collapsed.show {
+  height: auto !important; }
+
+.m-demo__preview {
+  background: white;
+  border: 4px solid #5867dd;
+  background: #f7f7fa;
+  padding: 30px;
+  margin-bottom: 20px; }
+
+.m-demo .m-demo__preview {
+  margin-bottom: 0; }
+
+.tab-content-white {
+  padding: 20px 20px 12px 20px;
+  background: #fff;
+  margin-top: -20px;
+  border: 1px solid #dee2e6;
+  border-top: none; }
+
 /*# sourceMappingURL=styles.css.map */
