@@ -162,6 +162,12 @@ span.size{ display: none; }
   .tapToView{
     display: block;
   }
+  .intro .content.gray{
+    margin-bottom: 43px;
+  }
+  .home{
+    margin-top: 47px;
+  }
   .loading{
     width: calc(100% - 100px);
   }
@@ -181,7 +187,12 @@ span.size{ display: none; }
   }
   .intro .databar{
     padding: 98px 30px 0 30px;
-    height: 280px;
+    height: 340px;
+  }
+  .intro .databar .additionalInfo{
+    font-size: 12px;
+    margin-top: 19px;
+    margin-left: 0px;
   }
   .bonuses{
     display: none;
@@ -205,8 +216,18 @@ span.size{ display: none; }
   }
   .intro .databar{
     padding: 120px 15px 0 15px;
-    height: 360px;
+    height: 400px;
     border-radius: 10px;
+  }
+  .intro .databar .additionalInfo{
+    margin-left: 0px;
+  }
+  .additionalInfo div{
+    margin-right: 0px;
+    margin-bottom: 11px;
+  }
+  .additionalInfo div:last-child{
+    float:right;
   }
   .Mbonuses{
     flex-wrap: wrap;
@@ -532,7 +553,9 @@ background-image: none;
 .fixedHeaderMobile .menu-mobile{
   top: 15px !important;
 }
-
+.intro .content.gray{
+  margin-bottom: 43px;
+}
 .noise .home{
   margin-top:47px;
   z-index: 14;
@@ -1561,5 +1584,16 @@ background-color: #1e245e;
   }
   .betterness tr td:not(:first-child){
     width: 25px;
+  }
+  .intro .databar{
+    height: 410px;
+  }
+}
+@media (max-width:380px){
+  .intro .databar{
+    height: 456px;
+  }
+  .additionalInfo div:last-child{
+    float: left;
   }
 }
