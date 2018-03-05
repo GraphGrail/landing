@@ -3,9 +3,7 @@ var Select2 = function() {
     //== Private functions
     var demos = function() {
         // basic
-        $('#m_select2_1, #m_select2_1_validate').select2({
-            placeholder: "Select a state"
-        });
+
 
         // nested
         $('#m_select2_2, #m_select2_2_validate').select2({

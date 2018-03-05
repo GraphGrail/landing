@@ -8,7 +8,7 @@ var Wait = {
 };
 
 var Categorization = {
-    data: {},
+    data: [],
     blocks: 0,
     load: function (data) {
         this.data = data;
@@ -34,6 +34,7 @@ var Categorization = {
     addSelect: function (section) {
         var block = $("#block-" + section);
         var select = $("#selectCategoryExample > *").clone();
+        //select.find("select").attr('name', 'cat-' + section);
         this.data.forEach(function (item) {
             var option = $("<option></option>");
             option.attr("value", item.id).text(item.title);
@@ -49,22 +50,45 @@ var Categorization = {
                 this.addSubSelect(section, data);
                 select.find("select").prop("disabled", true);
             }
-        }.bind(this));
+        }.bind(this)).select2({
+            placeholder: "Выберите категорию..."
+        });
         block.find(".btn-remove").on("click", function (e) {
             e.preventDefault();
             //this.clearBlock(section);
             block.remove();
         }.bind(this));
     },
+    getSubSelectName: function (section) {
+        var i = 0;
+        while (true) {
+            i++;
+            if ($('[name=cat-' + section + '-' + i + ']').length == 0) {
+                return 'cat-' + section + '-' + i;
+            }
+        }
+    },
     addSubSelect: function (section, data) {
         var block = $("#block-" + section);
         var select = $("#selectCategoryExample > *").clone();
+        select.find("select").attr('name', this.getSubSelectName(section));
         var subselect = null;
         select.find(".m-input-group").addClass("m--padding-left-25");
         data.forEach(function (item) {
-            var option = $("<option></option>");
-            option.attr("value", item.id).text(item.title);
-            select.find("select").append(option);
+            if (typeof item.items == "undefined") {
+                var option = $("<option></option>");
+                option.attr("value", item.id).text(item.title);
+                select.find("select").append(option);
+            } else {
+                var optionGroup = $("<optgroup></optgroup>");
+                optionGroup.attr("label", item.title);
+                item.items.forEach(function (item) {
+                    var option = $("<option></option>");
+                    option.attr("value", item.id).text(item.title);
+                    optionGroup.append(option);
+                });
+                select.find("select").append(optionGroup);
+            }
         });
         block.find(".addition-btn").remove();
         block.append(select);
@@ -79,7 +103,7 @@ var Categorization = {
             if (subselect) {
                 subselect.remove();
             }
-            if(block.find(".m--padding-left-25").length == 0){
+            if (block.find(".m--padding-left-25").length == 0) {
                 block.find("select").prop("disabled", false).val('');
                 block.find(".addition-btn").remove();
             }
@@ -89,43 +113,79 @@ var Categorization = {
                 var subDataItem = data.filter(function (i) {
                     return i.id == select.find("select").val()
                 })[0];
-                if (typeof subDataItem.items != "undefined") {
-                    subselect = this.addSubSubSelect(section, subDataItem.items, select);
-                    select.find("select").prop("disabled", true);
-                }
+                /*if (typeof subDataItem.items != "undefined") {
+                 subselect = this.addSubSubSelect(section, subDataItem.items, select);
+                 select.find("select").prop("disabled", true);
+                 }*/
 
             }
-        }.bind(this));
-    },
-    addSubSubSelect: function (section, data, parent) {
-        var block = $("#block-" + section);
-        var select = $("#selectCategoryExample > *").clone();
-        select.find(".m-input-group").addClass("m--padding-left-50");
-        data.forEach(function (item) {
-            var option = $("<option></option>");
-            option.attr("value", item.id).text(item.title);
-            select.find("select").append(option);
+        }.bind(this)).select2({
+            placeholder: "Выберите категорию..."
         });
-        select.insertAfter(parent);
-        select.find(".btn-remove").on("click", function (e) {
-            e.preventDefault();
-            select.remove();
-            parent.find("select").prop("disabled", false).val('');
-        }.bind(this));
-        return select;
+    },
+    getData: function () {
+        var data = [];
+        $("form", "#demo-markup").find("select").each(function () {
+            var name = $(this).attr('name');
+            var val = $(this).val();
+            if (name && val) {
+                data.push({
+                    'cat_id': val,
+                    'cat': Categorization.getValue(val),
+                    'text': 'Есть халат для медсестры с защитой от жидкости, недорогой?'
+                });
+            }
+        });
+        return data;
+    },
+    __getValue: function (items, id) {
+        for (let item of items) {
+            if (item.id == id) {
+                return item.title
+            } else {
+                if (typeof item.items != 'undefined') {
+                    var r = this.__getValue(item.items, id);
+                    if (r) {
+                        return item.title + " / " + r;
+                    }
+                }
+            }
+        }
+    },
+    getValue: function (id) {
+        return this.__getValue(this.data, id);
     }
+
+
+    /*addSubSubSelect: function (section, data, parent) {
+     var block = $("#block-" + section);
+     var select = $("#selectCategoryExample > *").clone();
+     select.find(".m-input-group").addClass("m--padding-left-50");
+     data.forEach(function (item) {
+     var option = $("<option></option>");
+     option.attr("value", item.id).text(item.title);
+     select.find("select").append(option);
+     });
+     select.insertAfter(parent);
+     select.find(".btn-remove").on("click", function (e) {
+     e.preventDefault();
+     select.remove();
+     parent.find("select").prop("disabled", false).val('');
+     }.bind(this));
+     return select;
+     }*/
 
 };
 
 var Storage = {
     clear: function () {
-
+        localStorage.clear();
     },
     set: function (key, value) {
-
+        localStorage.setItem(key, JSON.stringify(value));
     },
     get: function (key) {
-
+        return JSON.parse(localStorage.getItem(key));
     }
 };
 
