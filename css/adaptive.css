@@ -219,16 +219,6 @@ span.size{ display: none; }
     height: 400px;
     border-radius: 10px;
   }
-  .intro .databar .additionalInfo{
-    margin-left: 0px;
-  }
-  .additionalInfo div{
-    margin-right: 0px;
-    margin-bottom: 11px;
-  }
-  .additionalInfo div:last-child{
-    float:right;
-  }
   .Mbonuses{
     flex-wrap: wrap;
   }
@@ -509,7 +499,7 @@ span.size{ display: none; }
 
 }
 .fixedHeaderMobile.menu-open  .menu-mobile .logo-nav{
-    display: none;
+      display: none;
 }
 .fixedHeaderMobile #menuBurger{
   margin-top: -40px;
@@ -1263,6 +1253,18 @@ footer .content{
   }
 }
 @media (max-width:480px) {
+  .intro .databar .additionalInfo{
+    margin-left: 0px;
+    flex-wrap: wrap;
+  }
+  .additionalInfo div{
+    margin-right: 0px;
+    width: 100%;
+    margin-bottom: 11px;
+  }
+  .additionalInfo div:last-child{
+    float:right;
+  }
   .docs{
     flex-wrap: wrap;
   }
@@ -1586,7 +1588,7 @@ background-color: #1e245e;
     width: 25px;
   }
   .intro .databar{
-    height: 410px;
+    height: 445px;
   }
 }
 @media (max-width:380px){

@@ -692,33 +692,47 @@ var bonusOneGone = moment('2018-03-07T12:00:00');
 var bonusTwoGone = moment('2018-03-17T12:00:00');
 var bonusThreeGone = moment('2018-03-27T12:00:00');
 var currentBonus;
+var bonusPercent;
+checker = 0;
 
-if(bonusOneGone.diff(now, 'days') < 10){
+if((bonusOneGone.diff(now, 'days') >= 0) && (bonusOneGone.diff(now, 'days') < 10)){
   currentBonus = $('.firstBonusLeft');
   currentEngBonus = $('.firstEngBonusLeft');
-  hSince = (bonusOneGone.diff(now, 'days')).toString();
+  hSince = (bonusOneGone.diff(now, 'days')+1).toString();
   bonusPercent = 25;
-  daysleftPercent = (2.5*hSince);
+  daysleftPercent = (1.5*hSince);
   $('.bonuses .firstBonus').width(daysleftPercent + '%');
+  console.log(bonusOneGone.diff(now, 'days'));
+  checker = 1;
 }
-if(bonusTwoGone.diff(now, 'days') < 10){
-  $('.firstBonus').hide();
-  currentBonus = $('.secondBonusLeft');
-  currentEngBonus = $('.secondEngBonusLeft');
-  hSince = (bonusTwoGone.diff(now, 'days')).toString();
-  bonusPercent = 20;
-  daysleftPercent = (2.5*hSince);
-  $('.bonuses .secondBonus').width(daysleftPercent + '%');
+if((bonusTwoGone.diff(now, 'days') >= 0) && (bonusTwoGone.diff(now, 'days') < 10)){
+    $('.firstBonus').hide();
+    currentBonus = $('.secondBonusLeft');
+    currentEngBonus = $('.secondEngBonusLeft');
+    hSince = (bonusTwoGone.diff(now, 'days')+1).toString();
+    bonusPercent = 20;
+    daysleftPercent = (1.5*hSince);
+    $('.bonuses .secondBonus').width(daysleftPercent + '%');
+    checker = 1;
+    console.log(bonusTwoGone.diff(now, 'days'));
 }
-if(bonusThreeGone.diff(now, 'days') < 10){
-  $('.firstBonus').hide();
-  $('.secondBonus').hide();
-  currentBonus = $('.thirdBonusLeft');
-  currentEngBonus = $('.thirdEngBonusLeft');
-  hSince = (bonusThreeGone.diff(now, 'days')).toString();
-  bonusPercent = 15;
-  daysleftPercent = (2.5*hSince);
-  $('.bonuses .thirdBonus').width(daysleftPercent + '%');
+if((bonusThreeGone.diff(now, 'days') >= 0) && (bonusThreeGone.diff(now, 'days') < 10)){
+    $('.firstBonus').hide();
+    $('.secondBonus').hide();
+    currentBonus = $('.thirdBonusLeft');
+    currentEngBonus = $('.thirdEngBonusLeft');
+    hSince = (bonusThreeGone.diff(now, 'days')+1).toString();
+    bonusPercent = 15;
+    daysleftPercent = (1.5*hSince);
+    $('.bonuses .thirdBonus').width(daysleftPercent + '%');
+    checker = 1;
+    console.log(bonusThreeGone.diff(now, 'days'));
+}
+if(checker == 0){
+  bonusPercent = 0;
+  $('.bonuses').hide();
+  $('.bonusLefter').hide();
+  $('.intro .databar').css('padding', '65px 55px 0 55px').css('height', '230px');
 }
 
 var hword;
