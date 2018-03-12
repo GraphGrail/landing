@@ -532,7 +532,19 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   padding: 110px 55px 0 55px;
   background-color: white;
   border-radius: 10px;
-  height: 250px;
+  height: 275px;
+}
+.intro .databar .additionalInfo{
+  font-size: 12px;
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  left: 0;
+  justify-content: center;
+}
+.additionalInfo div{
+  float: left;
+  margin-right: 35px;
 }
 .scap, .hcap{
   position: absolute;
@@ -1228,9 +1240,11 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
 }
 .bonuses{
   position: absolute;
-  left: 20%;
+  left:0;
   margin-top: 4px;
-  width: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   font-weight: bold;
   font-size: 15px;
   color: #424242;
@@ -1248,7 +1262,8 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   height: 8px;
 }
 .firstBonus, .secondBonus, .thirdBonus{
-  width: 25%;
+  width: 15%;
+  margin-right: 5px;
   min-width: 65px;
   opacity: 0;
   transition: all 0.5s;
