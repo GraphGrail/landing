@@ -187,12 +187,16 @@ span.size{ display: none; }
   }
   .intro .databar{
     padding: 98px 30px 0 30px;
-    height: 340px;
+    height: 365px;
+  }
+  .reference{
+    max-width: 30%;
   }
   .intro .databar .additionalInfo{
     font-size: 12px;
     margin-top: 19px;
     margin-left: 0px;
+    justify-content: flex-start;
   }
   .bonuses{
     display: none;
@@ -207,7 +211,10 @@ span.size{ display: none; }
     margin: 30px 20px 20px 20px;
   }
 }
-@media (max-width:568px){
+@media (max-width:588px){
+  .reference{
+    max-width: 100%;
+  }
   .scap{
     left: 30%;
   }
@@ -216,7 +223,7 @@ span.size{ display: none; }
   }
   .intro .databar{
     padding: 120px 15px 0 15px;
-    height: 400px;
+    height: 440px;
     border-radius: 10px;
   }
   .Mbonuses{
@@ -229,7 +236,7 @@ span.size{ display: none; }
     margin-bottom: 16px;
   }
   .Mbonuses .firstBonus, .Mbonuses .secondBonus, .Mbonuses .thirdBonus{
-    width: 30%;
+    width: 48%;
     text-align: center;
   }
   .docPreview p{
@@ -1255,7 +1262,6 @@ footer .content{
 @media (max-width:480px) {
   .intro .databar .additionalInfo{
     margin-left: 0px;
-    flex-wrap: wrap;
   }
   .additionalInfo div{
     margin-right: 0px;
@@ -1300,16 +1306,16 @@ footer .content{
   }
     .login a{
       color: #e30613;
-font-size: 14px;
-text-decoration: underline;
-margin-left: 0px;
-float: left;
-display: block;
-margin: 0px 0px 15px 0;
-padding: 9px 14px;
-border-radius: 8px;
-color: white;
-background-color: #1e245e;
+      font-size: 14px;
+      text-decoration: underline;
+      margin-left: 0px;
+      float: left;
+      display: block;
+      margin: 0px 0px 15px 0;
+      padding: 9px 14px;
+      border-radius: 8px;
+      color: white;
+      background-color: #1e245e;
     }
     .login a:first-child{
       background-color: #de1c22;
@@ -1457,6 +1463,19 @@ background-color: #1e245e;
   .fixedHeaderMobile .top .login a:first-child{
     width: 53px;
   }
+  .intro .databar{
+    height: 557px;
+  }
+  .intro .databar.databar--english-version{
+    height: 540px;
+  }
+  .reference{
+    max-width: 74%;
+    text-align: left;
+    float: left;
+    left: 16px;
+    line-height: 14px;
+  }
 }
 @media (max-width:900px){
   header nav .left, header nav .right{
@@ -1591,11 +1610,17 @@ background-color: #1e245e;
     height: 445px;
   }
 }
-@media (max-width:380px){
-  .intro .databar{
-    height: 456px;
+@media (max-width:400px) {
+  .intro .databar .additionalInfo{
+    flex-wrap: wrap;
   }
+  .intro .databar{
+    height: 490px;
+  }
+}
+@media (max-width:380px){
   .additionalInfo div:last-child{
     float: left;
   }
+
 }
