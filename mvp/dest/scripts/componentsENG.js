@@ -51,7 +51,7 @@ var Categorization = {
                 select.find("select").prop("disabled", true);
             }
         }.bind(this)).select2({
-            placeholder: "Select category..."
+            placeholder: "Выберите категорию..."
         });
         block.find(".btn-remove").on("click", function (e) {
             e.preventDefault();
@@ -120,7 +120,7 @@ var Categorization = {
 
             }
         }.bind(this)).select2({
-            placeholder: "Select category..."
+            placeholder: "Select a category..."
         });
     },
     getData: function () {
