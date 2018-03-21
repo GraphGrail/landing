@@ -51,7 +51,7 @@ var Categorization = {
                 select.find("select").prop("disabled", true);
             }
         }.bind(this)).select2({
-            placeholder: "Выберите категорию..."
+            placeholder: "Select category..."
         });
         block.find(".btn-remove").on("click", function (e) {
             e.preventDefault();
@@ -120,7 +120,7 @@ var Categorization = {
 
             }
         }.bind(this)).select2({
-            placeholder: "Выберите категорию..."
+            placeholder: "Select category..."
         });
     },
     getData: function () {
@@ -132,7 +132,7 @@ var Categorization = {
                 data.push({
                     'cat_id': val,
                     'cat': Categorization.getValue(val),
-                    'text': 'Есть халат для медсестры с защитой от жидкости, недорогой?'
+                    'text': 'Is there a cheap nurse’s coat with protection from liquids?'
                 });
             }
         });
