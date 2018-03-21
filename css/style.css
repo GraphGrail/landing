@@ -532,11 +532,11 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   padding: 110px 55px 0 55px;
   background-color: white;
   border-radius: 10px;
-  height: 275px;
+  height: 300px;
 }
 .intro .databar .additionalInfo{
   font-size: 12px;
-  margin-top: 50px;
+  margin-top: 60px;
   display: flex;
   width: 100%;
   left: 0;
@@ -557,12 +557,12 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   left: 31%;
 }
 .intro .bar{
-  margin-top: 40px;
-    background-color: #e2e2e2;
-    background-position: 50% 50%;
-    border-radius: 10px;
-    height: 20px;
-    position: relative;
+  margin-top: 60px;
+  background-color: #e2e2e2;
+  background-position: 50% 50%;
+  border-radius: 10px;
+  height: 20px;
+  position: relative;
   }
 .intro .bar:after,.intro .bar:before{
   position: absolute;
@@ -1238,6 +1238,16 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   background: -o-linear-gradient(left, #ffbdbd, #ff0000);
   background: linear-gradient(to right, #ffbdbd, #ff0000);
 }
+.reference{
+  position: absolute;
+  right: 15px;
+  bottom: 1px;
+  font-weight: bold;
+  font-size: 13px;
+  max-width: 24%;
+  text-align: right;
+  color: #4e4e4e;
+}
 .bonuses{
   position: absolute;
   left:0;
@@ -1264,7 +1274,7 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
 .firstBonus, .secondBonus, .thirdBonus{
   width: 15%;
   margin-right: 5px;
-  min-width: 65px;
+  min-width: 100px;
   opacity: 0;
   transition: all 0.5s;
   text-align: center;

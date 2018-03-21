@@ -17,65 +17,65 @@ $(function () {
             $("#demo-markup").fadeIn().removeClass("m--hide");
             Categorization.load([
                 {
-                    title:"Продукты",
+                    title:"Products",
                     id:'l1-1',
                     items: [
                         {
-                            title:"Одежда",
+                            title:"Clothing",
                             id:'l2-1',
                             items:[
                                 {
-                                    title:"Халаты",
+                                    title:"Coats",
                                     id:'l3-1',
                                 },{
-                                    title:"Обувь",
+                                    title:"Shoes",
                                     id:'l3-2',
                                 },{
-                                    title:"Перчатки",
+                                    title:"Gloves",
                                     id:'l3-3',
                                 }
                             ]
                         },{
-                            title:"Инструменты",
+                            title:"Instruments",
                             id:'l2-2',
                             items:[
                                 {
-                                    title:"Скальпель",
+                                    title:"Scalpel",
                                     id:'l3-4',
                                 },{
-                                    title:"Нож",
+                                    title:"Knife",
                                     id:'l3-5',
                                 }
                             ]
                         }
                     ]
                 },{
-                    title:"Клиенты",
+                    title:"Clients",
                     id:'l1-2',
                     items: [
                         {
-                            title:"Педиатр",
+                            title:"Pediatrician",
                             id:'l2-3'
                         },{
-                            title:"Хирург",
+                            title:"Surgeon",
                             id:'l2-4'
                         },{
-                            title:"Лор",
+                            title:"Otolaryngologist",
                             id:'l2-5'
                         }
                     ]
                 },{
-                    title:"Цена",
+                    title:"Price",
                     id:'l1-3',
                     items: [
                         {
-                            title:"1 - 200 р",
+                            title:"$1 - $5",
                             id:'l2-6'
                         },{
-                            title:"201 - 5 000 р",
+                            title:"$6 – $100",
                             id:'l2-7'
                         },{
-                            title:"5 001 - 15 000 р",
+                            title:"$101 – $500",
                             id:'l2-8'
                         }
                     ]
@@ -88,23 +88,21 @@ $(function () {
         })
     }
     if ($("#chatMessages").length > 0) {
-        Chat.pushInMessage("Здравствуйте! Введите текст для обработки.");
+        Chat.pushInMessage("Hello! let's get to work. Enter text to process");
         $("#chatSendButton").on("click", function (e) {
             e.preventDefault();
             if( $("#chatInput").val() ){
-                var user_message = $("#chatInput").val();
-                Chat.pushOutMessage(user_message);
+                Chat.pushOutMessage($("#chatInput").val());
                 $("._mCS_1").mCustomScrollbar("scrollTo",$(".m-messenger__wrapper:last"));
                 $("#chatInput").val("");
-
-                $.ajax({
-                    url: "https://demoai.graphgrail.com",
-                    method: 'POST',
-                    data: {'message' : user_message}
-                }).done(function(data) {
-                    Chat.pushInMessage("Тема сообщения: <b>" + data.topic + "</b>");
+                setTimeout(function () {
+                    Chat.pushInMessage("Excellent! it seems to me that this is nonsense!");
                     $("._mCS_1").mCustomScrollbar("scrollTo",$(".m-messenger__wrapper:last"));
-                });
+                }, 700);
+                setTimeout(function () {
+                    Chat.pushInMessage("What? What is it? What did you write?");
+                    $("._mCS_1").mCustomScrollbar("scrollTo",$(".m-messenger__wrapper:last"));
+                }, 1400);
             }
         });
         $("#chatInput").on("keypress", function(e) {
@@ -116,7 +114,7 @@ $(function () {
     $(".carousel").carousel();
     if($('.m-js-tags').length > 0){
         $('.m-js-tags').select2({
-            placeholder: "теги тут",
+            placeholder: "Tags here",
             tags: true
         });
     }
@@ -133,15 +131,15 @@ $(function () {
         if(dataJSONArray.length == 0){
             dataJSONArray.push({
                 'cat_id': '***',
-                'cat': 'Продукты / Одежда / Халаты',
-                'text': 'Есть халат для медсестры с защитой от жидкости, недорогой?'
+                'cat': 'Products / Clothing / Coats',
+                'text': 'Is there a cheap nurse’s coat with protection from liquids?'
             });
         }
 
         dataJSONArray.push({
             'cat_id': '***',
-            'cat': 'Продукты / Одежда / Халаты',
-            'text': 'Есть халат для доктора хауса, средней цены?'
+            'cat': 'Products / Clothing / Coats',
+            'text': 'Is there is a coat for Dr. House at average price?'
         });
 
         var datatable = $('#json_data').mDatatable({
@@ -165,16 +163,16 @@ $(function () {
             pagination: true,
             columns: [ {
                 field: "text",
-                title: "Текст",
+                title: "text",
             }, {
                 field: "cat",
-                title: "Категория",
+                title: "Category",
                 template: function (row) {
                     return '<span class="m-badge m-badge--brand m-badge--wide">' + row.cat + '</span>';
                 }
             }, {
                 field: "cat_id",
-                title: "ID Категории",
+                title: "Category ID",
                 //sortable: false,
             }]
         });

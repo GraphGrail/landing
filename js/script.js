@@ -700,9 +700,8 @@ if((bonusOneGone.diff(now, 'days') >= 0) && (bonusOneGone.diff(now, 'days') < 10
   currentEngBonus = $('.firstEngBonusLeft');
   hSince = (bonusOneGone.diff(now, 'days')+1).toString();
   bonusPercent = 25;
-  daysleftPercent = (1.5*hSince);
+  daysleftPercent = (5*hSince);
   $('.bonuses .firstBonus').width(daysleftPercent + '%');
-  console.log(bonusOneGone.diff(now, 'days'));
   checker = 1;
 }
 if((bonusTwoGone.diff(now, 'days') >= 0) && (bonusTwoGone.diff(now, 'days') < 10)){
@@ -711,10 +710,9 @@ if((bonusTwoGone.diff(now, 'days') >= 0) && (bonusTwoGone.diff(now, 'days') < 10
     currentEngBonus = $('.secondEngBonusLeft');
     hSince = (bonusTwoGone.diff(now, 'days')+1).toString();
     bonusPercent = 20;
-    daysleftPercent = (1.5*hSince);
+    daysleftPercent = (5*hSince);
     $('.bonuses .secondBonus').width(daysleftPercent + '%');
     checker = 1;
-    console.log(bonusTwoGone.diff(now, 'days'));
 }
 if((bonusThreeGone.diff(now, 'days') >= 0) && (bonusThreeGone.diff(now, 'days') < 10)){
     $('.firstBonus').hide();
@@ -723,10 +721,9 @@ if((bonusThreeGone.diff(now, 'days') >= 0) && (bonusThreeGone.diff(now, 'days') 
     currentEngBonus = $('.thirdEngBonusLeft');
     hSince = (bonusThreeGone.diff(now, 'days')+1).toString();
     bonusPercent = 15;
-    daysleftPercent = (1.5*hSince);
+    daysleftPercent = (5*hSince);
     $('.bonuses .thirdBonus').width(daysleftPercent + '%');
     checker = 1;
-    console.log(bonusThreeGone.diff(now, 'days'));
 }
 if(checker == 0){
   bonusPercent = 0;
@@ -770,7 +767,7 @@ currentBonus.text(hSince + dword);
 currentEngBonus.text(hSince + edword);
 
 $('.bonusPercent').text(bonusPercent+'%');
-
+$('#extraBonus').text(' (starting from $10 000 - ' + (parseInt(bonusPercent)+5) +'%)')
 function showBonuses(){
   $('.firstBonus, .secondBonus, .thirdBonus').css('opacity', '1');
 }
