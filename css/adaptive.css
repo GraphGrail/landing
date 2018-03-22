@@ -7,7 +7,6 @@
 span.size{ display: none; }
 
 .menu-mobile {
-  height: 90px;
   width: 100%;
   position: static;
   left: 0;
@@ -398,12 +397,6 @@ span.size{ display: none; }
       margin-top: -60px;
       right: 30px;
     }
-    #menuBurger{
-
-    }
-    #menuBurger{
-      margin-top: 50px;
-    }
     .menu-open nav{
       position: fixed;
       width: 100%;
@@ -639,9 +632,6 @@ width: 151px;
 }
 }
 @media (max-width:767px) {
-  #menuBurger{
-    margin-top: 50px;
-  }
   .ipad{
     display: none;
   }
@@ -1246,7 +1236,34 @@ footer .content{
     padding: 8px 9px;
   }
 }
-
+@media (max-width:670px) {
+  .logo-large{
+    left: 26px;
+    top: -30px;
+  }
+  .logo-large .ring img {
+    height: 100px;
+    width: initial;
+  }
+  .logo-large .mainLogoImg{
+    max-width: 70px;
+    height: initial;
+  }
+  .logo-large .ring1, .logo-large .ring2, .logo-large .ring3{
+    left: -10px;
+    top: -5px;
+  }
+  .icoRatingBlock__logo{
+    height: 24px;
+    width: 115px;
+  }
+  .icoRatingBlock__titles .icoRatingBlock__main-title{
+    font-size: 17px;
+  }
+  .icoRatingBlock__table div{
+    font-size: 15px;
+  }
+}
 @media (max-width:580px) {
   .advantable{
       padding: 29px 0px 80px 0px;
@@ -1383,6 +1400,8 @@ footer .content{
       -ms-transform: scale(0.8);
        -o-transform: scale(0.8);
           transform: scale(0.8);
+      left: 5px;
+      top: -50px;
     }
     .intro .red-text{
       font-size: 18px;
@@ -1478,6 +1497,10 @@ footer .content{
   }
 }
 @media (max-width:900px){
+  .icoRatingBlock{
+    left: initial;
+    right: 10px;
+  }
   header nav .left, header nav .right{
     padding: 10px 0;
   }
@@ -1496,6 +1519,28 @@ footer .content{
   header nav a{
     font-size: 13px;
     width: 200px;
+  }
+}
+@media (max-width:480px){
+  .icoRatingBlock__logo{
+    display: none;
+  }
+  .icoRatingBlock{
+    top: -30px;
+    right: -5px;
+    max-width: 300px;
+  }
+}
+@media (max-width:480px){
+  .icoRatingBlock{
+    max-width: 235px;
+  }
+  .icoRatingBlock__table{
+    flex-direction: column;
+    text-align: center;
+  }
+  .icoRatingBlock__tables{
+    margin: 3px 0;
   }
 }
 @media (max-width:1400px) {
@@ -1517,8 +1562,7 @@ footer .content{
     top: -70px;
   }
   .lines #menuBurger{
-    position: fixed;
-    top: -30px;
+    top: 188px;
     border-radius: 0;
     left: 15px;
     z-index: 200;
@@ -1526,7 +1570,9 @@ footer .content{
   }
   .fixedHeaderMobile #menuBurger{
     margin-left: 0;
-    margin-top: 50px;
+    margin-top: 0px;
+    top: 17px;
+    position: fixed;
   }
   .menu-open .noise header nav{
     padding-top: 150px;

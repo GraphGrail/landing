@@ -141,11 +141,12 @@ header a{
   color: #ffffff;
 }
 .logo-large{
-  text-align: center;
   position: relative;
   z-index: 1;
-  padding: 25px 0 65px;
+  left: 120px;
+  padding: 25px 0 90px;
   margin: 0;
+  max-width: 200px;
 }
 .logo-large a{
   position: relative;
@@ -191,6 +192,57 @@ header a{
   height: auto;
   max-width: 215px;
   max-height: 59px;
+}
+.icoRatingBlock{
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 170px);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  color: white;
+}
+.icoRatingBlock__logo{
+  height: 28px;
+  width: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.icoRatingBlock__tables{
+  margin: 10px 20px 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 325px;
+}
+.icoRatingBlock__table{
+  display: flex;
+  margin-bottom: 5px;
+  background-color: #23152ca3;
+  width: 100%;
+  padding: 6px 14px 8px 15px;
+  justify-content: space-between;
+}
+.icoRatingBlock__table div{
+  font-size: 20px;
+}
+.icoRatingBlock__table div:last-child{
+  font-weight: bold;
+}
+.icoRatingBlock__littleScore{
+  font-size: 15px;
+}
+.icoRatingBlock__titles .icoRatingBlock__main-title{
+  font-size: 20px;
+  font-family: 'Ubuntu';
+  margin-top: 10px;
+  text-align: center;
+}
+.icoRatingBlock__titles .icoRatingBlock__small-title{
+  margin: -6px 0 10px 0px;
+  font-size: 13px;
 }
 header{
   position: relative;
