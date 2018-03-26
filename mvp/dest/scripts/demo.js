@@ -88,21 +88,23 @@ $(function () {
         })
     }
     if ($("#chatMessages").length > 0) {
-        Chat.pushInMessage("Hello! let's get to work. Enter text to process");
+        Chat.pushInMessage("Здравствуйте! Введите текст для обработки.");
         $("#chatSendButton").on("click", function (e) {
             e.preventDefault();
             if( $("#chatInput").val() ){
-                Chat.pushOutMessage($("#chatInput").val());
+                var user_message = $("#chatInput").val();
+                Chat.pushOutMessage(user_message);
                 $("._mCS_1").mCustomScrollbar("scrollTo",$(".m-messenger__wrapper:last"));
                 $("#chatInput").val("");
-                setTimeout(function () {
-                    Chat.pushInMessage("Excellent! it seems to me that this is nonsense!");
+
+                $.ajax({
+                    url: "https://demoai.graphgrail.com",
+                    method: 'POST',
+                    data: {'message' : user_message}
+                }).done(function(data) {
+                    Chat.pushInMessage("Тема сообщения: <b>" + data.topic + "</b>");
                     $("._mCS_1").mCustomScrollbar("scrollTo",$(".m-messenger__wrapper:last"));
-                }, 700);
-                setTimeout(function () {
-                    Chat.pushInMessage("What? What is it? What did you write?");
-                    $("._mCS_1").mCustomScrollbar("scrollTo",$(".m-messenger__wrapper:last"));
-                }, 1400);
+                });
             }
         });
         $("#chatInput").on("keypress", function(e) {
