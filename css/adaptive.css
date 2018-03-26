@@ -250,6 +250,52 @@ span.size{ display: none; }
     margin: 35px 5px 20px 5px;
   }
 }
+@media (max-width:991px) {
+  .keyproblem .howGGWorks .items{
+    padding: 0 30px;
+  }
+  .keyproblem .howGGWorks .items .col-xs-12.col-md-3{
+    width: 33%;
+  }
+  .keyproblem .howGGWorks .step .icon{
+    left: 0;
+  }
+  body .keyproblem .howGGWorks .steps li:after, body .keyproblem .howGGWorks .item:after{
+    left: 70%;
+    margin-left: 0;
+  }
+  .keyproblem .howGGWorks .step.step5 .icon{
+    margin-right: -146px;
+  }
+  .keyproblem .howGGWorks .items .item{
+    border-right: none;
+  }
+  .howGGWorks .roflex{
+    flex-wrap: wrap;
+  }
+}
+@media (max-width:600px) {
+  .roflex .col-xs-12.col-md-3:last-child .item::after{
+    content: initial;
+  }
+  .keyproblem .howGGWorks .items .col-xs-12.col-md-3{
+    width: 50%;
+  }
+  .keyproblem .howGGWorks .step.step5{
+    height: 148px;
+    width: 148px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .keyproblem .howGGWorks .step.step5 .icon{
+    position: absolute;
+    right: 0;
+    margin-top: initial;
+    margin-left: 0;
+    top: auto;
+    margin-right: initial;
+  }
+}
 @media (min-width:768px) and (max-width:991px) {
     .loading{
       width: calc(100% - 100px);
@@ -301,7 +347,6 @@ span.size{ display: none; }
       display: block;
       text-align: center;
     }
-
     .profits .item{
       padding: 30px 20px;
     }
@@ -583,6 +628,22 @@ background-image: none;
   -o-background-size: 100%;
 }
 
+}
+@media (max-width:500px) {
+  body .keyproblem .howGGWorks .steps li:after, body .keyproblem .howGGWorks .item:after{
+    display: none;
+  }
+  .keyproblem .howGGWorks .items .col-xs-12.col-md-3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .howGGWorks .roflex{
+    justify-content: center;
+  }
+  body .keyproblem .items .item, body .platform .items .item{
+    margin-bottom: -24px;
+  }
 }
 @media (max-width:991px) {
   .advantable{
@@ -1177,8 +1238,8 @@ background-image: none;
 
 
 .keyproblem .content, .platform .content,  .news .content, .interface .content{
-  padding-top: 55px;
-  padding-bottom: 0;
+  padding-top: 75px;
+  padding-bottom: 1px;
 }
 .platform .content.with-angle, .roadmap .content, .team .content{
   padding-top: 115px;
@@ -1689,5 +1750,23 @@ footer .content{
   }
   .icoRatingBlock__table div:first-child{
     font-size: 12px;
+  }
+}
+@media (max-width:680px){
+  .content.depadding2{
+    padding: 80px 30px 20px 30px;
+  }
+  .keyproblem .grapthExample{
+    padding: 0 30px;
+  }
+  .earnwithgg h2{
+    font-size: 27px;
+  }
+  .marketplace-advantages h2{
+    font-size: 27px;
+  }
+  .keyproblem .text, .platform .text{
+    line-height: 1;
+    font-size: 19px;
   }
 }
