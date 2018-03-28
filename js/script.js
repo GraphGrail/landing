@@ -729,48 +729,49 @@ if(checker == 0){
   bonusPercent = 0;
   $('.bonuses').hide();
   $('.bonusLefter').hide();
-  $('.intro .databar').css('padding', '65px 55px 0 55px').css('height', '230px');
 }
 
 var hword;
 var dword;
 
-if((hSince.substr(hSince.length-1,1)) == 1 ){
-  hword = ' час';
-}
-if((hSince.substr(hSince.length-1,1)) > 1 && (hSince.substr(hSince.length-1,1)) < 5 ){
-  hword = ' часa';
-}
-if((hSince.substr(hSince.length-1,1)) > 4 || (hSince.substr(hSince.length-1,1)) == 0 ){
-  hword = ' часов';
-}
+if(hSince){
+  if((hSince.substr(hSince.length-1,1)) == 1 ){
+    hword = ' час';
+  }
+  if((hSince.substr(hSince.length-1,1)) > 1 && (hSince.substr(hSince.length-1,1)) < 5 ){
+    hword = ' часa';
+  }
+  if((hSince.substr(hSince.length-1,1)) > 4 || (hSince.substr(hSince.length-1,1)) == 0 ){
+    hword = ' часов';
+  }
 
-if((hSince.substr(hSince.length-1,1)) == 1 ){
-  dword = ' день';
-  edword = ' day';
-}
-if((hSince.substr(hSince.length-1,1)) > 1 && (hSince.substr(hSince.length-1,1)) < 5 ){
-  dword = ' дня';
-}
-if((hSince.substr(hSince.length-1,1)) > 4 || (hSince.substr(hSince.length-1,1)) == 0 ){
-  dword = ' дней';
-}
+  if((hSince.substr(hSince.length-1,1)) == 1 ){
+    dword = ' день';
+    edword = ' day';
+  }
+  if((hSince.substr(hSince.length-1,1)) > 1 && (hSince.substr(hSince.length-1,1)) < 5 ){
+    dword = ' дня';
+  }
+  if((hSince.substr(hSince.length-1,1)) > 4 || (hSince.substr(hSince.length-1,1)) == 0 ){
+    dword = ' дней';
+  }
 
-if((hSince.substr(hSince.length-1,1)) == 1 ){
-  edword = ' day';
-} else {
-  edword = ' days';
-}
-$('#daysLeft').text(hSince + dword);
-$('#edaysLeft').text(hSince + edword);
-currentBonus.text(hSince + dword);
-currentEngBonus.text(hSince + edword);
+  if((hSince.substr(hSince.length-1,1)) == 1 ){
+    edword = ' day';
+  } else {
+    edword = ' days';
+  }
+  $('#daysLeft').text(hSince + dword);
+  $('#edaysLeft').text(hSince + edword);
+  currentBonus.text(hSince + dword);
+  currentEngBonus.text(hSince + edword);
 
-$('.bonusPercent').text(bonusPercent+'%');
-$('#extraBonus').text(' (starting from $10 000 - ' + (parseInt(bonusPercent)+5) +'%)')
-function showBonuses(){
-  $('.firstBonus, .secondBonus, .thirdBonus').css('opacity', '1');
-}
+  $('.bonusPercent').text(bonusPercent+'%');
+  $('#extraBonus').text(' (starting from $10 000 - ' + (parseInt(bonusPercent)+5) +'%)')
+  function showBonuses(){
+    $('.firstBonus, .secondBonus, .thirdBonus').css('opacity', '1');
+  }
 
-setTimeout(showBonuses, 1500);
-});
+  setTimeout(showBonuses, 1500);
+}
+  });

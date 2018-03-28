@@ -185,15 +185,15 @@ span.size{ display: none; }
     top: 15px;
   }
   .intro .databar{
-    padding: 98px 30px 0 30px;
-    height: 365px;
+    padding: 38px 30px 0 30px;
+    height: 242px;
   }
   .reference{
     max-width: 30%;
   }
   .intro .databar .additionalInfo{
     font-size: 12px;
-    margin-top: 19px;
+    margin-top: 60px;
     margin-left: 0px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -225,8 +225,8 @@ span.size{ display: none; }
     right: calc( 1% - -11px );
   }
   .intro .databar{
-    padding: 120px 15px 0 15px;
-    height: 440px;
+    padding: 38px 15px 0 15px;
+    height: 270px;
     border-radius: 10px;
   }
   .Mbonuses{
@@ -271,7 +271,8 @@ span.size{ display: none; }
     border-right: none;
   }
   .howGGWorks .roflex{
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 @media (max-width:600px) {
@@ -635,11 +636,17 @@ background-image: none;
   }
   .keyproblem .howGGWorks .items .col-xs-12.col-md-3{
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .howGGWorks .roflex{
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   body .keyproblem .items .item, body .platform .items .item{
     margin-bottom: -24px;
@@ -1563,9 +1570,6 @@ footer .content{
   .intro .databar{
     height: 557px;
   }
-  .intro .databar.databar--english-version{
-    height: 540px;
-  }
   .reference{
     max-width: 74%;
     text-align: left;
@@ -1728,9 +1732,6 @@ footer .content{
   .betterness tr td:not(:first-child){
     width: 25px;
   }
-  .intro .databar{
-    height: 445px;
-  }
 }
 @media (max-width:400px) {
   .intro .databar .additionalInfo{
@@ -1738,7 +1739,7 @@ footer .content{
         flex-wrap: wrap;
   }
   .intro .databar{
-    height: 490px;
+    height: 330px;
   }
 }
 @media (max-width:380px){

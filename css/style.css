@@ -622,14 +622,14 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
 .intro .databar{
   position: relative;
   margin-top: 0px;
-  padding: 110px 55px 0 55px;
+  padding: 42px 55px 0 55px;
   background-color: white;
   border-radius: 10px;
-  height: 300px;
+  height: 235px;
 }
 .intro .databar .additionalInfo{
   font-size: 12px;
-  margin-top: 60px;
+  margin-top: 46px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -654,7 +654,7 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   left: 31%;
 }
 .intro .bar{
-  margin-top: 60px;
+  margin-top: 70px;
   background-color: #e2e2e2;
   background-position: 50% 50%;
   border-radius: 10px;
@@ -1532,12 +1532,21 @@ body .keyproblem .howGGWorks .steps li:after, body .keyproblem .howGGWorks .item
   font-style: normal;
 }
 .howGGWorks .roflex{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .keyproblem .grapthExample .flector{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 20px;
 }
 .keyproblem .grapthExample .flector i{
@@ -1575,10 +1584,17 @@ body .keyproblem .howGGWorks .steps li:after, body .keyproblem .howGGWorks .item
   margin-top: 0;
 }
 .companies{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .companies .company{
   width: 100%;
