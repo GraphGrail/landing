@@ -1746,6 +1746,9 @@ footer .content{
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .googleTest .requestAI.rusButton{
+    width: 180px;
+  }
 }
 @media (max-width:380px){
   .additionalInfo div:last-child{
