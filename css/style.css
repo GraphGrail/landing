@@ -622,10 +622,10 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
 .intro .databar{
   position: relative;
   margin-top: 0px;
-  padding: 42px 55px 0 55px;
+  padding: 42px 55px 15px 55px;
   background-color: white;
   border-radius: 10px;
-  height: 235px;
+  box-shadow: 0px 3px 13px 0px #c3c3c3;
 }
 .intro .databar .additionalInfo{
   font-size: 12px;
@@ -712,7 +712,65 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
   float: left;
   display: block;
 }
-
+.googleTest{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    text-align: center;
+    padding: 21px 60px;
+    box-shadow: 0px 3px 13px 0px #c3c3c3;
+    background-color: #ffffff;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.googleTest .inviteTitle{
+    font-size: 28px;
+}
+.googleTest .inviteText{
+    margin: 22px 0;
+    color: #383838;
+}
+.googleTest .inviteText2{
+    color: #0e0e0e;
+    line-height: 26px;
+    font-size: 16px;
+    margin: 0 0 9px 0;
+}
+.googleTest .inviteListTitle{
+    font-size: 19px;
+    color: #404040;
+}
+.googleTest .inviteList li{
+    color: #2d2d2d;
+    margin: 12px 0 0 0;
+    font-size: 15px;
+}
+.googleTest .requestAI{
+    cursor: pointer;
+    display: block;
+    margin: 19px auto 14px auto;
+    width: 200px;
+    padding: 12px 10px;
+    border-radius: 7px;
+    box-shadow: 0px 3px 10px 0px #8a8a8a;
+    background-color: #e10019;
+    color: white;
+}
+.googleTest .requestAI:hover{
+    color: white;
+    box-shadow: 0px 6px 23px 0px #8a8a8a;
+}
+.googleTest .inviteJoinChat i{
+    color: #52b2ff;
+    font-size: 30px;
+}
+.googleTest .inviteJoinChat{
+    color: #0066b7;
+    font-size: 20px;
+    border-bottom: 1px solid #b9e0ff;
+}
+.googleTest .requestAI.rusButton{
+    width: 270px;
+}
 .home{
   position: relative;
   /*margin-top: -90px;
