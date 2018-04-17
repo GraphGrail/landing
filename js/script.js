@@ -793,7 +793,7 @@ if(hSince){
         });
     };
     function processTextCallback(data) {
-        $('#processedText').text(text);
+        $('#processedText').text(data);
     };
 
     processText('Однажды пять человек зашли в sample text и лорем ипсум в России', processTextCallback);
