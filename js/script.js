@@ -784,11 +784,9 @@ if(hSince){
                 'message': text,
             },
             success: function (data, status, jqXHR) {
-                console.log(data);
                 callback(data);
             },
             error: function (error) {
-                console.warn(error);
                 callback(error);
             }
         });
@@ -798,9 +796,10 @@ if(hSince){
     $('#botFormActivation').click(function(){
         let textInputValue = $('#botFormTextInput').val();
         if (textInputValue.trim() !== '') {
+          $('.processBlocker').css('display', 'flex');
           processText(textInputValue, processTextCallback);
         } else {
-            alert('Введите текст');
+          $('.processedText').html('<p class="botError">Enter some text, please</p>');
         }
     });
 
@@ -837,6 +836,10 @@ if(hSince){
             }
 
             $('.processedText').html(finalResult);
+            $('.processBlocker').css('display', 'none');
+        } else {
+            $('.processBlocker').css('display', 'none');
+            $('.processedText').html('<p class="botError">An unexpected error occurred. Check if the data entered correctly. Supported languages: English, Russian</p>');
         }
     };
   });
