@@ -3405,7 +3405,7 @@ header nav .back .container{
   -o-transition: all 0.1s;
   transition: all 0.1s;
 }
-.block:nth-child(2){
+.blocks:nth-child(2){
   display: none;
 }
 .loading{
@@ -3423,7 +3423,7 @@ header nav .back .container{
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 170px;
+  height: 122px;
   position: absolute;
   width: 230px;
 }
@@ -3449,6 +3449,9 @@ header nav .back .container{
 }
 .panel .blocks > div:last-child{
   margin-bottom: 0;
+}
+.panel .blocks > div:nth-child(2){
+  display: none;
 }
 .panel .blocks > div > b{
   display: block;
