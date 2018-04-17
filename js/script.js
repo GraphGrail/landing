@@ -785,34 +785,22 @@ if(hSince){
             },
             success: function (data, status, jqXHR) {
                 console.log(data);
-                callback(data, token);
+                callback(data);
             },
             error: function (error) {
                 console.warn(error);
                 callback(error);
             }
-        }).done(function(data) {
-           $('#processedText').text(data);
-       });
-
-
-        // $.ajax({
-        //      url: "https://demoai.graphgrail.com",
-        //      method: 'POST',
-        //      data: {
-        //        'message' : user_message
-        //      }
-        //  }).done(function(data) {
-        //      Chat.pushInMessage("Тема сообщения: <b>" + data.topic + "</b>");
-        //      $("._mCS_1").mCustomScrollbar("scrollTo",$(".m-messenger__wrapper:last"));
-        //  });
+        });
 
 
     };
+
+    processText('Однажды пять человек зашли в sample text и лорем ипсум в России', processTextCallback);
+
     function processTextCallback(data) {
         $('#processedText').text(data);
     };
 
-    processText('Однажды пять человек зашли в sample text и лорем ипсум в России', processTextCallback);
 
   });
