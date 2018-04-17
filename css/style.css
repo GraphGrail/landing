@@ -719,7 +719,7 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
     padding: 21px 60px;
     box-shadow: 0px 3px 13px 0px #c3c3c3;
     background-color: #ffffff;
-    margin-top: 30px;
+    margin-top: 100px;
     border-radius: 10px;
 }
 .googleTest .inviteTitle{
@@ -3405,6 +3405,9 @@ header nav .back .container{
   -o-transition: all 0.1s;
   transition: all 0.1s;
 }
+.blocks:nth-child(2){
+  display: none;
+}
 .loading{
   opacity: 1;
   -webkit-transition: all 0.1s;
@@ -3420,7 +3423,7 @@ header nav .back .container{
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 170px;
+  height: 122px;
   position: absolute;
   width: 230px;
 }
@@ -3446,6 +3449,9 @@ header nav .back .container{
 }
 .panel .blocks > div:last-child{
   margin-bottom: 0;
+}
+.panel .blocks > div:nth-child(2){
+  display: none;
 }
 .panel .blocks > div > b{
   display: block;
@@ -3500,4 +3506,87 @@ body.fixedHeader .intro{
 }
 .constructorsample{
   display: none;
+}
+.botForm {
+    display: flex;
+    max-width: 80%;
+    margin: 30px auto 10px auto;
+    position: relative;
+}
+.processedText {
+    position: relative;
+}
+.processBlocker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.85);
+    display: none;
+    border-radius: 10px;
+}
+.botForm input {
+    outline: none;
+    padding: 15px 15px;
+    background-color: white;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.botForm button{
+    padding: 15px 15px;
+    background-color: white;
+    font-size: 18px;
+    outline: none;
+}
+.responceCloudInfo {
+    position: absolute;
+    top: -24px;
+    left: 0px;
+    background-color: white;
+    opacity: 0;
+    font-size: 16px;
+    padding: 3px 8px 5px 8px;
+    border-radius: 0px;
+    border: 1px solid #adadad;
+    transition: opacity 0.1s;
+    color: #000000;
+    z-index: 10;
+}
+.bot_sentence {
+  display: flex;
+  flex-wrap: wrap;
+}
+.bot_sentence2Text {
+    position: relative;
+    padding: 10px;
+    margin: 11px 3px;
+    background-color: #f2f7ff;
+    color: black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.bot_sentence2Text.Blue, .bot_sentence2Text.Green, .bot_sentence2Text.Red {
+    color: white;
+}
+.bot_sentence2Text.Blue {
+    background-color: #2c407c;
+}
+.bot_sentence2Text.Green {
+    background-color: #008c0b;
+}
+.bot_sentence2Text.Red {
+    background-color: #b90015;
+}
+.bot_sentence2Text:hover .responceCloudInfo {
+    opacity: 1;
+}
+.botError {
+  text-align: center;
+}
+.botFormTitle {
+  text-align: center;
+  margin-bottom: 0;
 }

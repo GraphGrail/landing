@@ -774,4 +774,72 @@ if(hSince){
 
   setTimeout(showBonuses, 1500);
 }
+
+    function processText(text = '', callback = function () { return true }) {
+        $.ajax({
+            url: 'https://api.graphgrail.com/ner/v1',
+            method: "POST",
+            dataType: "json",
+            data: {
+                'message': text,
+            },
+            success: function (data, status, jqXHR) {
+                callback(data);
+            },
+            error: function (error) {
+                callback(error);
+            }
+        });
+
+    };
+
+    $('#botFormActivation').click(function(){
+        let textInputValue = $('#botFormTextInput').val();
+        if (textInputValue.trim() !== '') {
+          $('.processBlocker').css('display', 'flex');
+          processText(textInputValue, processTextCallback);
+        } else {
+          $('.processedText').html('<p class="botError">Enter some text, please</p>');
+        }
+    });
+
+    function processTextCallback(data){
+        if(data && !data.error) {
+            let finalResult = [];
+            let finalResult2 = [];
+
+            let responce = data.ner_result;
+
+            responceLength = responce.length;
+            for (let i = 0; i < responceLength; i++) {
+                for (let i2 = 0; i2 < (responce[i].length); i2++) {
+                    let responceBlock = responce[i][i2];
+                    let cloudInfo = '';
+                      let cloudInfoText = '';
+                      let cloudInfoColor = '';
+                      if (responce[i][i2][1] === 'I-ORG') {
+                          cloudInfoText = 'Organisation';
+                          cloudInfoColor = 'Green';
+                      } else if (responce[i][i2][1] === 'I-PER') {
+                          cloudInfoText = 'Person';
+                          cloudInfoColor = 'Blue';
+                      } else if (responce[i][i2][1] === 'I-LOC') {
+                          cloudInfoText = 'Location';
+                          cloudInfoColor = 'Red';
+                      } else {
+                          cloudInfoText = 'Text';
+                      }
+                      cloudInfo = '<div class="responceCloudInfo">' + cloudInfoText + '</div>';
+                    finalResult2 += '<div class="bot_sentence2"><div class="bot_sentence2Text ' + cloudInfoColor + '">' + responce[i][i2][0] + cloudInfo +'</div></div>';
+                }
+                finalResult = '<div class="bot_sentence">' + finalResult2 + '</div>';
+            }
+
+            $('.processedText').html(finalResult);
+            $('.processBlocker').css('display', 'none');
+        } else {
+            $('.processBlocker').css('display', 'none');
+            $('.processedText').html('<p class="botError">An unexpected error occurred. Check if the data entered correctly. Supported languages: English, Russian</p>');
+        }
+    };
   });
