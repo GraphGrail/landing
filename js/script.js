@@ -781,7 +781,7 @@ if(hSince){
             method: "POST",
             dataType: "json",
             data: {
-                text: text,
+                'message': text,
             },
             success: function (data, status, jqXHR) {
                 console.log(data);
@@ -789,8 +789,25 @@ if(hSince){
             },
             error: function (error) {
                 console.warn(error);
+                callback(error);
             }
-        });
+        }).done(function(data) {
+           $('#processedText').text(data);
+       });
+
+
+        // $.ajax({
+        //      url: "https://demoai.graphgrail.com",
+        //      method: 'POST',
+        //      data: {
+        //        'message' : user_message
+        //      }
+        //  }).done(function(data) {
+        //      Chat.pushInMessage("Тема сообщения: <b>" + data.topic + "</b>");
+        //      $("._mCS_1").mCustomScrollbar("scrollTo",$(".m-messenger__wrapper:last"));
+        //  });
+
+
     };
     function processTextCallback(data) {
         $('#processedText').text(data);
