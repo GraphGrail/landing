@@ -774,4 +774,28 @@ if(hSince){
 
   setTimeout(showBonuses, 1500);
 }
+
+    function processText(text = '', callback = function () { return true }) {
+        $.ajax({
+            url: 'https://api.graphgrail.com/ner/v1',
+            method: "POST",
+            dataType: "json",
+            data: {
+                text: text,
+            },
+            success: function (data, status, jqXHR) {
+                console.log(data);
+                callback(data, token);
+            },
+            error: function (error) {
+                console.warn(error);
+            }
+        });
+    };
+    function processTextCallback(data) {
+        $('#processedText').text(text);
+    };
+
+    processText('Однажды пять человек зашли в sample text и лорем ипсум в России', processTextCallback);
+
   });
