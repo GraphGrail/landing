@@ -158,6 +158,12 @@ span.size{ display: none; }
 
   }
 @media (max-width:768px){
+  .botFormTitle {
+      font-size: 24px;
+  }
+  .botForm {
+      max-width: 100%;
+  }
   .tapToView{
     display: block;
   }
