@@ -3501,3 +3501,63 @@ body.fixedHeader .intro{
 .constructorsample{
   display: none;
 }
+.botForm {
+    display: flex;
+    max-width: 80%;
+    margin: 30px auto 10px auto;
+}
+.botForm input {
+    outline: none;
+    padding: 15px 15px;
+    background-color: white;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.botForm button{
+    padding: 15px 15px;
+    background-color: white;
+    font-size: 18px;
+    outline: none;
+}
+.responceCloudInfo {
+    position: absolute;
+    top: -24px;
+    left: 0px;
+    background-color: white;
+    opacity: 0;
+    font-size: 16px;
+    padding: 3px 8px 5px 8px;
+    border-radius: 0px;
+    border: 1px solid #adadad;
+    transition: opacity 0.1s;
+    color: #000000;
+    z-index: 10;
+}
+.bot_sentence {
+  display: flex;
+  flex-wrap: wrap;
+}
+.bot_sentence2Text {
+    position: relative;
+    padding: 10px;
+    margin: 11px 3px;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.bot_sentence2Text.Blue, .bot_sentence2Text.Green, .bot_sentence2Text.Red {
+    color: white;
+}
+.bot_sentence2Text.Blue {
+    background-color: #2c407c;
+}
+.bot_sentence2Text.Green {
+    background-color: #008c0b;
+}
+.bot_sentence2Text.Red {
+    background-color: #b90015;
+}
+.bot_sentence2Text:hover .responceCloudInfo {
+    opacity: 1;
+}

@@ -793,14 +793,50 @@ if(hSince){
             }
         });
 
-
     };
 
-    processText('Однажды пять человек зашли в sample text и лорем ипсум в России', processTextCallback);
+    $('#botFormActivation').click(function(){
+        let textInputValue = $('#botFormTextInput').val();
+        if (textInputValue.trim() !== '') {
+          processText(textInputValue, processTextCallback);
+        } else {
+            alert('Введите текст');
+        }
+    });
 
-    function processTextCallback(data) {
-        $('#processedText').text(data);
+    function processTextCallback(data){
+        if(data && !data.error) {
+            let finalResult = [];
+            let finalResult2 = [];
+
+            let responce = data.ner_result;
+
+            responceLength = responce.length;
+            for (let i = 0; i < responceLength; i++) {
+                for (let i2 = 0; i2 < (responce[i].length); i2++) {
+                    let responceBlock = responce[i][i2];
+                    let cloudInfo = '';
+                      let cloudInfoText = '';
+                      let cloudInfoColor = '';
+                      if (responce[i][i2][1] === 'I-ORG') {
+                          cloudInfoText = 'Organisation';
+                          cloudInfoColor = 'Green';
+                      } else if (responce[i][i2][1] === 'I-PER') {
+                          cloudInfoText = 'Person';
+                          cloudInfoColor = 'Blue';
+                      } else if (responce[i][i2][1] === 'I-LOC') {
+                          cloudInfoText = 'Location';
+                          cloudInfoColor = 'Red';
+                      } else {
+                          cloudInfoText = 'Text';
+                      }
+                      cloudInfo = '<div class="responceCloudInfo">' + cloudInfoText + '</div>';
+                    finalResult2 += '<div class="bot_sentence2"><div class="bot_sentence2Text ' + cloudInfoColor + '">' + responce[i][i2][0] + cloudInfo +'</div></div>';
+                }
+                finalResult = '<div class="bot_sentence">' + finalResult2 + '</div>';
+            }
+
+            $('.processedText').html(finalResult);
+        }
     };
-
-
   });
