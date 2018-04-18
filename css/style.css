@@ -3515,7 +3515,7 @@ body.fixedHeader .intro{
 }
 .processedText {
     position: relative;
-    margin-top: 45px;
+    margin-top: 10px;
 }
 .processBlocker {
     position: absolute;
@@ -3593,8 +3593,8 @@ body.fixedHeader .intro{
   margin-bottom: 0;
 }
 .forExampleText {
-  position: absolute;
-  bottom: -36px;
+  max-width: 80%;
+  margin: 0 auto;
 }
 #forExample {
   cursor: pointer;
