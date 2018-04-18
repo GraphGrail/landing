@@ -3593,6 +3593,7 @@ body.fixedHeader .intro{
   margin-bottom: 0;
 }
 .forExampleText {
+  display: none;
   max-width: 80%;
   margin: 0 auto;
 }
