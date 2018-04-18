@@ -3515,6 +3515,7 @@ body.fixedHeader .intro{
 }
 .processedText {
     position: relative;
+    margin-top: 45px;
 }
 .processBlocker {
     position: absolute;
@@ -3585,8 +3586,19 @@ body.fixedHeader .intro{
 }
 .botError {
   text-align: center;
+  color: #750000;
 }
 .botFormTitle {
   text-align: center;
   margin-bottom: 0;
+}
+.forExampleText {
+  position: absolute;
+  bottom: -36px;
+}
+#forExample {
+  cursor: pointer;
+  color: #545454;
+  font-weight: bold;
+  border-bottom: 1px solid #bbbbbb;
 }

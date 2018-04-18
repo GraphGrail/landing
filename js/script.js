@@ -805,6 +805,7 @@ if(hSince){
 
     function processTextCallback(data){
         if(data && !data.error) {
+            $('.forExampleText').hide();
             let finalResult = [];
             let finalResult2 = [];
 
@@ -842,4 +843,22 @@ if(hSince){
             $('.processedText').html('<p class="botError">An unexpected error occurred. Check if the data entered correctly. Supported languages: English, Russian</p>');
         }
     };
+
+    $('#forExample').click(function(){
+        $('#botFormTextInput').val($('#forExample').text());
+        let textInputValue = $('#botFormTextInput').val();
+        if (textInputValue.trim() !== '') {
+          $('.processBlocker').css('display', 'flex');
+          processText(textInputValue, processTextCallback);
+        } else {
+          $('.processedText').html('<p class="botError">Enter some text, please</p>');
+        }
+    });
+    $('#botFormTextInput').keyup(function() {
+      if($(this).val() !== '') {
+          $('.forExampleText').hide();
+      } else {
+          $('.forExampleText').show();
+      }
+    });
   });
