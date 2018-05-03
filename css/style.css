@@ -621,7 +621,7 @@ nav a:visited,nav a:focus{background-color: transparent !important;}
 }
 .intro .databar{
   position: relative;
-  margin-top: 0px;
+  margin: 0 0 100px 0;
   padding: 42px 55px 15px 55px;
   background-color: white;
   border-radius: 10px;
