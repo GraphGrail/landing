@@ -3052,6 +3052,9 @@ footer h2{
 footer .footer-nav {
   padding: 20px 0
 }
+footer .footer-nav.arabic {
+    direction: ltr;
+}
 footer .footer-nav > div{
   padding: 10px 0;
 }
