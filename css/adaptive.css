@@ -268,6 +268,9 @@ span.size{ display: none; }
   }
 }
 @media (max-width:991px) {
+    .intro .why.arabic {
+        padding: 0px 0px 20px 0;
+    }
   .keyproblem .howGGWorks .items{
     padding: 0 30px;
   }
@@ -1270,6 +1273,9 @@ background-image: none;
   padding-bottom: 0;
   margin-bottom: 54px !important
 }
+.platform .content.with-angle, .roadmap .content, .team .content.arabic {
+  padding-top: 270px;
+}
 .profits .content{
   padding-top: 0;
 }
@@ -1597,6 +1603,10 @@ footer .content{
     left: initial;
     right: 10px;
   }
+  .icoRatingBlock.arabic {
+      left: 10px;
+      right: initial;
+  }
   header nav .left, header nav .right{
     padding: 10px 0;
   }
@@ -1636,6 +1646,9 @@ footer .content{
   .icoRatingBlock__tables{
     margin: 3px 0;
   }
+  .logo-large.arabic {
+    left: 0px;
+  }
 }
 @media (max-width:1400px) {
   .lang-menu.hidden-xs.hidden-sm.visible-md.visible-lg{
@@ -1649,6 +1662,7 @@ footer .content{
   body .noise header nav{
     display: none;
   }
+
   .menu-open .noise header nav{
     display: block;
   }
@@ -1656,7 +1670,7 @@ footer .content{
     top: -70px;
   }
   .lines #menuBurger{
-    top: 188px;
+    top: 225px;
     border-radius: 0;
     left: 15px;
     z-index: 200;
@@ -1784,4 +1798,9 @@ footer .content{
     line-height: 1;
     font-size: 19px;
   }
+}
+@media (max-width:450px){
+    .googleTest .requestAI.arabic {
+        width: 200px;
+    }
 }
