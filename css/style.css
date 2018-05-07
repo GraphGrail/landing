@@ -2199,10 +2199,10 @@ transform: translate(0px, -10px);
   padding: 0 50px;
   font-weight: 300;
 }
-.points .item h3, .profits .item h3.arabicH3 {
+.points .item h3.arabicH3, .profits .item h3.arabicH3 {
     text-align: right;
 }
-.points .item .text, .profits .item .text.arabic {
+.points .item .text.arabicH3, .profits .item .text.arabic {
     text-align: right;
 }
 .constructormokap .content .text.arabic {
