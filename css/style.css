@@ -1329,6 +1329,9 @@ body .keyproblem .howGGWorks .steps li:after, body .keyproblem .howGGWorks .item
   border-bottom-right-radius: 0;
   /*padding: 60px 30px*/
 }
+.fivesteps .items.arabic {
+    direction: ltr;
+}
 .fivesteps .items .item{
   padding: 0;
   border-right: 1px solid #e6e5e9;
@@ -1362,7 +1365,9 @@ body .keyproblem .howGGWorks .steps li:after, body .keyproblem .howGGWorks .item
   color: #000000;
   padding: 0 25px 55px;
 }
-
+.fivesteps .items .item .text.arabic {
+    direction: rtl;
+}
 .fivesteps .steps{
   position: absolute;
   top: 255px;
@@ -1389,7 +1394,7 @@ body .keyproblem .howGGWorks .steps li:after, body .keyproblem .howGGWorks .item
   z-index: 4;
   left: 50%;
   margin-left: -10px;
-  top: 50%;
+  top: 256px;
   margin-top: -60px;
   color: #e30613;
 }
