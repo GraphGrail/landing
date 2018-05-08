@@ -158,6 +158,9 @@ span.size{ display: none; }
 
   }
 @media (max-width:768px){
+    .roadmap .items > .row > div[class*='col-']:nth-child(2n) .item.arabic {
+        padding-right: 5px;
+    }
   .botFormTitle {
       font-size: 24px;
   }
