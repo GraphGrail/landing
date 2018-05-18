@@ -1838,7 +1838,7 @@ Good knowledge of C#.
           finalWidth = ((currentUSD+1300000)/usdPercent);
         }
         $('#raised').width(finalWidth + "%");
-        $('#USDClone').text((currentUSD).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+        $('#USDClone').text((currentUSD - 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
       }
       setTimeout(magic, 1000);
       setTimeout(postMagic, 1000);
