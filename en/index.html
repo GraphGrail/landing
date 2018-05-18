@@ -1646,7 +1646,7 @@ Good knowledge of C#.
         $('.blocks').addClass('showers');
       }
       function postMagic(){
-        var currentUSD = 1850000;
+        var currentUSD = 1827000;
         var usdPercent = (12000000/100);
         finalWidth = ((currentUSD+1600000)/usdPercent);
         if($(window).width()<768){
@@ -1656,7 +1656,7 @@ Good knowledge of C#.
           finalWidth = ((currentUSD+1300000)/usdPercent);
         }
         $('#raised').width(finalWidth + "%");
-        $('#USDClone').text((currentUSD - 200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+        $('#USDClone').text((currentUSD).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
       }
       setTimeout(magic, 1000);
       setTimeout(postMagic, 1000);
