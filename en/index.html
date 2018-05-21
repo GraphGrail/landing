@@ -1637,7 +1637,7 @@ Good knowledge of C#.
   <script type="text/javascript">
   $(document).ready(function() {
     jQuery.getJSON('/stat', {}, function(json){
-      jQuery('#totalWorth').html((parseInt( (Math.round(json.tokens_total).toFixed(0)))+ 10000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Worth of GAI tokens*</b>'  );
+      jQuery('#totalWorth').html('18 270 130' + '<b>Worth of GAI tokens*</b>');
       jQuery('#currentUSD').html((parseInt(Math.round(json.usd_total).toFixed(0)) + 2200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
       jQuery('#investors').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Purchasers</b>');
       jQuery('#investorsInLine').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<span> Contributors</span>');
