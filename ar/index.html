@@ -1635,8 +1635,8 @@ NLTK+ Celery+ Pymorphy2+ Pymorphy2+ GLRparser وإلخ. لدى فيكتور أك
   </script>
   <script type="text/javascript">
   $(document).ready(function() {
-    jQuery.getJSON('/stat', {}, function(json){
-      jQuery('#totalWorth').html('18 270 130' + '<b>Worth of GAI tokens*</b>');
+      jQuery.getJSON('/stat', {}, function(json){
+      jQuery('#totalWorth').html((parseInt( (Math.round(json.tokens_total).toFixed(0)))+ 12619942).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Worth of GAI tokens*</b>'  );
       jQuery('#currentUSD').html((parseInt(Math.round(json.usd_total).toFixed(0)) + 2200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
       jQuery('#investors').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Purchasers</b>');
       jQuery('#investorsInLine').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<span> Contributors</span>');
@@ -1645,7 +1645,7 @@ NLTK+ Celery+ Pymorphy2+ Pymorphy2+ GLRparser وإلخ. لدى فيكتور أك
         $('.blocks').addClass('showers');
       }
       function postMagic(){
-        var currentUSD = 1827013;
+        var currentUSD = parseInt(Math.round(json.usd_total).toFixed(0))+1443717;
         var usdPercent = (12000000/100);
         finalWidth = ((currentUSD+2027000)/usdPercent);
         if($(window).width()<768){
@@ -1662,7 +1662,6 @@ NLTK+ Celery+ Pymorphy2+ Pymorphy2+ GLRparser وإلخ. لدى فيكتور أك
     });
   });
 </script>
-
 
     </body>
 </html>
