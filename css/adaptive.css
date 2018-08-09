@@ -124,7 +124,7 @@ span.size{ display: none; }
 				 margin-right: 0px;
  				width: 40px;
  				height: 40px;
- 				line-height: 35px;
+ 				line-height: 41px;
  				font-size: 20px;
        }
        .intro .btns .btn{
@@ -334,7 +334,7 @@ span.size{ display: none; }
     span.size.sm{ display: block; }
     span.size.xs,span.size.xxs{ display: none; }
     .intro .share{
-      width: 200px;
+      width: 60%;
     }
     .intro .btns .btn{
         margin-right: 0;
@@ -350,8 +350,8 @@ span.size{ display: none; }
     }
     .intro .share{
       float: none;
-      margin: 30px 0;
-			height: 70px;
+      margin: 20px 0 30px 0;
+		height: 50px;
       text-align: center;
     }
 
@@ -996,10 +996,7 @@ width: 151px;
       margin-bottom: 20px;
     }
     .intro .share{
-      width: 200px;
-      float: none;
-      margin: 30px 0;
-      text-align: center;
+      width: 80%;
     }
     .intro .red-text{
       text-align: center;
@@ -1327,6 +1324,15 @@ footer .content{
     width: 83%;
     margin-top: -16px;
     z-index: 405;
+  }
+  .intro .share {
+      margin: 10px 0 40px 0;
+      width: 100%;
+      margin-bottom: 30px;
+      justify-content: flex-start;
+  }
+  .intro .share a {
+      margin: 4px;
   }
   .fixedHeaderMobile .top .login{
     left: 0;
