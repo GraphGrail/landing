@@ -272,7 +272,7 @@ span.size{ display: none; }
 }
 @media (max-width:991px) {
     .intro .why.arabic {
-        padding: 0px 0px 20px 0;
+        padding: 40px 0px 20px 0;
     }
   .keyproblem .howGGWorks .items{
     padding: 0 30px;
@@ -350,8 +350,7 @@ span.size{ display: none; }
     }
     .intro .share{
       float: none;
-      margin: 20px 0 30px 0;
-		height: 50px;
+      margin: 20px 0 10px 0;
       text-align: center;
     }
 
@@ -1666,6 +1665,22 @@ footer .content{
   .fixedHeaderMobile .top .lang-menu{
     display: none !important;
   }
+}
+
+@media (max-width: 1100px){
+    .gg_token_address {
+        width: initial;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 540px){
+    .gg_token_address {
+        padding: 0 22px;
+    }
+    .gg_token_address_link {
+        word-break: break-all;
+    }
 }
 @media (max-width:615px){
   body .noise header nav{

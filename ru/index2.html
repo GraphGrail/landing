@@ -174,6 +174,7 @@
                                                </div>
 
                                             </div>
+                                            <p class="gg_token_address">GraphGrailAi token contract address: <a class="gg_token_address_link" href="https://etherscan.io/token/0xf207ccfe6d1b90b0b7817ce2d5d262af1514e37b" target="_blank">0xf207ccfe6d1b90b0b7817ce2d5d262af1514e37b</a></p>
                                         </div>
 
                                         <div class="why">
@@ -234,7 +235,7 @@
                                                   <div class="blocks">
                                                       <div id="totalWorth">
 
-                                                          <b>Worth of GAI tokens*</b>
+                                                          <b>GAI tokens sold</b>
                                                       </div>
 
                                                       <div>
@@ -300,7 +301,7 @@
                                                            <div class="date">11.04.2018</div>
                                                            <h3>Announcing Data-label blockchain application</h3>
                                                            <div class="text">
-                                                               try our blockchain (currently Ethereum Rinkeby test network) data enrichment application with task distribution over Telegram.
+                                                               Try our blockchain (currently Ethereum Rinkeby test network) data enrichment application with task distribution over Telegram.
  Everyone can load csv data and create a task to platform participants work. Result: participants get paid,  business get data enriched,  ready for Ai neural network training <a class="news-link--in-text" href="http://labelapp.graphgrail.com">labelapp.graphgrail.com</a>
                                                            </div>
                                                        </div>
@@ -1647,18 +1648,6 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
 
                                <div class="col-xs-12 col-sm-6 col-md-3">
                                    <div class="item" style="top: 0px; opacity: 1;">
-                                       <div class="img" style="background-image: url('../img/marina.png')"></div>
-                                       <h3 class="text-center">Марина Паринова</h3>
-                                       <div class="text text-center">
-                                       <span>HR manager</span> <br>
-                                       Отвечает за IT рекрутмент, адаптацию новых сотрудников, уютную и приятную атмосферу в офисе.
-                                       Команда активно растет и пополняется крутыми специалистами.
-                                       Присоединяйтесь к нам! Отправьте CV на <a href="mailto:m.parinova@graphgrail.com">m.parinova@graphgrail.com</a> , и мы с удовольствием организуем интервью к нам в компанию.
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="col-xs-12 col-sm-6 col-md-3">
-                                   <div class="item" style="top: 0px; opacity: 1;">
                                        <div class="img" style="background-image: url('../img/nikita.png')"></div>
                                        <h3 class="text-center">Никита Буевич</h3>
                                        <div class="text text-center">
@@ -1912,7 +1901,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
   <script type="text/javascript">
   $(document).ready(function() {
       jQuery.getJSON('/stat', {}, function(json){
-      jQuery('#totalWorth').html((parseInt( (Math.round(json.tokens_total).toFixed(0)))+ 12619942).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Worth of GAI tokens*</b>'  );
+      jQuery('#totalWorth').html('20 041 974' + '<b>GAI tokens sold</b>');
       jQuery('#currentUSD').html((parseInt(Math.round(json.usd_total).toFixed(0)) + 2200000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
       jQuery('#investors').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<b>Purchasers</b>');
       jQuery('#investorsInLine').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<span> Contributors</span>');
