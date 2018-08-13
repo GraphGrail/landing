@@ -2068,6 +2068,10 @@ transform: translate(0px, -10px);
     position: relative;
 }
 
+.teamPerson_socials {
+    display: flex;
+    justify-content: center;
+}
 
 .news .content{
  /* margin-bottom: -123px !important;*/
@@ -2514,7 +2518,7 @@ color: #e30613;
   margin-top: 80px;
   float: right;
 }
- .social a {
+ .social-link {
   position: relative;
   height: 38px;
   line-height: 40px;
@@ -2526,29 +2530,32 @@ color: #e30613;
   border-radius: 50%;
   margin-right: 4px;
 }
-.social a i{
+.social-link i{
   font-size: 22px;
   color: #ffffff;
 }
-.social a.fb{
+ .social-link.fb{
   background-color: #3c5b9b;
 }
-.social a.tw{
+ .social-link.tw{
   background-color: #2daae1;
 }
-.social a.vk{
+.social-link.li {
+    background-color: #0274b3;
+}
+ .social-link.vk{
   background-color: #51749b;
 }
-.social a.gp{
+ .social-link.gp{
   background-color: #f63d27;
 }
-.social a.rss{
+ .social-link.rss{
   background-color: #f08421;
 }
-.social a.vimeo{
+ .social-link.vimeo{
   background-color: #41b2dc;
 }
-.social a:hover{
+ .social-link:hover{
   background-color: #207dcd;
   border-color: #207dcd;
   color: #ffffff;
