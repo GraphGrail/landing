@@ -962,7 +962,7 @@ padding: 45px 0 20px;
 }
 .panel {
   margin-top: 20px;
-  padding: 25px 25px 25px 25px;
+  padding: 10px;
   background-color: #ffffff;
   border-radius: 10px;
    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -3532,13 +3532,21 @@ header nav .back .container{
 }
 .lang-menu.open li{display: block;}
 .blocks{
-  opacity: 0;
   -webkit-transition: all 0.1s;
   -o-transition: all 0.1s;
   transition: all 0.1s;
 }
-.blocks:nth-child(2){
-  display: none;
+.crypto-image {
+    border-radius: 12px;
+    max-width: 100%;
+}
+.blocks .crypto-link {
+    color: black;
+}
+.blocks .crypto-link p {
+    margin: 8px 0 0 0;
+    font-size: 22px;
+    text-align: center;
 }
 .loading{
   opacity: 1;
