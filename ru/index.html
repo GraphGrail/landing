@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="../css/icons.css" />
         <link rel="stylesheet" href="../css/font-awesome/css/fontawesome-all.min.css" />
         <link rel="stylesheet" href="../css/slick.css" />
-        <link rel="stylesheet" href="../css/style.css?cssv=69">
-        <link rel="stylesheet" href="../css/adaptive.css?cssv=69">
+        <link rel="stylesheet" href="../css/style.css?cssv=72">
+        <link rel="stylesheet" href="../css/adaptive.css?cssv=72">
         <link rel="icon" type="image/png" href="../favicon.ico" />
         <script type="text/javascript" src="//vk.com/js/api/openapi.js?154"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=cyrillic" rel="stylesheet">
@@ -210,28 +210,14 @@
                                                     </div>
                                             </div-->
                                             <div class="panel">
-                                              <div class="bonus">
-                                                <p>Продажа токенов завершена</p>
-                                                    <hr>
+                                                <div class="bonus">
                                               </div>
-                                                <div class="text timeSince"></div>
-                                                    <div class="loading">
-                                                      <img src="../img/svg/spinner.svg" alt="">
-                                                    </div>
                                                   <div class="blocks">
-                                                      <div id="totalWorth">
-
-                                                          <b>GAI tokens sold</b>
-                                                      </div>
-
-                                                      <div>
-                                                          <span id="currentUSD"></span>
-                                                          <b>USD Raised</b>
-                                                      </div>
-                                                      <div id="investors">
-
-                                                          <b>Purchasers</b>
-                                                      </div>
+                                                      <a href="#">
+                                                          <img class="crypto-image" src="../img/crypto.png" alt="">
+                                                      </a>
+                                                      <hr>
+                                                      <a href="#" class="crypto-link"><p>Сервис CryptoPythia запущен!</p></a>
                                                   </div>
                                                     <script type="text/template" id="countdown-template">
                                                     <div class="time <%= label %>">
@@ -1752,7 +1738,7 @@ GraphGrailAi - одна из трех компаний в РФ с сервисо
       jQuery('#investorsInLine').html((Math.round(json.number_investors + 90).toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + '<span> Contributors</span>');
       function magic(){
         $('.loading').addClass('hiders');
-        $('.blocks').addClass('showers');
+        // $('.blocks').addClass('showers');
       }
       function postMagic(){
         var currentUSD = parseInt(Math.round(json.usd_total).toFixed(0))+1499431;
